@@ -15,16 +15,39 @@
     },
     "expansions": {
       "title": "Expansions",
+      "botUniqueHotel": "Unique Hotel for {deckType}:",
+      "botUniqueHotelRandom": "(random)",
       "lets-waltz-module-1-vienna-ballrooms": "Let's Waltz! - Module 1: Vienna Ballrooms",
       "lets-waltz-module-2-celebrities": "Let's Waltz! - Module 2: Celebrities",
       "lets-waltz-module-3-unique-hotels": "Let's Waltz! - Module 3: Unique Hotels",
       "lets-waltz-module-5-some-more": "Let's Waltz! - Module 5: Would you like some more?"
     }
   },
+  "setupBot": {
+    "title": "Setup {deckType}"
+  },
   "difficultyLevel": {
     "1": "Level 1 - Easy",
     "2": "Level 2 - Medium",
     "3": "Level 3 - Hard"
+  },
+  "deckType": {
+    "leopold": "Leopold",
+    "elisabeth": "Elisabeth"
+  },
+  "botUniqueHotel": {
+    "hautel-couture": {
+      "title": "Hautel Couture"
+    },
+    "nine-stars-inn": {
+      "title": "Nine Stars Inn"
+    },
+    "sushi-resort": {
+      "title": "Sushi Resort"
+    },
+    "toll-bridge-hotel": {
+      "title": "Toll Bridge Hotel"
+    }
   },
   "notfound": {
     "title": "Not Found"

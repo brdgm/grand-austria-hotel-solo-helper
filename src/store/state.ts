@@ -3,6 +3,7 @@ import { name } from '@/../package.json'
 import DifficultyLevel from '@/services/enum/DifficultyLevel'
 import Expansion from '@/services/enum/Expansion'
 import toggleArrayItem from '@brdgm/brdgm-commons/src/util/array/toggleArrayItem'
+import BotUniqueHotel from '@/services/enum/BotUniqueHotel'
 
 export const useStateStore = defineStore(`${name}.state`, {
   state: () => {
@@ -19,6 +20,7 @@ export const useStateStore = defineStore(`${name}.state`, {
   actions: {
     resetGame() {
       this.rounds = []
+      this.setup.botUniqueHotel = undefined
     },
     setupToggleExpansion(expansion: Expansion) : void {
       toggleArrayItem(this.setup.expansions, expansion)
@@ -45,6 +47,7 @@ export interface State {
 export interface Setup {
   difficultyLevel: DifficultyLevel
   expansions: Expansion[]
+  botUniqueHotel?: BotUniqueHotel
   debugMode?: boolean
 }
 export interface Round {

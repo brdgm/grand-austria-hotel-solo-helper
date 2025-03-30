@@ -10,6 +10,15 @@
           {{t(`setup.expansions.${expansion}`)}}
         </label>
       </div>
+      <div v-if="isAndHasUniqueHotelsExpansion(expansion)" class="ms-5 mb-3">
+        <label>
+          <span class="form-label fst-italic">{{t('setup.expansions.botUniqueHotel', {deckType: t(`deckType.${deckType}`)})}}</span>
+          <select class="form-select" v-model="state.setup.botUniqueHotel">
+            <option :value="undefined">{{t('setup.expansions.botUniqueHotelRandom')}}</option>
+            <option v-for="item in botUniqueHotels" :key="item" :value="item">{{t(`botUniqueHotel.${item}.title`)}}</option>
+          </select>
+        </label>
+      </div>
     </div>
   </div>
 </template>
@@ -19,6 +28,10 @@ import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useStateStore } from '@/store/state'
 import Expansion from '@/services/enum/Expansion'
+import BotUniqueHotel from '@/services/enum/BotUniqueHotel'
+import getAllEnumValues from '@brdgm/brdgm-commons/src/util/enum/getAllEnumValues'
+import DeckType from '@/services/enum/DeckType'
+import getMatchingDeckType from '@/util/getMatchingDeckType'
 
 export default defineComponent({
   name: 'ExpansionsSetup',
@@ -30,6 +43,12 @@ export default defineComponent({
   computed: {
     expansions() : Expansion[] {
       return Object.values(Expansion)
+    },
+    botUniqueHotels() : BotUniqueHotel[] {
+      return getAllEnumValues(BotUniqueHotel)
+    },
+    deckType() : DeckType {
+      return getMatchingDeckType(this.state.setup.expansions)
     }
   },
   methods: {
@@ -38,6 +57,10 @@ export default defineComponent({
     },
     toggleExpansion(expansion : Expansion) : void {
       this.state.setupToggleExpansion(expansion)
+    },
+    isAndHasUniqueHotelsExpansion(expansion : Expansion) : boolean {
+      return expansion == Expansion.LETS_WALTZ_MODULE_3_UNIQUE_HOTELS
+        && this.hasExpansion(Expansion.LETS_WALTZ_MODULE_3_UNIQUE_HOTELS)
     }
   }
 })

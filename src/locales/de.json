@@ -15,16 +15,39 @@
     },
     "expansions": {
       "title": "Erweiterungen",
+      "botUniqueHotel": "Besonderes Hotel für {deckType}:",
+      "botUniqueHotelRandom": "(zufällig)",
       "lets-waltz-module-1-vienna-ballrooms": "Alles Walzer! - Module 1: Wiener Ballsäle",
       "lets-waltz-module-2-celebrities": "Alles Walzer! - Module 2: Prominente",
       "lets-waltz-module-3-unique-hotels": "Alles Walzer! - Module 3: Besondere Hotels",
       "lets-waltz-module-5-some-more": "Alles Walzer! - Module 4: Darf's a bisserl mehr sein?"
     }
   },
+  "setupBot": {
+    "title": "Spielaufbau {deckType}"
+  },
   "difficultyLevel": {
     "1": "Level 1 - Einfach",
     "2": "Level 2 - Mittel",
     "3": "Level 3 - Schwer"
+  },
+  "deckType": {
+    "leopold": "Leopold",
+    "elisabeth": "Elisabeth"
+  },
+  "botUniqueHotel": {
+    "hautel-couture": {
+      "title": "Hautel Couture"
+    },
+    "nine-stars-inn": {
+      "title": "Gasthaus \"Zum Neunten Stern\""
+    },
+    "sushi-resort": {
+      "title": "Sushi Resort"
+    },
+    "toll-bridge-hotel": {
+      "title": "Hotel \"An der Mautbrücke\""
+    }
   },
   "notfound": {
     "title": "Nicht Gefunden"

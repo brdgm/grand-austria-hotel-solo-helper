@@ -7,7 +7,17 @@
     "feedback": "Discussion and Feedback:"
   },
   "setup": {
-    "title": "Spielaufbau"
+    "title": "Spielaufbau",
+    "difficultyLevel": {
+      "title": "Schwierigkeitsgrad",
+      "easy": "Leicht",
+      "hard": "Schwer"
+    }
+  },
+  "difficultyLevel": {
+    "1": "Level 1 - Einfach",
+    "2": "Level 2 - Mittel",
+    "3": "Level 3 - Schwer"
   },
   "notfound": {
     "title": "Nicht Gefunden"

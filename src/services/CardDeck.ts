@@ -3,9 +3,10 @@ import { CardDeckPersistence } from '@/store/state'
 import { ref } from 'vue'
 import Card from './Card'
 import Cards from './Cards'
+import DeckType from './enum/DeckType'
 
 /**
- * Manages the cards.
+ * Simple card deck with auto-shuffling when depleted.
  */
 export default class CardDeck {
 
@@ -18,7 +19,7 @@ export default class CardDeck {
   }
 
   public get currentCard() : Card|undefined {
-    return this._discard.value[0] as Card|undefined
+    return this._discard.value[0]
   }
 
   public get pile() : readonly Card[] {
@@ -68,8 +69,8 @@ export default class CardDeck {
   /**
    * Creates a shuffled new card deck.
    */
-  public static new() : CardDeck {
-    const cards = shuffle(Cards.getAll())
+  public static new(deckType: DeckType) : CardDeck {
+    const cards = shuffle(Cards.getAll(deckType))
     return new CardDeck(cards, [])
   }
 

@@ -1,0 +1,37 @@
+{
+  "gameTitle": "Grand Austria Hotel",
+  "home": {
+    "title": "Grand Austria Hotel Solo Helper",
+    "play1": "Spiele <a href='https://boardgamegeek.com/boardgame/182874/grand-austria-hotel' target='_blank' rel='noopener'><b>Grand Austria Hotel</b></a> alleine gegen Leopold und Elisabeth.",
+    "play2": "Diese Applikation implementiert den offiziellen Solo-Modus von Grand Austria Hotel: Alles Walzer! Sie ersetzt das Solo-Kartendeck. Du kannst mit dem Grundspiel oder mit den Modulen aus der Alles Walzer!-Erweiterung spielen.",
+    "feedback": "Discussion and Feedback:"
+  },
+  "setup": {
+    "title": "Spielaufbau"
+  },
+  "notfound": {
+    "title": "Nicht Gefunden"
+  },
+  "action": {
+    "playGame": "Spielen",
+    "startGame": "Spiel starten",
+    "next": "Weiter",
+    "nextRound": "Nächste Runde",
+    "abortGame": "Spiel abbrechen",
+    "abortGameConfirm": "Das aktuelle Spiel wird abgebrochen - bist du sicher?",
+    "endGame": "Spiel beenden",
+    "endGameConfirm": "Dieses Spiel wird beendet - bist du sicher?",
+    "cancel": "Abbrechen",
+    "backToHome": "Zurück zum Anfang",
+    "back": "Zurück",
+    "close": "Schließen",
+    "ok": "OK"
+  },
+  "footer": {
+    "credits": "Credits"
+  },
+  "serviceWorkerUpdatedRefresh": {
+    "title": "Applikation neu laden",
+    "notice": "Die Applikation wurde aktualisiert - möchtest du die Seite neu laden um die neueste Version zu nutzen?"
+  }
+}

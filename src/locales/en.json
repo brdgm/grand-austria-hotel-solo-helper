@@ -1,0 +1,37 @@
+{
+  "gameTitle": "Grand Austria Hotel",
+  "home": {
+    "title": "Grand Austria Hotel Solo Helper",
+    "play1": "Play <a href='https://boardgamegeek.com/boardgame/182874/grand-austria-hotel' target='_blank' rel='noopener'><b>Grand Austria Hotel</b></a> solo against Leopold and Elisabeth.",
+    "play2": "This application implements the official solo mode of Grand Austria Hotel: Let's Waltz. It replaces the solo card deck. You can play with the base game, or with the modules from the Let's Waltz expansion.",
+    "feedback": "Discussion and Feedback:"
+  },
+  "setup": {
+    "title": "Setup Game"
+  },
+  "notfound": {
+    "title": "Not Found"
+  },
+  "action": {
+    "playGame": "Play Game",
+    "startGame": "Start Game",
+    "next": "Next",
+    "nextRound": "Next Round",
+    "abortGame": "Abort Game",
+    "abortGameConfirm": "Aborting the running game - are you sure?",
+    "endGame": "End Game",
+    "endGameConfirm": "End this game and return to home screen - are you sure?",
+    "cancel": "Cancel",
+    "backToHome": "Back to Home",
+    "back": "Back",
+    "close": "Close",
+    "ok": "OK"
+  },
+  "footer": {
+    "credits": "Credits"
+  },
+  "serviceWorkerUpdatedRefresh": {
+    "title": "Refresh Application",
+    "notice": "The application was updated - do you want to refresh to use the latest version?"
+  }
+}

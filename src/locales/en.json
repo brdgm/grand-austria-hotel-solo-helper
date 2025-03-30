@@ -15,7 +15,7 @@
     },
     "expansions": {
       "title": "Expansions",
-      "botUniqueHotel": "Unique Hotel for {deckType}:",
+      "botUniqueHotel": "Unique Hotel for {opponentName}:",
       "botUniqueHotelRandom": "(random)",
       "lets-waltz-module-1-vienna-ballrooms": "Let's Waltz! - Module 1: Vienna Ballrooms",
       "lets-waltz-module-2-celebrities": "Let's Waltz! - Module 2: Celebrities",
@@ -24,29 +24,67 @@
     }
   },
   "setupBot": {
-    "title": "Setup {deckType}"
+    "title": "Setup {opponentName}",
+    "setup2Players": "Set up the game for 2 players, as described in the base game rules, applying the following changes to your <b>opponent’s</b> and, if mentioned, to your <b>personal display</b>:",
+    "turnOrderTile": "Your opponent gets the “1/4” turn order tile, i.e., he always takes the first turn. <i>(Conversely, you get the “2/3” turn order tile at the start.)</i>",
+    "hotelBoardSide": "Your opponent always uses the <b>night side</b> of a random hotel board. You can turn your hotel board to whichever side you prefer.",
+    "moneyTrack": "Your opponent does <b>not need</b> a money track nor money marker. In fact, he <b>never</b> has any money.",
+    "itemsKitchen": "Your opponent <b>does not</b> start with any items in the kitchen. In fact, he never gets any items into the kitchen.",
+    "botStaffCards": "<b>Before</b> drawing your initial hand of <b>staff cards</b> <i>(see next step)</i>, look through the deck and retrieve all cards with the ⇥ symbol. Shuffle these cards, draw 5 cards without looking at them, and place them in a facedown stack beside your opponent’s hotel board, as the <b>private deck</b>. Shuffle the remaining ⇥ cards back into the common deck. Your opponent <b>does not</b> draw any staff cards, nor does he reveal any cards in his private deck at this point.",
+    "playerStaffCards": "Draw <b>10 staff cards</b> from the common deck and select 6 of them for your initial hand. Return the other 4 to the bottom of the common deck, in any order.",
+    "initialGuestRooms": "Your opponent <b>does not</b> draw an initial guest and he <b>does not</b> prepare three rooms at the start <i>(only you do these things)</i>.",
+    "viennaBallrooms": {
+      "title": "Vienna Ballrooms",
+      "rehearsalRoomBoardPlayer": "Take a random rehearsal room board for yourself. (You do not get to choose one.)",
+      "rehearsalRoomBoardBot": "Your opponent <b>does not</b> get a rehearsal room board, but he does get his <b>10 dancers</b>, which she places beside his hotel board.",
+      "noChampagne": "Your opponent <b>does not</b> get any champagne."
+    },
+    "uniqueHotels": {
+      "title": "Unique Hotels",
+      "hotelEntranceBot": "Setup the hotel entrance of your opponent - <b>{hotelEntrance}</b>:",
+      "hotelEntrancePlayer": "Draw <b>three regular hotel entrance tiles</b> and choose one of them for yourself.",
+      "startingMoneyPlayer": "You start the game with <b>7 krones</b>. Adjust the marker on your money track accordingly."
+    }
   },
   "difficultyLevel": {
     "1": "Level 1 - Easy",
     "2": "Level 2 - Medium",
     "3": "Level 3 - Hard"
   },
-  "deckType": {
+  "opponentName": {
     "leopold": "Leopold",
     "elisabeth": "Elisabeth"
   },
   "botUniqueHotel": {
     "hautel-couture": {
-      "title": "Hautel Couture"
+      "title": "Hautel Couture",
+      "setup": {
+        "drawGuests": "Before placing guests in the queue <i>(step 1d of setup, as described in the revised base game rule book)</i>, shuffle the guest cards and draw cards from the top of the deck until you reveal <b>three guests showing 5, 6, or 7 victory points</b>, which—if also playing with module 1—do not require any champagne. Place these guests in <b>your opponent’s café</b>. Then shuffle the rest and place five guests in the queue as normal.",
+        "placeVacantRooms": "Starting from the top floor and from left to right, in the order in which the guests have been revealed, place <b>three vacant</b> rooms in your opponent’s hotel matching the colors of these guests. Green guests are considered of any color, so place a vacant room on the first empty space from the left. These rooms are <b>reserved</b> for those specific guests. <i>(If the covered space shows a victory point symbol, your opponent immediately scores that many victory points.)</i>",
+        "prepareItemPool": "Take the items required to complete these guests’ orders from the supply and place them, separate from the supply, beside the action board, as the so-called <b>item pool</b>. Add items from the supply to the item pool, until there are a total of <b>18 items</b> in the pool. Take the additional items from the supply in this order: strudel, cake, wine, coffee, strudel, cake, wine, coffee, etc.",
+        "placeItems": "Finally, for each <b>action space</b> on the action board, draw a <b>random item from the item pool</b> and place it on the space."
+      }
     },
     "nine-stars-inn": {
-      "title": "Nine Stars Inn"
+      "title": "Nine Stars Inn",
+      "setup": {
+        "objectiveCard": "Place an <b>objective card</b> from those remaining <i>(no matter which one)</i> face up and sideways beside your opponent’s hotel <i>(see image below)</i>, as the so-called stars track. If Ninas Melange is among the three hotel entrances you can choose from, first draw three objective cards for Ninas Melange before placing an objective card as the stars track."
+      }
     },
     "sushi-resort": {
-      "title": "Sushi Resort"
+      "title": "Sushi Resort",
+      "setup": {
+        "placeCogwheelTokens": "Place <b>6 cogwheel</b> tokens in your opponent’s hotel as follows:",
+        "floor1": "one each on the <b>last two rooms</b> on the first floor,",
+        "floor2": "one each on the <b>first three rooms</b> on the second floor,",
+        "floor3": "and one on the <b>first</b> room on the third floor."
+      }
     },
     "toll-bridge-hotel": {
-      "title": "Toll Bridge Hotel"
+      "title": "Toll Bridge Hotel",
+      "setup": {
+        "none": "No additional steps."
+      }
     }
   },
   "notfound": {

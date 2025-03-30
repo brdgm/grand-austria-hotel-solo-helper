@@ -12,7 +12,7 @@
       </div>
       <div v-if="isAndHasUniqueHotelsExpansion(expansion)" class="ms-5 mb-3">
         <label>
-          <span class="form-label fst-italic">{{t('setup.expansions.botUniqueHotel', {deckType: t(`deckType.${deckType}`)})}}</span>
+          <span class="form-label fst-italic">{{t('setup.expansions.botUniqueHotel', {opponentName: t(`opponentName.${deckType}`)})}}</span>
           <select class="form-select" v-model="state.setup.botUniqueHotel">
             <option :value="undefined">{{t('setup.expansions.botUniqueHotelRandom')}}</option>
             <option v-for="item in botUniqueHotels" :key="item" :value="item">{{t(`botUniqueHotel.${item}.title`)}}</option>

@@ -5,7 +5,7 @@
   <ExpansionsSetup/>
 
   <button class="btn btn-primary btn-lg mt-4" @click="setupBot()" data-testid="startGameButton">
-    {{t('setupBot.title', {deckType: t(`deckType.${deckType}`)})}}
+    {{t('setupBot.title', {opponentName: t(`opponentName.${deckType}`)})}}
   </button>
 
   <FooterButtons endGameButtonType="abortGame"/>

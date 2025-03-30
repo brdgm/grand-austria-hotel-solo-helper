@@ -12,6 +12,13 @@
       "title": "Schwierigkeitsgrad",
       "easy": "Leicht",
       "hard": "Schwer"
+    },
+    "expansions": {
+      "title": "Erweiterungen",
+      "lets-waltz-module-1-vienna-ballrooms": "Alles Walzer! - Module 1: Wiener Ballsäle",
+      "lets-waltz-module-2-celebrities": "Alles Walzer! - Module 2: Prominente",
+      "lets-waltz-module-3-unique-hotels": "Alles Walzer! - Module 3: Besondere Hotels",
+      "lets-waltz-module-5-some-more": "Alles Walzer! - Module 4: Darf's a bisserl mehr sein?"
     }
   },
   "difficultyLevel": {

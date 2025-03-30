@@ -12,6 +12,13 @@
       "title": "Difficulty Level",
       "easy": "Easy",
       "hard": "Hard"
+    },
+    "expansions": {
+      "title": "Expansions",
+      "lets-waltz-module-1-vienna-ballrooms": "Let's Waltz! - Module 1: Vienna Ballrooms",
+      "lets-waltz-module-2-celebrities": "Let's Waltz! - Module 2: Celebrities",
+      "lets-waltz-module-3-unique-hotels": "Let's Waltz! - Module 3: Unique Hotels",
+      "lets-waltz-module-5-some-more": "Let's Waltz! - Module 5: Would you like some more?"
     }
   },
   "difficultyLevel": {

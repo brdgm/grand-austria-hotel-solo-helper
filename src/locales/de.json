@@ -61,7 +61,8 @@
     }
   },
   "turnPlayer": {
-    "title": "Dein Zug"
+    "title": "Dein Zug",
+    "takeYourTurn": "Führ deinen Zug aus - oder passe."
   },
   "turnBot": {
     

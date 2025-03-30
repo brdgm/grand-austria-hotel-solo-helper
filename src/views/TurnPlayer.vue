@@ -3,7 +3,9 @@
 
   <h1>{{t('turnPlayer.title')}}</h1>
 
-  <p>...</p>
+  <TurnOrderTilePair :turn="turn"/>
+
+  <p class="mt-4" v-html="t('turnPlayer.takeYourTurn')"></p>
 
   <button class="btn btn-primary btn-lg mt-4" @click="next()">
     {{t('action.next')}}
@@ -20,12 +22,14 @@ import { useRoute, useRouter } from 'vue-router'
 import { useStateStore } from '@/store/state'
 import NavigationState from '@/util/NavigationState'
 import SideBar from '@/components/round/SideBar.vue'
+import TurnOrderTilePair from '@/components/structure/TurnOrderTilePair.vue'
 
 export default defineComponent({
   name: 'TurnPlayer',
   components: {
     FooterButtons,
-    SideBar
+    SideBar,
+    TurnOrderTilePair
   },
   setup() {
     const { t } = useI18n()

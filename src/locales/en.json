@@ -61,7 +61,8 @@
     }
   },
   "turnPlayer": {
-    "title": "Your Turn"
+    "title": "Your Turn",
+    "takeYourTurn": "Take your turn - or pass."
   },
   "turnBot": {
     

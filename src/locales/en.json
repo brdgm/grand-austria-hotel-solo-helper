@@ -46,6 +46,21 @@
       "startingMoneyPlayer": "You start the game with <b>7 krones</b>. Adjust the marker on your money track accordingly."
     }
   },
+  "roundStart": {
+    "title": "Round {round} Start"
+  },
+  "roundEnd": {
+    "title": "Round {round} End"
+  },
+  "turnPlayer": {
+    "title": "Your Turn"
+  },
+  "turnBot": {
+    
+  },
+  "endOfGame": {
+    "title": "End of Game"
+  },
   "difficultyLevel": {
     "1": "Level 1 - Easy",
     "2": "Level 2 - Medium",
@@ -86,6 +101,10 @@
         "none": "No additional steps."
       }
     }
+  },
+  "sideBar": {
+    "round": "Round {round}",
+    "turn": "Turn {turn}"
   },
   "notfound": {
     "title": "Not Found"

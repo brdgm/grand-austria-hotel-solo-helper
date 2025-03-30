@@ -20,6 +20,7 @@ export const useStateStore = defineStore(`${name}.state`, {
   actions: {
     resetGame() {
       this.rounds = []
+      this.setup.initialCardDeck = undefined
       this.setup.botUniqueHotel = undefined
     },
     setupToggleExpansion(expansion: Expansion) : void {
@@ -48,6 +49,7 @@ export interface Setup {
   difficultyLevel: DifficultyLevel
   expansions: Expansion[]
   botUniqueHotel?: BotUniqueHotel
+  initialCardDeck?: CardDeckPersistence
   debugMode?: boolean
 }
 export interface Round {

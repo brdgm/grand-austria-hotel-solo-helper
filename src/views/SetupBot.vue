@@ -77,6 +77,7 @@ import { useRouter } from 'vue-router'
 import DeckType from '@/services/enum/DeckType'
 import getMatchingDeckType from '@/util/getMatchingDeckType'
 import BotUniqueHotel from '@/services/enum/BotUniqueHotel'
+import CardDeck from '@/services/CardDeck'
 
 export default defineComponent({
   name: 'SetupBot',
@@ -122,8 +123,8 @@ export default defineComponent({
   },
   methods: {
     startGame() : void {
-      this.state.resetGame()
-      this.router.push('/round/1/turn/1')
+      this.state.setup.initialCardDeck = CardDeck.new(this.deckType).toPersistence()
+      this.router.push('/round/1/start')
     }
   }
 })

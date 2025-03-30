@@ -19,7 +19,7 @@
   </p>
 -->
 
-  <router-link to="/setupGame" class="btn btn-primary btn-lg mt-3">{{t('action.playGame')}}</router-link>
+  <button class="btn btn-primary btn-lg mt-3" @click="startGame()">{{t('action.playGame')}}</button>
 
   <p class="disclaimer">
     This is not an official Lookout Games product and has no affiliation with <a href="https://www.lookout-spiele.de/" target="_blank" rel="noopener">Lookout Games</a>.
@@ -31,14 +31,24 @@
 </template>
 
 <script lang="ts">
+import { useStateStore } from '@/store/state'
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useRouter } from 'vue-router'
 
 export default defineComponent({
   name: 'AppHome',
   setup() {
     const { t } = useI18n()
-    return { t }
+    const router = useRouter()
+    const state = useStateStore()
+    return { t, router, state }
+  },
+  methods: {
+    startGame() : void {
+      this.state.resetGame()
+      this.router.push('/setupGame')
+    }
   }
 })
 </script>

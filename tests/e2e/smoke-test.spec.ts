@@ -5,9 +5,10 @@ test('smoke test', async ({ page }) => {
 
   // app home
   await expect(page.locator('h1')).toHaveText('Grand Austria Hotel Solo Helper')
-  await page.getByRole('link', { name: 'Play Game' }).click()
+  await page.getByRole('button', { name: 'Play Game' }).click()
 
   // setup game
+  await page.getByTestId('setupBotButton').click()
   await page.getByRole('button', { name: 'Start Game' }).click()
 
   // play a few rounds

@@ -4,7 +4,7 @@
   <DifficultyLevel/>
   <ExpansionsSetup/>
 
-  <button class="btn btn-primary btn-lg mt-4" @click="setupBot()" data-testid="startGameButton">
+  <button class="btn btn-primary btn-lg mt-4" @click="setupBot()" data-testid="setupBotButton">
     {{t('setupBot.title', {opponentName: t(`opponentName.${deckType}`)})}}
   </button>
 

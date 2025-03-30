@@ -47,10 +47,18 @@
     }
   },
   "roundStart": {
-    "title": "Round {round} Start"
+    "title": "Round {round} Start",
+    "rollDice": "Roll all the dice and place them on the corresponding Action spaces."
   },
   "roundEnd": {
-    "title": "Round {round} End"
+    "title": "Round {round} End",
+    "swapTurnOrderTiles": "Swap the turn order tiles.",
+    "emperorScoring": {
+      "title": "Emperor Scoring",
+      "scoreVP": "<b>You and your opponent</b> score victory points for your position on the emperor track.",
+      "resetMarkers": "Reset both markers by {steps} steps.",
+      "gainBonusPenalty": "<b>Only you</b> get the reward or suffer the penalty from your position on the emperor track."
+    }
   },
   "turnPlayer": {
     "title": "Your Turn"
@@ -78,7 +86,8 @@
         "placeVacantRooms": "Starting from the top floor and from left to right, in the order in which the guests have been revealed, place <b>three vacant</b> rooms in your opponent’s hotel matching the colors of these guests. Green guests are considered of any color, so place a vacant room on the first empty space from the left. These rooms are <b>reserved</b> for those specific guests. <i>(If the covered space shows a victory point symbol, your opponent immediately scores that many victory points.)</i>",
         "prepareItemPool": "Take the items required to complete these guests’ orders from the supply and place them, separate from the supply, beside the action board, as the so-called <b>item pool</b>. Add items from the supply to the item pool, until there are a total of <b>18 items</b> in the pool. Take the additional items from the supply in this order: strudel, cake, wine, coffee, strudel, cake, wine, coffee, etc.",
         "placeItems": "Finally, for each <b>action space</b> on the action board, draw a <b>random item from the item pool</b> and place it on the space."
-      }
+      },
+      "roundStart": "Hautel Couture: Replenish the action spaces with random items drawn from the <b>item pool</b>."
     },
     "nine-stars-inn": {
       "title": "Nine Stars Inn",

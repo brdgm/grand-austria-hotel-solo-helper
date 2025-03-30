@@ -3,7 +3,15 @@
 
   <h1>{{t('roundEnd.title', {round})}}</h1>
 
-  <p>...</p>
+  <ul class="mt-4">
+    <li v-html="t('roundEnd.emperorScoring.title')"></li>
+    <ul>
+      <li v-html="t('roundEnd.emperorScoring.scoreVP')"></li>
+      <li v-html="t('roundEnd.emperorScoring.resetMarkers', {steps:emperorResetTrackSteps})"></li>
+      <li v-html="t('roundEnd.emperorScoring.gainBonusPenalty')"></li>
+    </ul>
+    <li v-html="t('roundEnd.swapTurnOrderTiles')"></li>
+  </ul>
 
   <button class="btn btn-primary btn-lg mt-4" @click="next()">
     {{t('action.next')}}
@@ -41,6 +49,15 @@ export default defineComponent({
   computed: {
     backButtonRouteTo() : string {
       return `/round/${this.round}/turn/4/${this.navigationState.previousPlayer}`
+    },
+    isEmperorScoring() : boolean {
+      return this.round == 3 || this.round == 5 || this.round == 7
+    },
+    emperorResetTrackSteps() : number {
+      if (this.isEmperorScoring) {
+        return this.round
+      }
+      return 0
     }
   },
   methods: {
@@ -55,3 +72,9 @@ export default defineComponent({
   }
 })
 </script>
+
+<style lang="scss" scoped>
+div > ul > li {
+  margin-top: 0.5rem;
+}
+</style>

@@ -3,7 +3,10 @@
 
   <h1>{{t('roundStart.title', {round})}}</h1>
 
-  <p>...</p>
+  <ul class="mt-4">
+    <li v-html="t('roundStart.rollDice')"></li>
+    <li v-if="isBotUniqueHotelTollBridgeHotel && round > 1" v-html="t('botUniqueHotel.hautel-couture.roundStart')"></li>
+  </ul>
 
   <button class="btn btn-primary btn-lg mt-4" @click="next()">
     {{t('action.next')}}
@@ -20,6 +23,8 @@ import { useRoute, useRouter } from 'vue-router'
 import { useStateStore } from '@/store/state'
 import NavigationState from '@/util/NavigationState'
 import SideBar from '@/components/round/SideBar.vue'
+import Expansion from '@/services/enum/Expansion'
+import BotUniqueHotel from '@/services/enum/BotUniqueHotel'
 
 export default defineComponent({
   name: 'RoundStart',
@@ -44,7 +49,11 @@ export default defineComponent({
         return `/round/${this.round - 1}/end`
       }
       return ''
-    }
+    },
+    isBotUniqueHotelTollBridgeHotel() : boolean {
+      return this.state.setup.expansions.includes(Expansion.LETS_WALTZ_MODULE_3_UNIQUE_HOTELS)
+          &&  this.state.setup.botUniqueHotel == BotUniqueHotel.HAUTEL_COUTURE
+    },
   },
   methods: {
     next() : void {
@@ -53,3 +62,9 @@ export default defineComponent({
   }
 })
 </script>
+
+<style lang="scss" scoped>
+ul > li {
+  margin-top: 0.5rem;
+}
+</style>

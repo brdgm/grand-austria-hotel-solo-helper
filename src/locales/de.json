@@ -47,10 +47,18 @@
     }
   },
   "roundStart": {
-    "title": "Beginn Runde {round}"
+    "title": "Beginn Runde {round}",
+    "rollDice": "Werfe alle Würfel und lege sie auf die entsprechenden Felder des Aktionsplans."
   },
   "roundEnd": {
-    "title": "Ende Runde {round}"
+    "title": "Ende Runde {round}",
+    "swapTurnOrderTiles": "Tausche die Reihenfolgeplättchen aus.",
+    "emperorScoring": {
+      "title": "Kaiserwertung",
+      "scoreVP": "<b>Du und dein Gegner</b> bekommt Siegpunkte für eure Positionen auf der Kaiserleiste.",
+      "resetMarkers": "Setze die Marker um {steps} Schritte zurück.",
+      "gainBonusPenalty": "Die Belohnung oder Bestrafung des Kaisers trifft <b>nuf auf dich</b> zu."
+    }
   },
   "turnPlayer": {
     "title": "Dein Zug"
@@ -78,7 +86,8 @@
         "placeVacantRooms": "Platziere dann für jeden Gast in seinem Café ein <b>passendes Zimmer</b> mit der Seite „frei“ in seinem Hotel: Gehe dabei <b>etagenweise von oben nach unten</b> vor und lege die Zimmer in der Reihenfolge, in der du die Gäste aufgedeckt hast, auf das erste passende Feld <b>von links</b>. Nimm für grüne Gäste einfach das nächste freie Feld von links, egal welcher Farbe. Die so platzierten freien Zimmer sind für genau diese drei Gäste <b>reserviert</b>. <i>(Deckst du hierbei Siegpunktsymbole ab, bekommt dein Gegner sofort diese Siegpunkte.)</i>",
         "prepareItemPool": "Nimm nun die <b>Waren</b> aus dem Vorrat, die von den Gästen im Café deines Gegners insgesamt gefordert werden, und bilde daraus einen <b>Warenpool</b>. Füge dem Warenpool weitere Waren aus dem Vorrat hinzu, um die Gesamtzahl der Waren im Pool auf 18 zu bringen. Füge die weiteren Waren in der folgenden Reihenfolge hinzu: Strudel, Torte, Wein, Kaffee, Strudel, Torte, Wein, Kaffee, etc.",
         "placeItems": "Lege schließlich auf jedes Feld des Aktionsplans <b>eine zufällige Ware aus dem Warenpool</b>."
-      }
+      },
+      "roundStart": "Hautel Couture: Fülle die Aktionsfelder, auf denen keine Ware liegt, mit je einer zufälligen Ware aus dem <b>Warenpool</b> auf."
     },
     "nine-stars-inn": {
       "title": "Gasthaus \"Zum Neunten Stern\"",

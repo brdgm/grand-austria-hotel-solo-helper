@@ -5,7 +5,8 @@
 
   <TurnOrderTilePair :turn="turn"/>
 
-  <p>...</p>
+  <BotActionsDisplay v-if="navigationState.botActions"
+      :navigationState="navigationState" :botActions="navigationState.botActions"/>
 
   <button class="btn btn-primary btn-lg mt-4 me-2" @click="next()">
     {{t('action.next')}}
@@ -26,6 +27,7 @@ import NavigationState from '@/util/NavigationState'
 import SideBar from '@/components/round/SideBar.vue'
 import TurnOrderTilePair from '@/components/structure/TurnOrderTilePair.vue'
 import DebugInfo from '@/components/round/DebugInfo.vue'
+import BotActionsDisplay from '@/components/round/BotActionsDisplay.vue'
 
 export default defineComponent({
   name: 'TurnBot',
@@ -33,6 +35,7 @@ export default defineComponent({
     FooterButtons,
     SideBar,
     TurnOrderTilePair,
+    BotActionsDisplay,
     DebugInfo
   },
   setup() {

@@ -6,6 +6,7 @@ import Player from '@/services/enum/Player'
 import DeckType from '@/services/enum/DeckType'
 import getMatchingDeckType from './getMatchingDeckType'
 import CardDeck from '@/services/CardDeck'
+import BotActions from '@/services/BotActions'
 
 export default class NavigationState {
 
@@ -17,6 +18,7 @@ export default class NavigationState {
   readonly nextPlayer : Player
   readonly previousPlayer : Player
   readonly cardDeck : CardDeck
+  readonly botActions? : BotActions
 
   constructor(route: RouteLocation, state: State) {    
     this.round = getIntRouteParam(route, 'round')
@@ -32,7 +34,8 @@ export default class NavigationState {
 
     this.cardDeck = getCardDeckFromLastTurn(state, this.round, this.turn)
     if (this.currentPlayer == Player.BOT && this.turn > 0) {
-      this.cardDeck.draw()
+      const currentCard = this.cardDeck.draw()
+      this.botActions = new BotActions(currentCard, state)
     }
   }
 

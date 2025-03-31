@@ -11,6 +11,8 @@
     {{t('action.next')}}
   </button>
 
+  <DebugInfo :navigationState="navigationState"/>
+
   <FooterButtons :backButtonRouteTo="backButtonRouteTo" endGameButtonType="abortGame"/>
 </template>
 
@@ -18,18 +20,20 @@
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
-import { useStateStore } from '@/store/state'
+import { Turn, useStateStore } from '@/store/state'
 import { useRoute, useRouter } from 'vue-router'
 import NavigationState from '@/util/NavigationState'
 import SideBar from '@/components/round/SideBar.vue'
 import TurnOrderTilePair from '@/components/structure/TurnOrderTilePair.vue'
+import DebugInfo from '@/components/round/DebugInfo.vue'
 
 export default defineComponent({
   name: 'TurnBot',
   components: {
     FooterButtons,
     SideBar,
-    TurnOrderTilePair
+    TurnOrderTilePair,
+    DebugInfo
   },
   setup() {
     const { t } = useI18n()
@@ -52,6 +56,12 @@ export default defineComponent({
   },
   methods: {
     next() : void {
+      const turn : Turn = {
+        round: this.round,
+        turn: this.turn,
+        cardDeck: this.navigationState.cardDeck.toPersistence()
+      }
+      this.state.storeTurn(turn)
       if (this.turn == 4) {
         this.router.push(`/round/${this.round}/end`)
       }

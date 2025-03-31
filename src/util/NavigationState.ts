@@ -5,17 +5,18 @@ import DifficultyLevel from '@/services/enum/DifficultyLevel'
 import Player from '@/services/enum/Player'
 import DeckType from '@/services/enum/DeckType'
 import getMatchingDeckType from './getMatchingDeckType'
+import CardDeck from '@/services/CardDeck'
 
 export default class NavigationState {
 
   readonly round : number
   readonly turn : number
-  
   readonly difficultyLevel : DifficultyLevel
   readonly deckType : DeckType
-  
+  readonly currentPlayer : Player
   readonly nextPlayer : Player
   readonly previousPlayer : Player
+  readonly cardDeck : CardDeck
 
   constructor(route: RouteLocation, state: State) {    
     this.round = getIntRouteParam(route, 'round')
@@ -24,13 +25,14 @@ export default class NavigationState {
     this.difficultyLevel = state.setup.difficultyLevel
     this.deckType = getMatchingDeckType(state.setup.expansions)
 
-    if (isEven(this.round)) {
-      this.nextPlayer = getTurnPlayer(this.turn + 1, Player.PLAYER)
-      this.previousPlayer = getTurnPlayer(this.turn - 1, Player.PLAYER)
-    }
-    else {
-      this.nextPlayer = getTurnPlayer(this.turn + 1, Player.BOT)
-      this.previousPlayer = getTurnPlayer(this.turn - 1, Player.BOT)
+    const startPlayer = isEven(this.round) ? Player.PLAYER : Player.BOT
+    this.currentPlayer = getTurnPlayer(this.turn, startPlayer)
+    this.nextPlayer = getTurnPlayer(this.turn + 1, startPlayer)
+    this.previousPlayer = getTurnPlayer(this.turn - 1, startPlayer)
+
+    this.cardDeck = getCardDeckFromLastTurn(state, this.round, this.turn)
+    if (this.currentPlayer == Player.BOT && this.turn > 0) {
+      this.cardDeck.draw()
     }
   }
 
@@ -50,4 +52,23 @@ function getTurnPlayer(turn: number, startPlayer: Player) : Player {
   else {
     return Player.PLAYER
   }
+}
+
+function getCardDeckFromLastTurn(state: State, round: number, turn: number) : CardDeck {
+  const roundData = state.rounds.find(item => item.round == round)
+  if (roundData) {
+    const descendingLastTurns = roundData.turns.filter(item => item.turn < turn).toSorted((item1,item2) => item2.turn - item1.turn)
+    const lastTurn = descendingLastTurns[0]
+    if (lastTurn) {
+      return CardDeck.fromPersistence(lastTurn.cardDeck)
+    }
+  }
+  if (round > 1) {
+    return getCardDeckFromLastTurn(state, round - 1, 999)
+  }
+  if (state.setup.initialCardDeck) {
+    return CardDeck.fromPersistence(state.setup.initialCardDeck)
+  }
+  // should never happen
+  return CardDeck.new(getMatchingDeckType(state.setup.expansions))
 }

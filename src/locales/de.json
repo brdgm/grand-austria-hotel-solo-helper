@@ -88,7 +88,7 @@
         "prepareItemPool": "Nimm nun die <b>Waren</b> aus dem Vorrat, die von den Gästen im Café deines Gegners insgesamt gefordert werden, und bilde daraus einen <b>Warenpool</b>. Füge dem Warenpool weitere Waren aus dem Vorrat hinzu, um die Gesamtzahl der Waren im Pool auf 18 zu bringen. Füge die weiteren Waren in der folgenden Reihenfolge hinzu: Strudel, Torte, Wein, Kaffee, Strudel, Torte, Wein, Kaffee, etc.",
         "placeItems": "Lege schließlich auf jedes Feld des Aktionsplans <b>eine zufällige Ware aus dem Warenpool</b>."
       },
-      "roundStart": "Hautel Couture: Fülle die Aktionsfelder, auf denen keine Ware liegt, mit je einer zufälligen Ware aus dem <b>Warenpool</b> auf."
+      "roundStart": "Fülle die Aktionsfelder, auf denen keine Ware liegt, mit je einer zufälligen Ware aus dem <b>Warenpool</b> auf."
     },
     "nine-stars-inn": {
       "title": "Gasthaus \"Zum Neunten Stern\"",

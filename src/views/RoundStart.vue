@@ -5,7 +5,10 @@
 
   <ul class="mt-4">
     <li v-html="t('roundStart.rollDice')"></li>
-    <li v-if="isBotUniqueHotelTollBridgeHotel && round > 1" v-html="t('botUniqueHotel.hautel-couture.roundStart')"></li>
+    <li v-if="isBotUniqueHotelTollBridgeHotel && round > 1">
+      <span class="fst-italic" v-html="t('botUniqueHotel.hautel-couture.title')"></span>:
+      <span v-html="t('botUniqueHotel.hautel-couture.roundStart')"></span>
+    </li>
   </ul>
 
   <button class="btn btn-primary btn-lg mt-4" @click="next()">

@@ -88,7 +88,7 @@
         "prepareItemPool": "Take the items required to complete these guests’ orders from the supply and place them, separate from the supply, beside the action board, as the so-called <b>item pool</b>. Add items from the supply to the item pool, until there are a total of <b>18 items</b> in the pool. Take the additional items from the supply in this order: strudel, cake, wine, coffee, strudel, cake, wine, coffee, etc.",
         "placeItems": "Finally, for each <b>action space</b> on the action board, draw a <b>random item from the item pool</b> and place it on the space."
       },
-      "roundStart": "Hautel Couture: Replenish the action spaces with random items drawn from the <b>item pool</b>."
+      "roundStart": "Replenish the action spaces with random items drawn from the <b>item pool</b>."
     },
     "nine-stars-inn": {
       "title": "Nine Stars Inn",

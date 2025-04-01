@@ -105,6 +105,16 @@
         "twoDice": "If the instruction card depicts <b>two dice</b>, he chooses the die that has <b>more dice</b> (as compared to the other die) on the action board.",
         "anyDie": "If the depicted die has a <b>question mark</b>, or there are no dice with the depicted values, he chooses the die that has <b>the most dice</b> on the action board.",
         "tieBreaker": "Resolve any ties according to the hand symbol."
+      },
+      "emperorTrack": {
+        "title": "Emperor Track",
+        "advance": "Advance your opponent’s marker on the Emperor track by the indicated number of spaces.",
+        "scoreVP": "He scores victory points as normal if his marker were to exceed the track."
+      },
+      "staffCard": {
+        "title": "Staff Card",
+        "drawCard": "Draw the top staff card from your opponent’s personal deck and place it face up beside it.",
+        "finalScoring": "During final scoring, he will score points according to all of his face-up staff cards."
       }
     }
   },

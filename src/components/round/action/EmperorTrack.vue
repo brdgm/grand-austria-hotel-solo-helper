@@ -1,13 +1,14 @@
 <template>
-  <ActionBox :instructionTitle="t('rules.action.gainVp.title')">
+  <ActionBox :instructionTitle="t('rules.action.emperorTrack.title')">
     <template #action>
       <div class="action">
+        <div class="steps">+{{additionalAction.emperorTrackSteps}}</div>
         <AppIcon type="action" name="emperor-track" class="icon"/>
-        <div class="value">{{additionalAction.emperorTrackSteps}}</div>
       </div>
     </template>
     <template #instruction>
-      <p v-html="t('rules.action.gainVp.instruction')"></p>
+      <p v-html="t('rules.action.emperorTrack.advance')"></p>
+      <p v-html="t('rules.action.emperorTrack.scoreVP')"></p>
     </template>
   </ActionBox>
 </template>
@@ -45,6 +46,13 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .action {
+  display: flex;
+  gap: 0.25rem;
+  .steps {
+    font-size: 30px;
+    letter-spacing: -0.2rem;
+    padding-top: 0.2rem;
+  }
   .icon {
     height: 3.5rem;
   }

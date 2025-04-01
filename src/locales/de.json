@@ -77,7 +77,7 @@
       "guestSelection": {
         "title": "Guest Selection",
         "select": {
-          "title": "Selecting Guest",
+          "title": "Gast wählen",
           "takeGuest": "Dein Gegner wählt einen Gast in der <b>passenden Farbe</b> aus der Reihe. Er braucht für den Gast nichts zu bezahlen.",
           "multipleGuests": "Liegt von der gewünschten Farbe <b>mehr als ein Gast</B> in der Reihe, nimmt er von ihnen immer den mit den meisten Siegpunkten.",
           "noSuchGuest": "Liegt von der gewünschten Farbe <b>kein Gast</b> in der Reihe oder <b>zeigt das Symbol keine Farbe</b> an, nimmt er sich von den vorhandenen den Gast mit den meisten Siegpunkten.",
@@ -86,7 +86,7 @@
           "noGuest": "Nur im äußerst seltenen Fall, dass sich nur noch Gäste in der Reihe befinden, die er nicht unterbringen kann <i>(weil in seinem Hotel alle Zimmer dieser Farben bereits bezogen sind)</i>, erhält er keinen Gast."
         },
         "accommodate": {
-          "title": "Accommodating Guest",
+          "title": "Gast unterbringen",
           "takeGuest": "Die Gäste deines Gegners kommen nicht in sein Café. Stattdessen bekommt er sofort die auf der Gästekarte aufgedruckten <b>Siegpunkte</b> und <b>bezieht</b> sofort ein passendes Zimmer in seinem Hotel. Dabei gilt:",
           "allRoomsPrepared": "In seinem Hotel gelten <b>alle Zimmer als vorbereitet</b>. Er legt Zimmerplättchen somit <b>immer mit der Seite „bezogen“</b> in sein Hotel, niemals mit der Seite „frei“.",
           "noAdjacencyRule": "Er <b>braucht seine Zimmer nicht angrenzend zueinander zu legen</b>. Sein erstes Zimmer muss auch nicht das Zimmer links unten sein. Stattdessen gilt:",
@@ -105,6 +105,16 @@
         "twoDice": "Sind <b>zwei Würfel</b> abgebildet, wählt er von diesen zwei Würfeln denjenigen, von dem <b>mehr Würfel</b> auf dem Aktionsplan liegen.",
         "anyDie": "Weist der abgebildete Würfel ein <b>Fragezeichen</b> auf oder gibt es keinen der abgebildeten Würfel mehr, nimmt sich Leopold den Würfel, von dem <b>am meisten</b> auf dem Aktionsplan liegen.",
         "tieBreaker": "Bei Gleichstand entscheidet das Handsymbol."
+      },
+      "emperorTrack": {
+        "title": "Kaiserleiste",
+        "advance": "Rücke den Marker deines Gegners auf der Kaiserleiste um die angegebene Anzahl von Schritten vor.",
+        "scoreVP": "Soll sein Marker dabei über das Ende der Leiste hinwegziehen, bekommt er wie gewohnt Siegpunkte."
+      },
+      "staffCard": {
+        "title": "Personalkarte",
+        "drawCard": "Ziehe die oberste Karte vom privaten Stapel deines Gegners und lege sie offen daneben.",
+        "finalScoring": "Bei der Wertung bekommt er für seine offenen Personalkarten Siegpunkte."
       }
     }
   },

@@ -1,12 +1,13 @@
 <template>
-  <ActionBox :instructionTitle="t('rules.action.gainVp.title')">
+  <ActionBox :instructionTitle="t('rules.action.staffCard.title')">
     <template #action>
       <div class="action">
         <AppIcon type="action" name="staff-card" class="icon"/>
       </div>
     </template>
     <template #instruction>
-      <p v-html="t('rules.action.gainVp.instruction')"></p>
+      <p v-html="t('rules.action.staffCard.drawCard')"></p>
+      <p v-html="t('rules.action.staffCard.finalScoring')"></p>
     </template>
   </ActionBox>
 </template>
@@ -45,7 +46,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 .action {
   .icon {
-    height: 3.5rem;
+    height: 4.5rem;
   }
 }
 </style>

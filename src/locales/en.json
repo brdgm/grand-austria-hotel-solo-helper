@@ -116,6 +116,39 @@
         "drawCard": "Draw the top staff card from your opponent’s personal deck and place it face up beside it.",
         "finalScoring": "During final scoring, he will score points according to all of his face-up staff cards."
       }
+    },
+    "botUniqueHotel": {
+      "hautel-couture": {
+        "title": "Hautel Couture",
+        "setup": {
+          "drawGuests": "Before placing guests in the queue <i>(step 1d of setup, as described in the revised base game rule book)</i>, shuffle the guest cards and draw cards from the top of the deck until you reveal <b>three guests showing 5, 6, or 7 victory points</b>, which—if also playing with module 1—do not require any champagne. Place these guests in <b>your opponent’s café</b>. Then shuffle the rest and place five guests in the queue as normal.",
+          "placeVacantRooms": "Starting from the top floor and from left to right, in the order in which the guests have been revealed, place <b>three vacant</b> rooms in your opponent’s hotel matching the colors of these guests. Green guests are considered of any color, so place a vacant room on the first empty space from the left. These rooms are <b>reserved</b> for those specific guests. <i>(If the covered space shows a victory point symbol, your opponent immediately scores that many victory points.)</i>",
+          "prepareItemPool": "Take the items required to complete these guests’ orders from the supply and place them, separate from the supply, beside the action board, as the so-called <b>item pool</b>. Add items from the supply to the item pool, until there are a total of <b>18 items</b> in the pool. Take the additional items from the supply in this order: strudel, cake, wine, coffee, strudel, cake, wine, coffee, etc.",
+          "placeItems": "Finally, for each <b>action space</b> on the action board, draw a <b>random item from the item pool</b> and place it on the space."
+        },
+        "roundStart": "Replenish the action spaces with random items drawn from the <b>item pool</b>."
+      },
+      "nine-stars-inn": {
+        "title": "Nine Stars Inn",
+        "setup": {
+          "objectiveCard": "Place an <b>objective card</b> from those remaining <i>(no matter which one)</i> face up and sideways beside your opponent’s hotel <i>(see image below)</i>, as the so-called stars track. If Ninas Melange is among the three hotel entrances you can choose from, first draw three objective cards for Ninas Melange before placing an objective card as the stars track."
+        }
+      },
+      "sushi-resort": {
+        "title": "Sushi Resort",
+        "setup": {
+          "placeCogwheelTokens": "Place <b>6 cogwheel</b> tokens in your opponent’s hotel as follows:",
+          "floor1": "one each on the <b>last two rooms</b> on the first floor,",
+          "floor2": "one each on the <b>first three rooms</b> on the second floor,",
+          "floor3": "and one on the <b>first</b> room on the third floor."
+        }
+      },
+      "toll-bridge-hotel": {
+        "title": "Toll Bridge Hotel",
+        "setup": {
+          "none": "No additional steps."
+        }
+      }
     }
   },
   "difficultyLevel": {
@@ -126,39 +159,6 @@
   "opponentName": {
     "leopold": "Leopold",
     "elisabeth": "Elisabeth"
-  },
-  "botUniqueHotel": {
-    "hautel-couture": {
-      "title": "Hautel Couture",
-      "setup": {
-        "drawGuests": "Before placing guests in the queue <i>(step 1d of setup, as described in the revised base game rule book)</i>, shuffle the guest cards and draw cards from the top of the deck until you reveal <b>three guests showing 5, 6, or 7 victory points</b>, which—if also playing with module 1—do not require any champagne. Place these guests in <b>your opponent’s café</b>. Then shuffle the rest and place five guests in the queue as normal.",
-        "placeVacantRooms": "Starting from the top floor and from left to right, in the order in which the guests have been revealed, place <b>three vacant</b> rooms in your opponent’s hotel matching the colors of these guests. Green guests are considered of any color, so place a vacant room on the first empty space from the left. These rooms are <b>reserved</b> for those specific guests. <i>(If the covered space shows a victory point symbol, your opponent immediately scores that many victory points.)</i>",
-        "prepareItemPool": "Take the items required to complete these guests’ orders from the supply and place them, separate from the supply, beside the action board, as the so-called <b>item pool</b>. Add items from the supply to the item pool, until there are a total of <b>18 items</b> in the pool. Take the additional items from the supply in this order: strudel, cake, wine, coffee, strudel, cake, wine, coffee, etc.",
-        "placeItems": "Finally, for each <b>action space</b> on the action board, draw a <b>random item from the item pool</b> and place it on the space."
-      },
-      "roundStart": "Replenish the action spaces with random items drawn from the <b>item pool</b>."
-    },
-    "nine-stars-inn": {
-      "title": "Nine Stars Inn",
-      "setup": {
-        "objectiveCard": "Place an <b>objective card</b> from those remaining <i>(no matter which one)</i> face up and sideways beside your opponent’s hotel <i>(see image below)</i>, as the so-called stars track. If Ninas Melange is among the three hotel entrances you can choose from, first draw three objective cards for Ninas Melange before placing an objective card as the stars track."
-      }
-    },
-    "sushi-resort": {
-      "title": "Sushi Resort",
-      "setup": {
-        "placeCogwheelTokens": "Place <b>6 cogwheel</b> tokens in your opponent’s hotel as follows:",
-        "floor1": "one each on the <b>last two rooms</b> on the first floor,",
-        "floor2": "one each on the <b>first three rooms</b> on the second floor,",
-        "floor3": "and one on the <b>first</b> room on the third floor."
-      }
-    },
-    "toll-bridge-hotel": {
-      "title": "Toll Bridge Hotel",
-      "setup": {
-        "none": "No additional steps."
-      }
-    }
   },
   "sideBar": {
     "round": "Round {round}",

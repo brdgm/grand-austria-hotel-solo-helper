@@ -23,35 +23,35 @@
     <template v-if="hasUniqueHotels">
       <h4>{{t('setupBot.uniqueHotels.title')}}</h4>
       <ol>
-        <li v-html="t('setupBot.uniqueHotels.hotelEntranceBot', {hotelEntrance:t(`botUniqueHotel.${state.setup.botUniqueHotel}.title`)})"></li>
+        <li v-html="t('setupBot.uniqueHotels.hotelEntranceBot', {hotelEntrance:t(`rules.botUniqueHotel.${state.setup.botUniqueHotel}.title`)})"></li>
         <template v-if="isBotUniqueHotelHautelCouture">
           <ol type="a">
-            <li v-html="t('botUniqueHotel.hautel-couture.setup.drawGuests')"></li>
-            <li v-html="t('botUniqueHotel.hautel-couture.setup.placeVacantRooms')"></li>
-            <li v-html="t('botUniqueHotel.hautel-couture.setup.prepareItemPool')"></li>
-            <li v-html="t('botUniqueHotel.hautel-couture.setup.placeItems')"></li>
+            <li v-html="t('rules.botUniqueHotel.hautel-couture.setup.drawGuests')"></li>
+            <li v-html="t('rules.botUniqueHotel.hautel-couture.setup.placeVacantRooms')"></li>
+            <li v-html="t('rules.botUniqueHotel.hautel-couture.setup.prepareItemPool')"></li>
+            <li v-html="t('rules.botUniqueHotel.hautel-couture.setup.placeItems')"></li>
           </ol>
         </template>
         <template v-if="isBotUniqueHotelNineStarsInn">
           <ul>
-            <li v-html="t('botUniqueHotel.nine-stars-inn.setup.objectiveCard')"></li>
+            <li v-html="t('rules.botUniqueHotel.nine-stars-inn.setup.objectiveCard')"></li>
           </ul>
           <img src="@/assets/bot-unique-hotel/nine-stars-inn-setup.webp" alt="" class="setupImage"/>
         </template>
         <template v-if="isBotUniqueHotelSushiResort">
           <ul>
-            <li v-html="t('botUniqueHotel.sushi-resort.setup.placeCogwheelTokens')"></li>
+            <li v-html="t('rules.botUniqueHotel.sushi-resort.setup.placeCogwheelTokens')"></li>
             <ul>
-              <li v-html="t('botUniqueHotel.sushi-resort.setup.floor1')"></li>
-              <li v-html="t('botUniqueHotel.sushi-resort.setup.floor2')"></li>
-              <li v-html="t('botUniqueHotel.sushi-resort.setup.floor3')"></li>
+              <li v-html="t('rules.botUniqueHotel.sushi-resort.setup.floor1')"></li>
+              <li v-html="t('rules.botUniqueHotel.sushi-resort.setup.floor2')"></li>
+              <li v-html="t('rules.botUniqueHotel.sushi-resort.setup.floor3')"></li>
             </ul>
           </ul>
           <img src="@/assets/bot-unique-hotel/sushi-resort-setup.webp" alt="" class="setupImage"/>
         </template>
         <template v-if="isBotUniqueHotelTollBridgeHotel">
           <ul>
-            <li v-html="t('botUniqueHotel.toll-bridge-hotel.setup.none')"></li>
+            <li v-html="t('rules.botUniqueHotel.toll-bridge-hotel.setup.none')"></li>
           </ul>
         </template>
         <li v-html="t('setupBot.uniqueHotels.hotelEntrancePlayer')"></li>

@@ -116,7 +116,40 @@
         "drawCard": "Ziehe die oberste Karte vom privaten Stapel deines Gegners und lege sie offen daneben.",
         "finalScoring": "Bei der Wertung bekommt er für seine offenen Personalkarten Siegpunkte."
       }
-    }
+    },
+    "botUniqueHotel": {
+      "hautel-couture": {
+        "title": "Hautel Couture",
+        "setup": {
+          "drawGuests": "Führe diesen Schritt durch, bevor du Gäste auf den Spielplan legst <i>(Schritt 1d der Spielvorbereitung, wie sie in der überarbeiteten Anleitung beschrieben wird)</i>. Mische die Gästekarten und decke so lange Karten vom Stapel auf, bis du <b>drei Gäste mit 5, 6 oder 7 Siegpunkten</b> aufgedeckt hast, die – sofern du auch mit Modul 1 spielst – keinen Champagner verlangen. Lege diese drei Gäste in das <b>Café deines Gegners</b>. Mische dann die anderen aufgedeckten Gäste zurück in den Stapel und lege wie gewohnt fünf Gäste in die Reihe.",
+          "placeVacantRooms": "Platziere dann für jeden Gast in seinem Café ein <b>passendes Zimmer</b> mit der Seite „frei“ in seinem Hotel: Gehe dabei <b>etagenweise von oben nach unten</b> vor und lege die Zimmer in der Reihenfolge, in der du die Gäste aufgedeckt hast, auf das erste passende Feld <b>von links</b>. Nimm für grüne Gäste einfach das nächste freie Feld von links, egal welcher Farbe. Die so platzierten freien Zimmer sind für genau diese drei Gäste <b>reserviert</b>. <i>(Deckst du hierbei Siegpunktsymbole ab, bekommt dein Gegner sofort diese Siegpunkte.)</i>",
+          "prepareItemPool": "Nimm nun die <b>Waren</b> aus dem Vorrat, die von den Gästen im Café deines Gegners insgesamt gefordert werden, und bilde daraus einen <b>Warenpool</b>. Füge dem Warenpool weitere Waren aus dem Vorrat hinzu, um die Gesamtzahl der Waren im Pool auf 18 zu bringen. Füge die weiteren Waren in der folgenden Reihenfolge hinzu: Strudel, Torte, Wein, Kaffee, Strudel, Torte, Wein, Kaffee, etc.",
+          "placeItems": "Lege schließlich auf jedes Feld des Aktionsplans <b>eine zufällige Ware aus dem Warenpool</b>."
+        },
+        "roundStart": "Fülle die Aktionsfelder, auf denen keine Ware liegt, mit je einer zufälligen Ware aus dem <b>Warenpool</b> auf."
+      },
+      "nine-stars-inn": {
+        "title": "Gasthaus \"Zum Neunten Stern\"",
+        "setup": {
+          "objectiveCard": "Lege irgendeine von den übriggebliebenen Politikkarten (egal welche) offen und <b>quer</b> neben das Hotel deines Gegners <i>(siehe Abbildung unten)</i>. Diese Karte stellt die so genannte <b>Sterneleiste</b> dar. Ist Ninas Melange unter den drei Hoteleingängen, von denen du dir einen aussuchen darfst, werden die drei Politikkarten für Ninas Melange zuerst gezogen, bevor eine Karte zur Sterneleiste wird."
+        }
+      },
+      "sushi-resort": {
+        "title": "Sushi Resort",
+        "setup": {
+          "placeCogwheelTokens": "Lege wie folgt <b>6 Zahnräder</b> im Hotel deines Gegners:",
+          "floor1": "je eines auf die <b>letzten beiden Zimmer</b> in der ersten Etage,",
+          "floor2": "je eines auf die <b>ersten drei Zimmer</b> in der zweiten Etage sowie",
+          "floor3": "eins auf das <b>erste Zimmer</b> in der dritten Etage."
+        }
+      },
+      "toll-bridge-hotel": {
+        "title": "Hotel \"An der Mautbrücke\"",
+        "setup": {
+          "none": "Keine zusätzlichen Schritte."
+        }
+      }
+    }    
   },
   "difficultyLevel": {
     "1": "Level 1 - Einfach",
@@ -126,39 +159,6 @@
   "opponentName": {
     "leopold": "Leopold",
     "elisabeth": "Elisabeth"
-  },
-  "botUniqueHotel": {
-    "hautel-couture": {
-      "title": "Hautel Couture",
-      "setup": {
-        "drawGuests": "Führe diesen Schritt durch, bevor du Gäste auf den Spielplan legst <i>(Schritt 1d der Spielvorbereitung, wie sie in der überarbeiteten Anleitung beschrieben wird)</i>. Mische die Gästekarten und decke so lange Karten vom Stapel auf, bis du <b>drei Gäste mit 5, 6 oder 7 Siegpunkten</b> aufgedeckt hast, die – sofern du auch mit Modul 1 spielst – keinen Champagner verlangen. Lege diese drei Gäste in das <b>Café deines Gegners</b>. Mische dann die anderen aufgedeckten Gäste zurück in den Stapel und lege wie gewohnt fünf Gäste in die Reihe.",
-        "placeVacantRooms": "Platziere dann für jeden Gast in seinem Café ein <b>passendes Zimmer</b> mit der Seite „frei“ in seinem Hotel: Gehe dabei <b>etagenweise von oben nach unten</b> vor und lege die Zimmer in der Reihenfolge, in der du die Gäste aufgedeckt hast, auf das erste passende Feld <b>von links</b>. Nimm für grüne Gäste einfach das nächste freie Feld von links, egal welcher Farbe. Die so platzierten freien Zimmer sind für genau diese drei Gäste <b>reserviert</b>. <i>(Deckst du hierbei Siegpunktsymbole ab, bekommt dein Gegner sofort diese Siegpunkte.)</i>",
-        "prepareItemPool": "Nimm nun die <b>Waren</b> aus dem Vorrat, die von den Gästen im Café deines Gegners insgesamt gefordert werden, und bilde daraus einen <b>Warenpool</b>. Füge dem Warenpool weitere Waren aus dem Vorrat hinzu, um die Gesamtzahl der Waren im Pool auf 18 zu bringen. Füge die weiteren Waren in der folgenden Reihenfolge hinzu: Strudel, Torte, Wein, Kaffee, Strudel, Torte, Wein, Kaffee, etc.",
-        "placeItems": "Lege schließlich auf jedes Feld des Aktionsplans <b>eine zufällige Ware aus dem Warenpool</b>."
-      },
-      "roundStart": "Fülle die Aktionsfelder, auf denen keine Ware liegt, mit je einer zufälligen Ware aus dem <b>Warenpool</b> auf."
-    },
-    "nine-stars-inn": {
-      "title": "Gasthaus \"Zum Neunten Stern\"",
-      "setup": {
-        "objectiveCard": "Lege irgendeine von den übriggebliebenen Politikkarten (egal welche) offen und <b>quer</b> neben das Hotel deines Gegners <i>(siehe Abbildung unten)</i>. Diese Karte stellt die so genannte <b>Sterneleiste</b> dar. Ist Ninas Melange unter den drei Hoteleingängen, von denen du dir einen aussuchen darfst, werden die drei Politikkarten für Ninas Melange zuerst gezogen, bevor eine Karte zur Sterneleiste wird."
-      }
-    },
-    "sushi-resort": {
-      "title": "Sushi Resort",
-      "setup": {
-        "placeCogwheelTokens": "Lege wie folgt <b>6 Zahnräder</b> im Hotel deines Gegners:",
-        "floor1": "je eines auf die <b>letzten beiden Zimmer</b> in der ersten Etage,",
-        "floor2": "je eines auf die <b>ersten drei Zimmer</b> in der zweiten Etage sowie",
-        "floor3": "eins auf das <b>erste Zimmer</b> in der dritten Etage."
-      }
-    },
-    "toll-bridge-hotel": {
-      "title": "Hotel \"An der Mautbrücke\"",
-      "setup": {
-        "none": "Keine zusätzlichen Schritte."
-      }
-    }
   },
   "sideBar": {
     "round": "Runde {round}",

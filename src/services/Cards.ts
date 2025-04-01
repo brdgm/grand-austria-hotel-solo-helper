@@ -472,7 +472,7 @@ const cards : Card[] = [
     dieSelection: [DieSelection.THREE],
     additionalAction: [
       {
-        action: Action.SEND_BALLROOM,
+        action: Action.PLACE_DANCER,
         ballroomSelection: BallroomSelection.NEXT_1
       },
       {
@@ -521,7 +521,7 @@ const cards : Card[] = [
         emperorTrackSteps: 3
       },
       {
-        action: Action.SEND_BALLROOM,
+        action: Action.PLACE_DANCER,
         ballroomSelection: BallroomSelection.NEXT_2,
         difficultyLevel: [DifficultyLevel.MEDIUM, DifficultyLevel.HARD]
       },
@@ -582,7 +582,7 @@ const cards : Card[] = [
     dieSelection: [DieSelection.ANY],
     additionalAction: [
       {
-        action: Action.SEND_BALLROOM,
+        action: Action.PLACE_DANCER,
         ballroomSelection: BallroomSelection.NEXT_1
       },
       {
@@ -649,7 +649,7 @@ const cards : Card[] = [
     dieSelection: [DieSelection.ANY],
     additionalAction: [
       {
-        action: Action.SEND_BALLROOM,
+        action: Action.PLACE_DANCER,
         ballroomSelection: BallroomSelection.NEXT_2
       },
       {
@@ -756,7 +756,7 @@ const cards : Card[] = [
     dieSelection: [DieSelection.THREE, DieSelection.FOUR],
     additionalAction: [
       {
-        action: Action.SEND_BALLROOM,
+        action: Action.PLACE_DANCER,
         ballroomSelection: BallroomSelection.NEXT_1
       },
       {
@@ -803,7 +803,7 @@ const cards : Card[] = [
         emperorTrackSteps: 4
       },
       {
-        action: Action.SEND_BALLROOM,
+        action: Action.PLACE_DANCER,
         ballroomSelection: BallroomSelection.NEXT_1,
         difficultyLevel: [DifficultyLevel.HARD]
       },

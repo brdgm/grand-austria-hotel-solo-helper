@@ -36,7 +36,7 @@
     "viennaBallrooms": {
       "title": "Vienna Ballrooms",
       "rehearsalRoomBoardPlayer": "Take a random rehearsal room board for yourself. (You do not get to choose one.)",
-      "rehearsalRoomBoardBot": "Your opponent <b>does not</b> get a rehearsal room board, but he does get his <b>10 dancers</b>, which she places beside his hotel board.",
+      "rehearsalRoomBoardBot": "Your opponent <b>does not</b> get a rehearsal room board, but he does get his <b>10 dancers</b>, which he places beside his hotel board.",
       "noChampagne": "Your opponent <b>does not</b> get any champagne."
     },
     "uniqueHotels": {
@@ -97,6 +97,17 @@
           "noOccupancyBonus": "He <b>does not get an occupancy bonus</b>, when he completes a group in his hotel.",
           "noReward": "He <b>does not get the reward</b> printed on the bottom of the guest card.",
           "discardGuest": "Finally, place the guest card in the discard pile, and replenish the queue."
+        },
+        "placeDancer": {
+          "title": "Place Dancer",
+          "scoreVpDiscard": "Your opponent <b>scores the victory points</b> printed on the chosen guest card and places it in the discard pile. <i>(As always, he does not get the guest reward.)</i>",
+          "placeDancer": "He then places one of his dancer tokens in a ballroom, on an <b>available space in the bottommost row</b>:",
+          "ballroomSelection": {
+            "next-1": "He sends the guest to the ballroom <b>that will be scored next</b>, if spaces remain. Otherwise, he sends the guest to the next ballroom to the right that has spaces remaining. <i>(Remember, the balcony has an unlimited number of spaces.)</i>",
+            "next-2": "He sends the guest to the ballroom <b>that will be scored after the next</b>. In rounds 6 and 7 or if that ballroom has no spaces left, he sends the guest to the rightmost ballroom. <i>(Remember, the balcony has an unlimited number of spaces.)</i>"
+          },
+          "noChampagneNoBonus": "He <b>does not</b> pay any champagne to place the dancer; in addition, he <b>does not ever</b> get a row bonus.",
+          "noRoomTile": "Also, <b>he does not place a room tile</b> in his hotel when sending a dancer to a ballroom."
         }
       },
       "dieSelection": {
@@ -122,6 +133,10 @@
         "hasMarker": "<b>If he does not</b>, place one of his remaining markers on “III” <i>(literally covering the lettering)</i>. This will act as sort of a countdown, until he claims this objective.",
         "noMarker": "<b>If he does</b>, move his marker one space to the left <i>(from “III” to “II”, or from “II” to “I”)</i>. The moment his marker moves onto “I”, he <b>immediately claims</b> the objective by moving his marker on the highest available victory point spot, scoring that many victory points.",
         "anyCard": "If the depicted objective card shows a <b>question mark</b>, or he has already claimed that objective, check the objective card on which he has made <b>the least progress</b>. Resolve any ties with the hand symbol."
+      },
+      "placeDancer": {
+        "title": "Place Dancer",
+        "placeDancer": "Your opponent sends an <b>additional dancer</b> to a ballroom, on an <b>available space in the bottommost row</b>:"
       }
     },
     "botUniqueHotel": {

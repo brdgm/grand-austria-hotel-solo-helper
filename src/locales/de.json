@@ -97,6 +97,17 @@
           "noOccupancyBonus": "Er erhält <b>keinen Auslastungsbonus</b>, wenn er eine Zimmergruppe abschließt.",
           "noReward": "Er <b>ignoriert die Belohnungen</b>, die unten auf der Gästekarte aufgedruckt sind.",
           "discardGuest": "Lege die Gästekarte auf den Ablagestapel und fülle die Reihe wieder auf."
+        },
+        "placeDancer": {
+          "title": "Tänzer platzieren",
+          "scoreVpDiscard": "Dein Gegner bekommt die <b>aufgedruckten Siegpunkte</b> und legt die Karte auf den Ablagestapel. <i>(Nach wie vor gilt, dass er die Belohnungen des Gastes ignoriert.)</i>",
+          "placeDancer": "Dann platziert er ein Tänzerplättchen in einem Ballsaal, und zwar auf das <b>erste freie Feld von unten</b>:",
+          "ballroomSelection": {
+            "next-1": "Er platziert den Tänzer in dem <b>Ballsaal, der als nächster gewertet</b> wird, sofern dort noch Plätze frei sind. Ansonsten platziert er den Tänzer im nächstmöglichen Ballsaal rechts davon. <i>(Zur Erinnerung: Auf den Balkon passen beliebig viele Tänzer.)</i>",
+            "next-2": "Er platziert den Tänzer in dem <b>Ballsaal, der als übernächster gewertet</b> wird. In den Spielrunden 6 und 7 bzw., wenn im übernächsten Ballsaal keine Plätze mehr frei sind, platziert er den Tänzer stattdessen im rechten Ballsaal. <i>(Zur Erinnerung: Auf den Balkon passen beliebig viele Tänzer.)</i>"
+          },
+          "noChampagneNoBonus": "Er braucht für das Platzieren des Tänzers <b>keinen Champagner</b> zu bezahlen, erhält aber auch niemals den Reihenbonus.",
+          "noRoomTile": "Zudem platziert er <b>kein Zimmer</b> in seinem Hotel, wenn er einen Tänzer entsendet."
         }
       },
       "dieSelection": {
@@ -122,6 +133,10 @@
         "hasMarker": "<b>Wenn nein</b>, platziere einen seiner übrigen Marker auf „III“ <i>(auf den Schriftzug)</i>. Dadurch wird eine Art Countdown gestartet, nach dessen Ablauf er die Politikkarte „erfüllt“.",
         "noMarker": "<b>Wenn ja</b>, schiebe seinen Marker um eine Position nach links <i>(also von „III“ auf „II“ bzw. von „II“ auf „I“)</i>. In dem Moment, wo sein Marker auf „I“ geschoben wird, wird er <b>sofort</b> weiter auf das höchste freie Siegpunktsymbol verschoben und er bekommt sofort die dort aufgedruckten Siegpunkte.",
         "anyCard": "Weist die abgebildete Politikkarte ein <b>Fragezeichen</b> auf oder hat er für diese Karte bereits Siegpunkte bekommen, so gilt stattdessen die Politikkarte, bei der er <b>noch am weitesten</b> entfernt davon ist, Siegpunkte zu bekommen. Bei Gleichstand entscheidet das Handsymbol."
+      },
+      "placeDancer": {
+        "title": "Tänzer platzieren",
+        "placeDancer": "Dein Gegner entsendet <b>einen zusätzlichen Tänzer</b> in einen Ballsaal, und zwar auf das <b>erste freie Feld von unten</b>:"
       }
     },
     "botUniqueHotel": {

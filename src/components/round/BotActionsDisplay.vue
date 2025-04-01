@@ -2,13 +2,13 @@
   <h5 class="mt-3">{{t('turnBot.guest')}}</h5>
   <div class="actionList container-fluid">
     <div class="row" v-for="(guestSelection,index) in botActions.guestSelection" :key="index">
-      <GuestSelectionDisplay :guestSelection="guestSelection" :botActions="botActions"/>
+      <GuestSelection :guestSelection="guestSelection" :botActions="botActions"/>
     </div>
   </div>
   <h5 class="mt-3">{{t('turnBot.die')}}</h5>
   <div class="actionList container-fluid">
     <div class="row">
-      <DieSelectionDisplay :dieSelection="[...botActions.dieSelection]" :botActions="botActions"/>
+      <DieSelection :dieSelection="[...botActions.dieSelection]" :botActions="botActions"/>
     </div>
   </div>
   <h5 class="mt-3">{{t('turnBot.additionalAction')}}</h5>
@@ -27,8 +27,9 @@ import BotActions from '@/services/BotActions'
 import ObjectiveCard from './action/ObjectiveCard.vue'
 import EmperorTrack from './action/EmperorTrack.vue'
 import StaffCard from './action/StaffCard.vue'
-import DieSelectionDisplay from './action/DieSelection.vue'
-import GuestSelectionDisplay from './action/GuestSelection.vue'
+import DieSelection from './action/DieSelection.vue'
+import GuestSelection from './action/GuestSelection.vue'
+import PlaceDancer from './action/PlaceDancer.vue'
 
 export default defineComponent({
   name: 'BotActionsDisplay',
@@ -37,11 +38,12 @@ export default defineComponent({
     return { t }
   },
   components: {
-    GuestSelectionDisplay,
-    DieSelectionDisplay,
+    GuestSelection,
+    DieSelection,
     ObjectiveCard,
     EmperorTrack,
-    StaffCard
+    StaffCard,
+    PlaceDancer
   },
   props: {
     navigationState: {

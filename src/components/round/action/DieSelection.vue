@@ -28,7 +28,7 @@ import DieSelection from '@/services/enum/DieSelection'
 import BotActions from '@/services/BotActions'
 
 export default defineComponent({
-  name: 'DieSelectionDisplay',
+  name: 'DieSelection',
   components: {
     ActionBox,
     AppIcon

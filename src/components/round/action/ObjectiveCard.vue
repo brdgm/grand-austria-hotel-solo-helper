@@ -3,7 +3,7 @@
     <template #action>
       <div class="action">
         <AppIcon type="action" name="objective-card" class="icon"/>
-        <div class="cardNo">{{additionalAction.objectiveCard}}</div>
+        <div v-if="additionalAction.objectiveCard" class="cardNo">{{getCardNo(additionalAction.objectiveCard)}}</div>
       </div>
     </template>
     <template #instruction>
@@ -24,6 +24,7 @@ import ActionBox from '../ActionBox.vue'
 import AppIcon from '../../structure/AppIcon.vue'
 import { AdditionalAction } from '@/services/Card'
 import BotActions from '@/services/BotActions'
+import ObjectiveCard from '@/services/enum/ObjectiveCard'
 
 export default defineComponent({
   name: 'ObjectiveCard',
@@ -43,6 +44,14 @@ export default defineComponent({
     botActions: {
       type: BotActions,
       required: true
+    }
+  },
+  methods: {
+    getCardNo(objectiveCard: ObjectiveCard) : string {
+      if (objectiveCard == ObjectiveCard.ANY) {
+        return '?'
+      }
+      return objectiveCard
     }
   }
 })

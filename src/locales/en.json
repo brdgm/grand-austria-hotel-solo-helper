@@ -115,6 +115,13 @@
         "title": "Staff Card",
         "drawCard": "Draw the top staff card from your opponent’s personal deck and place it face up beside it.",
         "finalScoring": "During final scoring, he will score points according to all of his face-up staff cards."
+      },
+      "objectiveCard": {
+        "title": "Objective Card",
+        "checkCard": "Check whether your opponent has a marker on the depicted objective card:",
+        "hasMarker": "<b>If he does not</b>, place one of his remaining markers on “III” <i>(literally covering the lettering)</i>. This will act as sort of a countdown, until he claims this objective.",
+        "noMarker": "<b>If he does</b>, move his marker one space to the left <i>(from “III” to “II”, or from “II” to “I”)</i>. The moment his marker moves onto “I”, he <b>immediately claims</b> the objective by moving his marker on the highest available victory point spot, scoring that many victory points.",
+        "anyCard": "If the depicted objective card shows a <b>question mark</b>, or he has already claimed that objective, check the objective card on which he has made <b>the least progress</b>. Resolve any ties with the hand symbol."
       }
     },
     "botUniqueHotel": {

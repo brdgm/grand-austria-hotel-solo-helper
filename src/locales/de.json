@@ -115,6 +115,13 @@
         "title": "Personalkarte",
         "drawCard": "Ziehe die oberste Karte vom privaten Stapel deines Gegners und lege sie offen daneben.",
         "finalScoring": "Bei der Wertung bekommt er für seine offenen Personalkarten Siegpunkte."
+      },
+      "objectiveCard": {
+        "title": "Politikkarte",
+        "checkCard": "Prüfe, ob dein Gegner bereits einen Marker auf der abgebildeten Politikkarte hat:",
+        "hasMarker": "<b>Wenn nein</b>, platziere einen seiner übrigen Marker auf „III“ <i>(auf den Schriftzug)</i>. Dadurch wird eine Art Countdown gestartet, nach dessen Ablauf er die Politikkarte „erfüllt“.",
+        "noMarker": "<b>Wenn ja</b>, schiebe seinen Marker um eine Position nach links <i>(also von „III“ auf „II“ bzw. von „II“ auf „I“)</i>. In dem Moment, wo sein Marker auf „I“ geschoben wird, wird er <b>sofort</b> weiter auf das höchste freie Siegpunktsymbol verschoben und er bekommt sofort die dort aufgedruckten Siegpunkte.",
+        "anyCard": "Weist die abgebildete Politikkarte ein <b>Fragezeichen</b> auf oder hat er für diese Karte bereits Siegpunkte bekommen, so gilt stattdessen die Politikkarte, bei der er <b>noch am weitesten</b> entfernt davon ist, Siegpunkte zu bekommen. Bei Gleichstand entscheidet das Handsymbol."
       }
     },
     "botUniqueHotel": {

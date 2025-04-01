@@ -1,13 +1,18 @@
 <template>
-  <ActionBox :instructionTitle="t('rules.action.gainVp.title')">
+  <ActionBox :instructionTitle="t('rules.action.objectiveCard.title')" :tieBreaker="botActions.tieBreaker">
     <template #action>
       <div class="action">
         <AppIcon type="action" name="objective-card" class="icon"/>
-        <div class="value">{{additionalAction.objectiveCard}}</div>
+        <div class="cardNo">{{additionalAction.objectiveCard}}</div>
       </div>
     </template>
     <template #instruction>
-      <p v-html="t('rules.action.gainVp.instruction')"></p>
+      <p v-html="t('rules.action.objectiveCard.checkCard')"></p>
+      <ul>
+        <li v-html="t('rules.action.objectiveCard.hasMarker')"></li>
+        <li v-html="t('rules.action.objectiveCard.noMarker')"></li>
+      </ul>
+      <p v-html="t('rules.action.objectiveCard.anyCard')"></p>
     </template>
   </ActionBox>
 </template>
@@ -45,8 +50,17 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .action {
+  position: relative;
   .icon {
-    height: 3.5rem;
+    height: 4.5rem;
+  }
+  .cardNo {
+    position: absolute;
+    left: 0px;
+    top: 9px;
+    width: 2.9rem;
+    font-size: 35px;
+    text-align: center;
   }
 }
 </style>

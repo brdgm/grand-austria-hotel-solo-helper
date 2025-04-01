@@ -92,12 +92,19 @@
           "noAdjacencyRule": "Your opponent does not follow the adjacency rule and he does not need to place his first room in the bottom left corner. Instead:",
           "blueRedYellowGuest": "When he accommodates a <b>blue, red, or yellow guest</b>, he selects the <b>first matching space from the left in the bottommost possible row</b>, placing a matching room—with the “occupied” side facing up—on that space.",
           "greenGuest": "When he accommodates a <b>green guest</b>, he selects the <b>first empty space from the bottom in the rightmost possible column</b>, placing a matching room—with the “occupied” side facing up—on that space.",
-          "spaceVP": "If the covered space shows a <b>victory point symbol</b>, Leopold immediately scores that many victory points.",
-          "noRoomCost": "Leopold <b>does not pay</b> for any rooms he places in his hotel.",
-          "noOccupancyBonus": "Leopold <b>does not get an occupancy bonus</b>, when he completes a group in his hotel.",
-          "noReward": "Leopold <b>does not get the reward</b> printed on the bottom of the guest card.",
+          "spaceVP": "If the covered space shows a <b>victory point symbol</b>, he immediately scores that many victory points.",
+          "noRoomCost": "He <b>does not pay</b> for any rooms he places in his hotel.",
+          "noOccupancyBonus": "He <b>does not get an occupancy bonus</b>, when he completes a group in his hotel.",
+          "noReward": "He <b>does not get the reward</b> printed on the bottom of the guest card.",
           "discardGuest": "Finally, place the guest card in the discard pile, and replenish the queue."
         }
+      },
+      "dieSelection": {
+        "title": "Take Die",
+        "takeDie": "Your opponent takes the <b>depicted die</b> from the action board, placing it on his turn order tile as normal. He <b>does not carry out</b> the associated action.",
+        "twoDice": "If the instruction card depicts <b>two dice</b>, he chooses the die that has <b>more dice</b> (as compared to the other die) on the action board.",
+        "anyDie": "If the depicted die has a <b>question mark</b>, or there are no dice with the depicted values, he chooses the die that has <b>the most dice</b> on the action board.",
+        "tieBreaker": "Resolve any ties according to the hand symbol."
       }
     }
   },

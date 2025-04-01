@@ -98,6 +98,13 @@
           "noReward": "Er <b>ignoriert die Belohnungen</b>, die unten auf der Gästekarte aufgedruckt sind.",
           "discardGuest": "Lege die Gästekarte auf den Ablagestapel und fülle die Reihe wieder auf."
         }
+      },
+      "dieSelection": {
+        "title": "Würfel nehmen",
+        "takeDie": "Dein Gegner nimmt den <b>abgebildeten Würfel</b> vom Aktionsplan und legt ihn wie gewohnt auf sein Reihenfolgeplättchen, <b>ohne</b> die zugehörige Aktion durchzuführen.",
+        "twoDice": "Sind <b>zwei Würfel</b> abgebildet, wählt er von diesen zwei Würfeln denjenigen, von dem <b>mehr Würfel</b> auf dem Aktionsplan liegen.",
+        "anyDie": "Weist der abgebildete Würfel ein <b>Fragezeichen</b> auf oder gibt es keinen der abgebildeten Würfel mehr, nimmt sich Leopold den Würfel, von dem <b>am meisten</b> auf dem Aktionsplan liegen.",
+        "tieBreaker": "Bei Gleichstand entscheidet das Handsymbol."
       }
     }
   },

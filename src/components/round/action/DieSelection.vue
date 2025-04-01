@@ -1,12 +1,20 @@
 <template>
-  <ActionBox :instructionTitle="t('rules.action.dieSelection.title')">
+  <ActionBox :instructionTitle="t('rules.action.dieSelection.title')" :tieBreaker="botActions.tieBreaker">
     <template #action>
       <div class="action">
-        <AppIcon v-for="die of dieSelection" :key="die" type="die-selection" :name="die" class="icon" extension="svg"/>
+        <template v-for="(die,index) of dieSelection" :key="die">
+          <div v-if="index > 0" class="separator">/</div>
+          <AppIcon type="die-selection" :name="die" class="icon" :extension="getExtension(die)"/>
+        </template>
       </div>
     </template>
     <template #instruction>
-      <p v-html="t('rules.action.dieSelection.instruction')"></p>
+      <p v-html="t('rules.action.dieSelection.takeDie')"></p>
+      <ul>
+        <li v-html="t('rules.action.dieSelection.twoDice')"></li>
+        <li v-html="t('rules.action.dieSelection.anyDie')"></li>
+        <li v-html="t('rules.action.dieSelection.tieBreaker')"></li>
+      </ul>
     </template>
   </ActionBox>
 </template>
@@ -38,14 +46,24 @@ export default defineComponent({
       type: BotActions,
       required: true
     }
+  },
+  methods: {
+    getExtension(die: DieSelection): string {
+      return die === DieSelection.COLOR_MAX ? 'webp' : 'svg'
+    }
   }
 })
 </script>
 
 <style lang="scss" scoped>
 .action {
+  display: flex;
+  gap: 0.5rem;
   .icon {
-    height: 3.5rem;
+    height: 2.5rem;
+  }
+  .separator {
+    font-size: 25px;
   }
 }
 </style>

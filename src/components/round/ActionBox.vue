@@ -54,13 +54,15 @@ export default defineComponent({
 <style lang="scss" scoped>
 .actionBox {
   position: relative;
-  color: white;
+  color: #000;
   background-color: #e5d295;
   border: 1px solid #645039;
   border-radius: 0.5rem;
   filter: drop-shadow(0.1rem 0.1rem 0.2rem #888);
-  padding: 1rem;
+  padding-left: 1rem;
+  padding-top: 1rem;
   padding-right: 2rem;
+  padding-bottom: 1.25rem;
   cursor: pointer;
   background-image: url('@/assets/icons/help-semi-transparent.png');
   background-repeat: no-repeat;

@@ -1,6 +1,7 @@
 <template>
   <div class="actionBox col" @click="showInstructions">
     <slot name="action"></slot>
+    <AppIcon v-if="tieBreaker" type="tie-breaker" :name="tieBreaker" class="tieBreakerIcon"/>
   </div>
 
   <ModalDialog :id="modalId" :title="instructionTitle" :scrollable="true" :size-lg="modalSizeLg">
@@ -14,11 +15,15 @@
 import { defineComponent } from 'vue'
 import ModalDialog from '@brdgm/brdgm-commons/src/components/structure/ModalDialog.vue'
 import showModal from '@brdgm/brdgm-commons/src/util/modal/showModal'
+import { PropType } from 'vue'
+import TieBreaker from '@/services/enum/TieBreaker'
+import AppIcon from '../structure/AppIcon.vue'
 
 export default defineComponent({
   name: 'ActionBox',
   components: {
-    ModalDialog
+    ModalDialog,
+    AppIcon
   },
   setup() {
     const modalId = `modal-${crypto.randomUUID()}`
@@ -28,6 +33,10 @@ export default defineComponent({
     instructionTitle: {
       type: String,
       required: true
+    },
+    tieBreaker: {
+      type: Object as PropType<TieBreaker>,
+      required: false
     },
     modalSizeLg: {
       type: Boolean,
@@ -44,6 +53,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .actionBox {
+  position: relative;
   color: white;
   background-color: #e5d295;
   border: 1px solid #645039;
@@ -56,5 +66,11 @@ export default defineComponent({
   background-repeat: no-repeat;
   background-position: right 5px top 5px;
   background-size: 1.25rem;
+  .tieBreakerIcon {
+    position: absolute;
+    right: 3px;
+    bottom: 3px;
+    width: 30px;
+  }
 }
 </style>

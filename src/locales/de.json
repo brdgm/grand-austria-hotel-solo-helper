@@ -65,10 +65,41 @@
     "takeYourTurn": "Führ deinen Zug aus - oder passe."
   },
   "turnBot": {
-    
+    "guest": "Gast",
+    "die": "Würfel",
+    "additionalAction": "Zusatzaktion"
   },
   "endOfGame": {
     "title": "Spielende"
+  },
+  "rules": {
+    "action": {
+      "guestSelection": {
+        "title": "Guest Selection",
+        "select": {
+          "title": "Selecting Guest",
+          "takeGuest": "Dein Gegner wählt einen Gast in der <b>passenden Farbe</b> aus der Reihe. Er braucht für den Gast nichts zu bezahlen.",
+          "multipleGuests": "Liegt von der gewünschten Farbe <b>mehr als ein Gast</B> in der Reihe, nimmt er von ihnen immer den mit den meisten Siegpunkten.",
+          "noSuchGuest": "Liegt von der gewünschten Farbe <b>kein Gast</b> in der Reihe oder <b>zeigt das Symbol keine Farbe</b> an, nimmt er sich von den vorhandenen den Gast mit den meisten Siegpunkten.",
+          "allRooms": "Sind <b>alle Zimmer</b> der jeweiligen Farbe in seinem Hotel bereits bezogen, nimmt er sich von den vorhandenen den Gast mit den meisten Siegpunkten, den er in seinem Hotel unterbringen kann.",
+          "tieBreaker": "Trifft eine dieser Aussagen auf mehrere Gäste zu, die <b>alle denselben Siegpunktwert</b> haben, entscheidet er sich für den Gast, der durch das <b>Handsymbol</b> bestimmt wird.",
+          "noGuest": "Nur im äußerst seltenen Fall, dass sich nur noch Gäste in der Reihe befinden, die er nicht unterbringen kann <i>(weil in seinem Hotel alle Zimmer dieser Farben bereits bezogen sind)</i>, erhält er keinen Gast."
+        },
+        "accommodate": {
+          "title": "Accommodating Guest",
+          "takeGuest": "Die Gäste deines Gegners kommen nicht in sein Café. Stattdessen bekommt er sofort die auf der Gästekarte aufgedruckten <b>Siegpunkte</b> und <b>bezieht</b> sofort ein passendes Zimmer in seinem Hotel. Dabei gilt:",
+          "allRoomsPrepared": "In seinem Hotel gelten <b>alle Zimmer als vorbereitet</b>. Er legt Zimmerplättchen somit <b>immer mit der Seite „bezogen“</b> in sein Hotel, niemals mit der Seite „frei“.",
+          "noAdjacencyRule": "Er <b>braucht seine Zimmer nicht angrenzend zueinander zu legen</b>. Sein erstes Zimmer muss auch nicht das Zimmer links unten sein. Stattdessen gilt:",
+          "blueRedYellowGuest": "Bei einem <b>blauen, roten oder gelben Gast</b> geht er <b>etagenweise von unten nach oben</b> vor und platziert ein Zimmerplättchen mit der Seite „bezogen“ auf das erste freie Feld von links, das die entsprechende Farbe aufweist.",
+          "greenGuest": "Bei einem <b>grünen Gast</b> geht er <b>spaltenweise von rechts nach links</b> vor und platziert ein Zimmerplättchen mit der Seite „bezogen“ auf das erste freie Feld von unten <i>(egal welcher Farbe)</i>.",
+          "spaceVP": "Überdeckt er mit dem Zimmer ein <b>Siegpunktsymbol</b>, so bekommt er sofort diese Siegpunkte.",
+          "noRoomCost": "Er <b>zahlt nichts</b> für seine Zimmer.",
+          "noOccupancyBonus": "Er erhält <b>keinen Auslastungsbonus</b>, wenn er eine Zimmergruppe abschließt.",
+          "noReward": "Er <b>ignoriert die Belohnungen</b>, die unten auf der Gästekarte aufgedruckt sind.",
+          "discardGuest": "Lege die Gästekarte auf den Ablagestapel und fülle die Reihe wieder auf."
+        }
+      }
+    }
   },
   "difficultyLevel": {
     "1": "Level 1 - Einfach",

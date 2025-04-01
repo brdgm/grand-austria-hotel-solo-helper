@@ -65,10 +65,41 @@
     "takeYourTurn": "Take your turn - or pass."
   },
   "turnBot": {
-    
+    "guest": "Guest",
+    "die": "Die",
+    "additionalAction": "Additional Action"
   },
   "endOfGame": {
     "title": "End of Game"
+  },
+  "rules": {
+    "action": {
+      "guestSelection": {
+        "title": "Guest Selection",
+        "select": {
+          "title": "Selecting Guest",
+          "takeGuest": "Your opponent takes a guest from the queue, <b>matching the depicted color</b>. He does not pay for the guest.",
+          "multipleGuests": "If there are <b>multiple guests</b> of the depicted color, he takes the one that provides the most victory points.",
+          "noSuchGuest": "If there is <b>no such guest</b>, or if the symbol <b>does not specify a color</b>, he chooses the guest in the queue that provides the most victory points.",
+          "allRooms": "If <b>all rooms</b> of the respective color are occupied in your opponents hotel, he chooses the guest that provides the most victory points of any color that can still be moved into the hotel.",
+          "tieBreaker": "If there are multiple eligible guests <b>worth the same number</b> of victory points, he chooses them in the order indicated by the <b>hand symbol</b>.",
+          "noGuest": "Only in the very unlikely event that all guests in the queue have a color that is no longer available on your opponents hotel board <i>(i.e., all rooms of those colors are occupied)</i>, he does not take a guest."
+        },
+        "accommodate": {
+          "title": "Accommodating Guest",
+          "takeGuest": "When your opponent takes a guest card, he does not place it in his café. Instead, he immediately scores the <b>victory points</b> printed on the card and <b>occupies</b> a matching room in his hotel, as follows:",
+          "allRoomsPrepared": "<b>All rooms</b> in his hotel <b>are considered prepared</b>. He never places vacant rooms in his hotel; he <b>only places occupied rooms</b>, straight away.",
+          "noAdjacencyRule": "Your opponent does not follow the adjacency rule and he does not need to place his first room in the bottom left corner. Instead:",
+          "blueRedYellowGuest": "When he accommodates a <b>blue, red, or yellow guest</b>, he selects the <b>first matching space from the left in the bottommost possible row</b>, placing a matching room—with the “occupied” side facing up—on that space.",
+          "greenGuest": "When he accommodates a <b>green guest</b>, he selects the <b>first empty space from the bottom in the rightmost possible column</b>, placing a matching room—with the “occupied” side facing up—on that space.",
+          "spaceVP": "If the covered space shows a <b>victory point symbol</b>, Leopold immediately scores that many victory points.",
+          "noRoomCost": "Leopold <b>does not pay</b> for any rooms he places in his hotel.",
+          "noOccupancyBonus": "Leopold <b>does not get an occupancy bonus</b>, when he completes a group in his hotel.",
+          "noReward": "Leopold <b>does not get the reward</b> printed on the bottom of the guest card.",
+          "discardGuest": "Finally, place the guest card in the discard pile, and replenish the queue."
+        }
+      }
+    }
   },
   "difficultyLevel": {
     "1": "Level 1 - Easy",

@@ -18,6 +18,7 @@ import { useI18n } from 'vue-i18n'
 import ActionBox from '../ActionBox.vue'
 import AppIcon from '../../structure/AppIcon.vue'
 import { AdditionalAction } from '@/services/Card'
+import BotActions from '@/services/BotActions'
 
 export default defineComponent({
   name: 'EmperorTrack',
@@ -32,6 +33,10 @@ export default defineComponent({
   props: {
     additionalAction: {
       type: Object as PropType<AdditionalAction>,
+      required: true
+    },
+    botActions: {
+      type: BotActions,
       required: true
     }
   }

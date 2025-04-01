@@ -12,10 +12,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, PropType } from 'vue'
 import ModalDialog from '@brdgm/brdgm-commons/src/components/structure/ModalDialog.vue'
 import showModal from '@brdgm/brdgm-commons/src/util/modal/showModal'
-import { PropType } from 'vue'
 import TieBreaker from '@/services/enum/TieBreaker'
 import AppIcon from '../structure/AppIcon.vue'
 

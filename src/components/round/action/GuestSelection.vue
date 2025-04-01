@@ -65,6 +65,7 @@ import ActionBox from '../ActionBox.vue'
 import AppIcon from '../../structure/AppIcon.vue'
 import { GuestSelection } from '@/services/Card'
 import BotActions from '@/services/BotActions'
+import { useStateStore } from '@/store/state'
 
 export default defineComponent({
   name: 'GuestSelection',
@@ -74,7 +75,8 @@ export default defineComponent({
   },
   setup() {
     const { t } = useI18n()
-    return { t }
+    const state = useStateStore()
+    return { t, state }
   },
   props: {
     guestSelection: {

@@ -4,12 +4,16 @@
   <h1>{{t('roundEnd.title', {round})}}</h1>
 
   <ul class="mt-4">
-    <li v-html="t('roundEnd.emperorScoring.title')"></li>
-    <ul>
-      <li v-html="t('roundEnd.emperorScoring.scoreVP')"></li>
-      <li v-html="t('roundEnd.emperorScoring.resetMarkers', {steps:emperorResetTrackSteps})"></li>
-      <li v-html="t('roundEnd.emperorScoring.gainBonusPenalty')"></li>
-    </ul>
+    <li v-if="hasCelebritiesExpansion" v-html="t('roundEnd.celebrities')"></li>
+    <template v-if="isEmperorScoring">
+      <li v-html="t('roundEnd.emperorScoring.title')"></li>
+      <ul>
+        <li v-html="t('roundEnd.emperorScoring.scoreVP')"></li>
+        <li v-html="t('roundEnd.emperorScoring.resetMarkers', {steps:emperorResetTrackSteps})"></li>
+        <li v-html="t('roundEnd.emperorScoring.gainBonusPenalty')"></li>
+      </ul>
+    </template>
+    <li v-if="hasViennaBallroomsExpansion" v-html="t('roundEnd.viennaBallrooms')"></li>
     <li v-html="t('roundEnd.swapTurnOrderTiles')"></li>
   </ul>
 
@@ -28,6 +32,7 @@ import { useRoute, useRouter } from 'vue-router'
 import { useStateStore } from '@/store/state'
 import NavigationState from '@/util/NavigationState'
 import SideBar from '@/components/round/SideBar.vue'
+import Expansion from '@/services/enum/Expansion'
 
 export default defineComponent({
   name: 'RoundEnd',
@@ -58,6 +63,12 @@ export default defineComponent({
         return this.round
       }
       return 0
+    },
+    hasViennaBallroomsExpansion() : boolean {
+      return this.state.setup.expansions.includes(Expansion.LETS_WALTZ_MODULE_1_VIENNA_BALLROOMS)
+    },
+    hasCelebritiesExpansion() : boolean {
+      return this.state.setup.expansions.includes(Expansion.LETS_WALTZ_MODULE_2_CELEBRITIES)
     }
   },
   methods: {

@@ -52,13 +52,15 @@
   },
   "roundEnd": {
     "title": "Round {round} End",
-    "swapTurnOrderTiles": "Swap the turn order tiles.",
+    "celebrities": "<i>Celebrities</i>: Discard player’s <b>celebrities</b>, update celebrities in the lounge and replenish the lounge.",
     "emperorScoring": {
       "title": "Emperor Scoring",
       "scoreVP": "<b>You and your opponent</b> score victory points for your position on the emperor track.",
       "resetMarkers": "Reset both markers by {steps} steps.",
       "gainBonusPenalty": "<b>Only you</b> get the reward or suffer the penalty from your position on the emperor track."
-    }
+    },
+    "viennaBallrooms": "<i>Vienna Ballrooms</i>: Score the <b>ballroom</b>.",
+    "swapTurnOrderTiles": "Swap the turn order tiles."
   },
   "turnPlayer": {
     "title": "Your Turn",
@@ -115,7 +117,20 @@
         "takeDie": "Your opponent takes the <b>depicted die</b> from the action board, placing it on his turn order tile as normal. He <b>does not carry out</b> the associated action.",
         "twoDice": "If the instruction card depicts <b>two dice</b>, he chooses the die that has <b>more dice</b> (as compared to the other die) on the action board.",
         "anyDie": "If the depicted die has a <b>question mark</b>, or there are no dice with the depicted values, he chooses the die that has <b>the most dice</b> on the action board.",
-        "tieBreaker": "Resolve any ties according to the hand symbol."
+        "tieBreaker": "Resolve any ties according to the hand symbol.",
+        "colorMaxDie": "He chooses the die associated with the celebrity that provides <b>the most victory points</b>. If no colored dice are available, he chooses the die that has the most dice on its action space.",
+        "coloredDie": {
+          "title": "Colored Die",
+          "takeColoredDie": "Whenever he takes a die from the action board, <b>if there are colored dice present</b>, he takes one of those, as follows:",
+          "multipleColored": "If there are <b>multiple colored dice</b> on the selected action space, he takes the die associated with the celebrity that provides <b>the most victory points</b>. Resolve any ties according to the hand symbol; it applies to the order of dice shown on the lounge tile.",
+          "celebrityTile": "He takes the <b>corresponding celebrity tile</b>, and immediately scores its victory points.",
+          "ignoreCelebrityEffect": "He <b>ignores</b> the effect on the celebrity tile; <b>instead</b>, he immediately gains a bonus based on the color of the chosen die:",
+          "celebrityEffect": {
+            "red": "Advance your opponent’s marker on the <b>objective card</b> on which she has made <b>the least progress</b>. <i>(If there is an objective card without her marker, place one on “III”. Otherwise move the marker one space to the left. Resolve a tie according to the hand symbol.)</i>",
+            "yellow": "Advance your opponent’s marker on the <b>Emperor track</b> by <b>2 spaces</b>.",
+            "blue": "Your opponent scores <b>2 victory points</b>."
+          }
+        }
       },
       "emperorTrack": {
         "title": "Emperor Track",

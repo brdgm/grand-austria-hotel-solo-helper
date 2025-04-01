@@ -52,13 +52,15 @@
   },
   "roundEnd": {
     "title": "Ende Runde {round}",
-    "swapTurnOrderTiles": "Tausche die Reihenfolgeplättchen aus.",
+    "celebrities": "<i>Prominente</i>: Werfe die <b>Prominenten</b> aller Spieler ab, aktualisiere die Prominenten in der Lounge und fülle die Lounge wieder auf.",
     "emperorScoring": {
       "title": "Kaiserwertung",
       "scoreVP": "<b>Du und dein Gegner</b> bekommt Siegpunkte für eure Positionen auf der Kaiserleiste.",
       "resetMarkers": "Setze die Marker um {steps} Schritte zurück.",
       "gainBonusPenalty": "Die Belohnung oder Bestrafung des Kaisers trifft <b>nuf auf dich</b> zu."
-    }
+    },
+    "viennaBallrooms": "<i>Wiener Ballsäle</i>: Werte den <b>Ballsaal</b>.",
+    "swapTurnOrderTiles": "Tausche die Reihenfolgeplättchen aus."
   },
   "turnPlayer": {
     "title": "Dein Zug",
@@ -114,8 +116,21 @@
         "title": "Würfel nehmen",
         "takeDie": "Dein Gegner nimmt den <b>abgebildeten Würfel</b> vom Aktionsplan und legt ihn wie gewohnt auf sein Reihenfolgeplättchen, <b>ohne</b> die zugehörige Aktion durchzuführen.",
         "twoDice": "Sind <b>zwei Würfel</b> abgebildet, wählt er von diesen zwei Würfeln denjenigen, von dem <b>mehr Würfel</b> auf dem Aktionsplan liegen.",
-        "anyDie": "Weist der abgebildete Würfel ein <b>Fragezeichen</b> auf oder gibt es keinen der abgebildeten Würfel mehr, nimmt sich Leopold den Würfel, von dem <b>am meisten</b> auf dem Aktionsplan liegen.",
-        "tieBreaker": "Bei Gleichstand entscheidet das Handsymbol."
+        "anyDie": "Weist der abgebildete Würfel ein <b>Fragezeichen</b> auf oder gibt es keinen der abgebildeten Würfel mehr, nimmt er sich den Würfel, von dem <b>am meisten</b> auf dem Aktionsplan liegen.",
+        "tieBreaker": "Bei Gleichstand entscheidet das Handsymbol.",
+        "colorMaxDie": "Er nimmt den Würfel, der zum Prominenten mit den <b>meisten Siegpunkten</b> gehört. Sind keine farbigen Würfel mehr da, nimmt er stattdessen den Würfel, von dem die meisten auf dem Aktionsplan liegen.",
+        "coloredDie": {
+          "title": "Farbiger Würfel",
+          "takeColoredDie": "Immer, wenn er einen Würfel vom Aktionsplan nimmt, wählt er nach Möglichkeit <b>einen farbigen Würfel</b>. Dabei gilt:",
+          "multipleColored": "Befinden sich <b>mehrere farbige</b> Würfel auf dem Aktionsfeld, nimmt er von diesen denjenigen, der zum Prominenten mit den <b>meisten Siegpunkten</B> gehört. Bei Gleichstand entscheidet das Handsymbol – es bezieht sich auf die Reihenfolge, in der die Würfel in der Lounge abgebildet sind.",
+          "celebrityTile": "Er nimmt sich den zum Würfel <b>passenden Prominenten</b> und bekommt sofort seine Siegpunkte. ",
+          "ignoreCelebrityEffect": "Er <b>ignoriert</b> den Effekt des genommenen Prominenten. <b>Stattdessen</b> erhält sie einen fixen Bonus, der von der Würfelfarbe abhängt:",
+          "celebrityEffect": {
+            "red": "Setze den Marker deines Gegners auf der <b>Politikkarte</b> weiter, auf der sie am <b>weitesten davon entfern</b>t ist, Siegpunkte zu bekommen. <i>(Hat sie auf einer Politikkarte noch keinen Marker, platziere einen auf „III“. Andernfalls schiebe ihren Marker um eine Position nach links. Bei Gleichstand entscheidet das Handsymbol.)</i>",
+            "yellow": "Dein Gegner erhält <b>2 Schritte auf der Kaiserleiste</b>. Rücke seinen Marker entsprechend vor. ",
+            "blue": "Dein Gegner bekommt <b>2 Siegpunkte</b>. Rücke seinen Marker entsprechend vor. "
+          }
+        }
       },
       "emperorTrack": {
         "title": "Kaiserleiste",

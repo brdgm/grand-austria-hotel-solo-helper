@@ -1,0 +1,77 @@
+<template>
+  <SideBar :navigationState="navigationState"/>
+
+  <h1>{{t(`opponentName.${navigationState.deckType}`)}}</h1>
+
+  <TurnOrderTilePair :turn="turn"/>
+
+  <BotActionsDisplay v-if="navigationState.botActions"
+      :navigationState="navigationState" :botActions="navigationState.botActions"/>
+
+  <button class="btn btn-primary btn-lg mt-4 me-2" @click="next()">
+    {{t('action.next')}}
+  </button>
+
+  <DebugInfo :navigationState="navigationState"/>
+
+  <FooterButtons :backButtonRouteTo="backButtonRouteTo" endGameButtonType="abortGame"/>
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+import { useI18n } from 'vue-i18n'
+import FooterButtons from '@/components/structure/FooterButtons.vue'
+import { Turn, useStateStore } from '@/store/state'
+import { useRoute, useRouter } from 'vue-router'
+import NavigationState from '@/util/NavigationState'
+import SideBar from '@/components/round/SideBar.vue'
+import TurnOrderTilePair from '@/components/structure/TurnOrderTilePair.vue'
+import DebugInfo from '@/components/round/DebugInfo.vue'
+import BotActionsDisplay from '@/components/round/BotActionsDisplay.vue'
+
+export default defineComponent({
+  name: 'TurnBot',
+  components: {
+    FooterButtons,
+    SideBar,
+    TurnOrderTilePair,
+    BotActionsDisplay,
+    DebugInfo
+  },
+  setup() {
+    const { t } = useI18n()
+    const router = useRouter()
+    const route = useRoute()
+    const state = useStateStore()
+
+    const navigationState = new NavigationState(route, state)
+    const { round, turn } = navigationState
+
+    return { t, router, state, navigationState, round, turn }
+  },
+  computed: {
+    backButtonRouteTo() : string {
+      if (this.turn > 1) {
+        return `/round/${this.round}/turn/${this.turn-1}/${this.navigationState.previousPlayer}`
+      }
+      return `/round/${this.round}/start`
+    }
+  },
+  methods: {
+    next() : void {
+      const turn : Turn = {
+        round: this.round,
+        turn: this.turn,
+        cardDeck: this.navigationState.cardDeck.toPersistence()
+      }
+      this.state.storeTurn(turn)
+      if (this.turn == 4) {
+        this.router.push(`/round/${this.round}/end`)
+      }
+      else {
+        this.router.push(`/round/${this.round}/turn/${this.turn+1}/${this.navigationState.nextPlayer}`)
+      }
+    }
+  }
+})
+</script>

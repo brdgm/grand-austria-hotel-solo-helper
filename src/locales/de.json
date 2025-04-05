@@ -1,0 +1,245 @@
+{
+  "gameTitle": "Grand Austria Hotel",
+  "home": {
+    "title": "Grand Austria Hotel Solo Helper",
+    "play1": "Spiele <a href='https://boardgamegeek.com/boardgame/182874/grand-austria-hotel' target='_blank' rel='noopener'><b>Grand Austria Hotel</b></a> alleine gegen Leopold und Elisabeth.",
+    "play2": "Diese Applikation implementiert den offiziellen Solo-Modus von Grand Austria Hotel: Alles Walzer! Sie ersetzt das Solo-Kartendeck. Du kannst mit dem Grundspiel oder mit den Modulen aus der Alles Walzer!-Erweiterung spielen.",
+    "feedback": "Discussion and Feedback:"
+  },
+  "setup": {
+    "title": "Spielaufbau",
+    "difficultyLevel": {
+      "title": "Schwierigkeitsgrad",
+      "easy": "Leicht",
+      "hard": "Schwer"
+    },
+    "expansions": {
+      "title": "Erweiterungen",
+      "botUniqueHotel": "Besonderes Hotel für {opponentName}:",
+      "botUniqueHotelRandom": "(zufällig)",
+      "lets-waltz-module-1-vienna-ballrooms": "Alles Walzer! - Module 1: Wiener Ballsäle",
+      "lets-waltz-module-2-celebrities": "Alles Walzer! - Module 2: Prominente",
+      "lets-waltz-module-3-unique-hotels": "Alles Walzer! - Module 3: Besondere Hotels",
+      "lets-waltz-module-5-some-more": "Alles Walzer! - Module 4: Darf's a bisserl mehr sein?"
+    }
+  },
+  "setupBot": {
+    "title": "Spielaufbau {opponentName}",
+    "setup2Players": "Baue das Spiel gemäß der Anleitung des Grundspiels wie für zwei Personen auf, beachte aber folgende Änderungen für die deines <b>Gegners</b> sowie – sofern explizit erwähnt – für deine <b>persönliche Auslage</b>:",
+    "turnOrderTile": "Dein Gegner erhält das Reihenfolgeplättchen „1/4“, d. h., er macht den ersten Spielzug. <i>(Folglich startest du mit dem Reihenfolgeplättchen „2/3“.)</i>",
+    "hotelBoardSide": "Dein Gegner dreht seinen Hotelplan immer auf die <b>Nachtseite</b>. Du kannst dein Hotel nach Belieben auf die Nacht- oder Tagseite drehen.",
+    "moneyTrack": "Dein Gegner braucht <b>keine Geldleiste</B> und somit auch keinen Geldmarker. Er hat niemals Geld.",
+    "itemsKitchen": "Dein Gegner <b>hat keine Waren</b> in seiner Küche. Seine Küche bleibt immer leer.",
+    "botStaffCards": "Suche, <b>bevor</b> du deine Starthand von Personalkarten ziehst <i>(siehe nächsten Schritt)</i>, alle Karten mit dem Symbol ⇥ aus dem Stapel heraus, mische sie und zähle unbesehen 5 Karten davon ab. Lege sie als verdeckten Stapel neben das Hotel deines Gegners. Dies ist sein <b>privater Stapel</b>. Mische die übrigen Karten mit dem Symbol ⇥ zurück in den gemeinsamen Personalkartenstapel. Dein Gegner <b>zieht keine</b> Personalkarten auf die Hand und deckt auch noch keine der Karten in seinem privaten Stapel auf.",
+    "playerStaffCards": "Ziehe <b>10 Personalkarten</b> vom gemeinsamen Stapel und wähle 6 Karten davon aus, die du auf die Hand nimmst. Lege die anderen vier in einer beliebigen Reihenfolge zurück unter den Stapel.",
+    "initialGuestRooms": "Dein Gegner nimmt sich <b>keinen Gast</b> aus der Reihe und er bereitet auch keine Räume vor. <i>(Nur du tust diese Dinge.)</i>",
+    "viennaBallrooms": {
+      "title": "Wiener Ballsäle",
+      "rehearsalRoomBoardPlayer": "Nimm dir einen zufällig bestimmten Proberaum. <i>(Du kannst dir deinen Proberaum nicht aussuchen.)</i>",
+      "rehearsalRoomBoardBot": "Dein Gegner erhält <b>keinen Proberaum</b>, wohl aber 10 Tänzerplättchen, die er neben seinen Hotelplan legt.",
+      "noChampagne": "Dein Gegner erhält auch <b>keinen Champagner</b>."
+    },
+    "uniqueHotels": {
+      "title": "Besondere Hotels",
+      "hotelEntranceBot": "Bereite den Hoteleingang deines Gegners vor - <b>{hotelEntrance}</b>:",
+      "hotelEntrancePlayer": "Ziehe <b>drei gewöhnliche Hoteleingänge</b> und wähle einen davon für dich aus.",
+      "startingMoneyPlayer": "Du beginnst das Spiel mit <b>7 Kronen</b>. Stelle deinen Marker auf der Geldleiste entsprechend ein."
+    }
+  },
+  "roundStart": {
+    "title": "Beginn Runde {round}",
+    "rollDice": "Werfe alle Würfel und lege sie auf die entsprechenden Felder des Aktionsplans."
+  },
+  "roundEnd": {
+    "title": "Ende Runde {round}",
+    "celebrities": "<i>Prominente</i>: Werfe die <b>Prominenten</b> aller Spieler ab, aktualisiere die Prominenten in der Lounge und fülle die Lounge wieder auf.",
+    "emperorScoring": {
+      "title": "Kaiserwertung",
+      "scoreVP": "<b>Du und dein Gegner</b> bekommt Siegpunkte für eure Positionen auf der Kaiserleiste.",
+      "resetMarkers": "Setze die Marker um {steps} Schritte zurück.",
+      "gainBonusPenalty": "Die Belohnung oder Bestrafung des Kaisers trifft <b>nuf auf dich</b> zu."
+    },
+    "viennaBallrooms": "<i>Wiener Ballsäle</i>: Werte den <b>Ballsaal</b>.",
+    "swapTurnOrderTiles": "Tausche die Reihenfolgeplättchen aus."
+  },
+  "turnPlayer": {
+    "title": "Dein Zug",
+    "takeYourTurn": "Führ deinen Zug aus - oder passe."
+  },
+  "turnBot": {
+    "guest": "Gast",
+    "die": "Würfel",
+    "additionalAction": "Zusatzaktion"
+  },
+  "endOfGame": {
+    "title": "Spielende",
+    "finalScoring": "Schlusswertung",
+    "staffCards": "Dein Gegner und du erhalten Siegpunkte für aufgedeckte Personalkarten.",
+    "occupiedRooms": "Dein Gegner und du erhalten Siegpunkte für bezogene Zimmer.",
+    "moneyDishDrinks": "Du erhälst 1 Siegpunkt für jede Krone und je übriger Speise und je übrigem Gentränk in deiner Küche.",
+    "remainingGuests": "Du verlierst 5 Siegpunkte je Gast, der sich noch in deinem Café befindet.",
+    "winCondition": "Du gewinnst das Spiel, wenn du <b>mehr Siegpunkte</b> als dein Gegner hast. Bei Gleichstand gewinnt dein Gegner."
+  },
+  "rules": {
+    "action": {
+      "guestSelection": {
+        "title": "Guest Selection",
+        "select": {
+          "title": "Gast wählen",
+          "takeGuest": "Dein Gegner wählt einen Gast in der <b>passenden Farbe</b> aus der Reihe. Er braucht für den Gast nichts zu bezahlen.",
+          "multipleGuests": "Liegt von der gewünschten Farbe <b>mehr als ein Gast</B> in der Reihe, nimmt er von ihnen immer den mit den meisten Siegpunkten.",
+          "noSuchGuest": "Liegt von der gewünschten Farbe <b>kein Gast</b> in der Reihe oder <b>zeigt das Symbol keine Farbe</b> an, nimmt er sich von den vorhandenen den Gast mit den meisten Siegpunkten.",
+          "allRooms": "Sind <b>alle Zimmer</b> der jeweiligen Farbe in seinem Hotel bereits bezogen, nimmt er sich von den vorhandenen den Gast mit den meisten Siegpunkten, den er in seinem Hotel unterbringen kann.",
+          "tieBreaker": "Trifft eine dieser Aussagen auf mehrere Gäste zu, die <b>alle denselben Siegpunktwert</b> haben, entscheidet er sich für den Gast, der durch das <b>Handsymbol</b> bestimmt wird.",
+          "noGuest": "Nur im äußerst seltenen Fall, dass sich nur noch Gäste in der Reihe befinden, die er nicht unterbringen kann <i>(weil in seinem Hotel alle Zimmer dieser Farben bereits bezogen sind)</i>, erhält er keinen Gast."
+        },
+        "accommodate": {
+          "title": "Gast unterbringen",
+          "takeGuest": "Die Gäste deines Gegners kommen nicht in sein Café. Stattdessen bekommt er sofort die auf der Gästekarte aufgedruckten <b>Siegpunkte</b> und <b>bezieht</b> sofort ein passendes Zimmer in seinem Hotel. Dabei gilt:",
+          "allRoomsPrepared": "In seinem Hotel gelten <b>alle Zimmer als vorbereitet</b>. Er legt Zimmerplättchen somit <b>immer mit der Seite „bezogen“</b> in sein Hotel, niemals mit der Seite „frei“.",
+          "noAdjacencyRule": "Er <b>braucht seine Zimmer nicht angrenzend zueinander zu legen</b>. Sein erstes Zimmer muss auch nicht das Zimmer links unten sein. Stattdessen gilt:",
+          "blueRedYellowGuest": "Bei einem <b>blauen, roten oder gelben Gast</b> geht er <b>etagenweise von unten nach oben</b> vor und platziert ein Zimmerplättchen mit der Seite „bezogen“ auf das erste freie Feld von links, das die entsprechende Farbe aufweist.",
+          "greenGuest": "Bei einem <b>grünen Gast</b> geht er <b>spaltenweise von rechts nach links</b> vor und platziert ein Zimmerplättchen mit der Seite „bezogen“ auf das erste freie Feld von unten <i>(egal welcher Farbe)</i>.",
+          "spaceVP": "Überdeckt er mit dem Zimmer ein <b>Siegpunktsymbol</b>, so bekommt er sofort diese Siegpunkte.",
+          "noRoomCost": "Er <b>zahlt nichts</b> für seine Zimmer.",
+          "noOccupancyBonus": "Er erhält <b>keinen Auslastungsbonus</b>, wenn er eine Zimmergruppe abschließt.",
+          "noReward": "Er <b>ignoriert die Belohnungen</b>, die unten auf der Gästekarte aufgedruckt sind.",
+          "discardGuest": "Lege die Gästekarte auf den Ablagestapel und fülle die Reihe wieder auf."
+        },
+        "placeDancer": {
+          "title": "Tänzer platzieren",
+          "scoreVpDiscard": "Dein Gegner bekommt die <b>aufgedruckten Siegpunkte</b> und legt die Karte auf den Ablagestapel. <i>(Nach wie vor gilt, dass er die Belohnungen des Gastes ignoriert.)</i>",
+          "placeDancer": "Dann platziert er ein Tänzerplättchen in einem Ballsaal, und zwar auf das <b>erste freie Feld von unten</b>:",
+          "ballroomSelection": {
+            "next-1": "Er platziert den Tänzer in dem <b>Ballsaal, der als nächster gewertet</b> wird, sofern dort noch Plätze frei sind. Ansonsten platziert er den Tänzer im nächstmöglichen Ballsaal rechts davon. <i>(Zur Erinnerung: Auf den Balkon passen beliebig viele Tänzer.)</i>",
+            "next-2": "Er platziert den Tänzer in dem <b>Ballsaal, der als übernächster gewertet</b> wird. In den Spielrunden 6 und 7 bzw., wenn im übernächsten Ballsaal keine Plätze mehr frei sind, platziert er den Tänzer stattdessen im rechten Ballsaal. <i>(Zur Erinnerung: Auf den Balkon passen beliebig viele Tänzer.)</i>"
+          },
+          "noChampagneNoBonus": "Er braucht für das Platzieren des Tänzers <b>keinen Champagner</b> zu bezahlen, erhält aber auch niemals den Reihenbonus.",
+          "noRoomTile": "Zudem platziert er <b>kein Zimmer</b> in seinem Hotel, wenn er einen Tänzer entsendet."
+        }
+      },
+      "dieSelection": {
+        "title": "Würfel nehmen",
+        "takeDie": "Dein Gegner nimmt den <b>abgebildeten Würfel</b> vom Aktionsplan und legt ihn wie gewohnt auf sein Reihenfolgeplättchen, <b>ohne</b> die zugehörige Aktion durchzuführen.",
+        "twoDice": "Sind <b>zwei Würfel</b> abgebildet, wählt er von diesen zwei Würfeln denjenigen, von dem <b>mehr Würfel</b> auf dem Aktionsplan liegen.",
+        "anyDie": "Weist der abgebildete Würfel ein <b>Fragezeichen</b> auf oder gibt es keinen der abgebildeten Würfel mehr, nimmt er sich den Würfel, von dem <b>am meisten</b> auf dem Aktionsplan liegen.",
+        "tieBreaker": "Bei Gleichstand entscheidet das Handsymbol.",
+        "colorMaxDie": "Er nimmt den Würfel, der zum Prominenten mit den <b>meisten Siegpunkten</b> gehört. Sind keine farbigen Würfel mehr da, nimmt er stattdessen den Würfel, von dem die meisten auf dem Aktionsplan liegen.",
+        "coloredDie": {
+          "title": "Farbiger Würfel",
+          "takeColoredDie": "Immer, wenn er einen Würfel vom Aktionsplan nimmt, wählt er nach Möglichkeit <b>einen farbigen Würfel</b>. Dabei gilt:",
+          "multipleColored": "Befinden sich <b>mehrere farbige</b> Würfel auf dem Aktionsfeld, nimmt er von diesen denjenigen, der zum Prominenten mit den <b>meisten Siegpunkten</B> gehört. Bei Gleichstand entscheidet das Handsymbol – es bezieht sich auf die Reihenfolge, in der die Würfel in der Lounge abgebildet sind.",
+          "celebrityTile": "Er nimmt sich den zum Würfel <b>passenden Prominenten</b> und bekommt sofort seine Siegpunkte. ",
+          "ignoreCelebrityEffect": "Er <b>ignoriert</b> den Effekt des genommenen Prominenten. <b>Stattdessen</b> erhält sie einen fixen Bonus, der von der Würfelfarbe abhängt:",
+          "celebrityEffect": {
+            "red": "Setze den Marker deines Gegners auf der <b>Politikkarte</b> weiter, auf der sie am <b>weitesten davon entfern</b>t ist, Siegpunkte zu bekommen. <i>(Hat sie auf einer Politikkarte noch keinen Marker, platziere einen auf „III“. Andernfalls schiebe ihren Marker um eine Position nach links. Bei Gleichstand entscheidet das Handsymbol.)</i>",
+            "yellow": "Dein Gegner erhält <b>2 Schritte auf der Kaiserleiste</b>. Rücke seinen Marker entsprechend vor. ",
+            "blue": "Dein Gegner bekommt <b>2 Siegpunkte</b>. Rücke seinen Marker entsprechend vor. "
+          }
+        }
+      },
+      "emperorTrack": {
+        "title": "Kaiserleiste",
+        "advance": "Rücke den Marker deines Gegners auf der Kaiserleiste um die angegebene Anzahl von Schritten vor.",
+        "scoreVP": "Soll sein Marker dabei über das Ende der Leiste hinwegziehen, bekommt er wie gewohnt Siegpunkte."
+      },
+      "staffCard": {
+        "title": "Personalkarte",
+        "drawCard": "Ziehe die oberste Karte vom privaten Stapel deines Gegners und lege sie offen daneben.",
+        "finalScoring": "Bei der Wertung bekommt er für seine offenen Personalkarten Siegpunkte."
+      },
+      "objectiveCard": {
+        "title": "Politikkarte",
+        "checkCard": "Prüfe, ob dein Gegner bereits einen Marker auf der abgebildeten Politikkarte hat:",
+        "hasMarker": "<b>Wenn nein</b>, platziere einen seiner übrigen Marker auf „III“ <i>(auf den Schriftzug)</i>. Dadurch wird eine Art Countdown gestartet, nach dessen Ablauf er die Politikkarte „erfüllt“.",
+        "noMarker": "<b>Wenn ja</b>, schiebe seinen Marker um eine Position nach links <i>(also von „III“ auf „II“ bzw. von „II“ auf „I“)</i>. In dem Moment, wo sein Marker auf „I“ geschoben wird, wird er <b>sofort</b> weiter auf das höchste freie Siegpunktsymbol verschoben und er bekommt sofort die dort aufgedruckten Siegpunkte.",
+        "anyCard": "Weist die abgebildete Politikkarte ein <b>Fragezeichen</b> auf oder hat er für diese Karte bereits Siegpunkte bekommen, so gilt stattdessen die Politikkarte, bei der er <b>noch am weitesten</b> entfernt davon ist, Siegpunkte zu bekommen. Bei Gleichstand entscheidet das Handsymbol."
+      },
+      "placeDancer": {
+        "title": "Tänzer platzieren",
+        "placeDancer": "Dein Gegner entsendet <b>einen zusätzlichen Tänzer</b> in einen Ballsaal, und zwar auf das <b>erste freie Feld von unten</b>:"
+      }
+    },
+    "botUniqueHotel": {
+      "hautel-couture": {
+        "title": "Hautel Couture",
+        "setup": {
+          "drawGuests": "Führe diesen Schritt durch, bevor du Gäste auf den Spielplan legst <i>(Schritt 1d der Spielvorbereitung, wie sie in der überarbeiteten Anleitung beschrieben wird)</i>. Mische die Gästekarten und decke so lange Karten vom Stapel auf, bis du <b>drei Gäste mit 5, 6 oder 7 Siegpunkten</b> aufgedeckt hast, die – sofern du auch mit Modul 1 spielst – keinen Champagner verlangen. Lege diese drei Gäste in das <b>Café deines Gegners</b>. Mische dann die anderen aufgedeckten Gäste zurück in den Stapel und lege wie gewohnt fünf Gäste in die Reihe.",
+          "placeVacantRooms": "Platziere dann für jeden Gast in seinem Café ein <b>passendes Zimmer</b> mit der Seite „frei“ in seinem Hotel: Gehe dabei <b>etagenweise von oben nach unten</b> vor und lege die Zimmer in der Reihenfolge, in der du die Gäste aufgedeckt hast, auf das erste passende Feld <b>von links</b>. Nimm für grüne Gäste einfach das nächste freie Feld von links, egal welcher Farbe. Die so platzierten freien Zimmer sind für genau diese drei Gäste <b>reserviert</b>. <i>(Deckst du hierbei Siegpunktsymbole ab, bekommt dein Gegner sofort diese Siegpunkte.)</i>",
+          "prepareItemPool": "Nimm nun die <b>Waren</b> aus dem Vorrat, die von den Gästen im Café deines Gegners insgesamt gefordert werden, und bilde daraus einen <b>Warenpool</b>. Füge dem Warenpool weitere Waren aus dem Vorrat hinzu, um die Gesamtzahl der Waren im Pool auf 18 zu bringen. Füge die weiteren Waren in der folgenden Reihenfolge hinzu: Strudel, Torte, Wein, Kaffee, Strudel, Torte, Wein, Kaffee, etc.",
+          "placeItems": "Lege schließlich auf jedes Feld des Aktionsplans <b>eine zufällige Ware aus dem Warenpool</b>."
+        },
+        "roundStart": "Fülle die Aktionsfelder, auf denen keine Ware liegt, mit je einer zufälligen Ware aus dem <b>Warenpool</b> auf.",
+        "turnPlayer": "Lege immer, wenn <b>du</b> einen Würfel vom Aktionsplan nimmst, die Ware, die auf dem Aktionsfeld liegt, sofort auf einen passenden Gast das Café deines Gegners. <i>(Das gilt nicht, wenn dein Gegner einen Würfel nimmt.)</i> Du kannst frei wählen, auf welchen Gast du die Ware legst, sofern dieser Gast die Ware überhaupt will. Gibt es keinen solchen Gast, kommt die Ware zurück in den Vorrat. Liegt auf dem Aktionsfeld keine Ware, passiert nichts weiter. Die Aktionsfelder, auf denen keine Ware liegt, werden zu Beginn der nächsten Spielrunde mit je einer zufälligen Ware aus dem Warenpool wieder aufgefüllt.<br/>Sobald du die letzte Ware auf einen Gast in das Café deines Gegners legst, gilt die Bestellung als <b>erfüllt</b> und er bekommt sofort die auf der Karte aufgedruckten Siegpunkte. Den Gast bringt er in dem für ihn reservierten Zimmer unter. <i>(Ein grüner Gast muss in genau den Raum einziehen, der für ihn vorbereitet wurde.)</i>",
+        "endOfGame": "Im Gegensatz zu dir bekommt dein Gegner keinen Punktabzug für Gäste, die noch in seinem Café sitzen. Hat Leopold den Rezeptionisten <i>(Karte Nr. 34)</i> gespielt, zählen auch die noch ggf. freien Zimmer."
+      },
+      "nine-stars-inn": {
+        "title": "Gasthaus \"Zum Neunten Stern\"",
+        "setup": {
+          "objectiveCard": "Lege irgendeine von den übriggebliebenen Politikkarten (egal welche) offen und <b>quer</b> neben das Hotel deines Gegners <i>(siehe Abbildung unten)</i>. Diese Karte stellt die so genannte <b>Sterneleiste</b> dar. Ist Ninas Melange unter den drei Hoteleingängen, von denen du dir einen aussuchen darfst, werden die drei Politikkarten für Ninas Melange zuerst gezogen, bevor eine Karte zur Sterneleiste wird."
+        },
+        "turnPlayer": "Entferne immer, wenn <b>du</b> eine <b>Etage</b> oder eine <b>Spalte</b> deines Hotels abschließt, also alle Zimmer darin bezogen hast, sofort das zuletzt platzierte Zahnrad von der Sterneleiste <i>(d. h. das Zahnrad, das sich am weitesten rechts in der untersten Zeile befindet, in der mindestens ein Zahnrad liegt)</i>. Befinden sich keine Zahnräder auf der Sterneleiste, passiert nichts weiter.",
+        "turnBot": "Zusätzlich zum Weitersetzen des Markers deines Gegners auf der entsprechenden Politikkarte, platziert er ein <b>Zahnrad</b> auf die Sterneleiste.<br/> Stelle dir dazu vor, dass die Karte in <b>drei Zeilen</b> <i>(„III“, „II“ bzw. „I“)</i> zu je <b>drei Spalten</b> <i>(„links von“, „in“ bzw. „rechts von“ der Bedingung)</i> unterteilt ist, was zusammen <b>neun Felder</b> ergibt. Er platziert die Zahnräder <b>zeilenweise von oben nach unten</b> auf das erste freie Feld von links. <i>(Er füllt also Zeile „III“ zuerst, dann Zeile „II“ und schließlich Zeile „I“.)</i>",
+        "emperorScoring": "Dein Gegener bekommt so viele <b>Siegpunkte</b>, wie <b>rechts</b> in der untersten Zeile angegeben ist, in der mindestens ein Zahnrad liegt, d. h. 5, 10 bzw. 15 Siegpunkte."
+      },
+      "sushi-resort": {
+        "title": "Sushi Resort",
+        "setup": {
+          "placeCogwheelTokens": "Lege wie folgt <b>6 Zahnräder</b> im Hotel deines Gegners:",
+          "floor1": "je eines auf die <b>letzten beiden Zimmer</b> in der ersten Etage,",
+          "floor2": "je eines auf die <b>ersten drei Zimmer</b> in der zweiten Etage sowie",
+          "floor3": "eins auf das <b>erste Zimmer</b> in der dritten Etage."
+        },
+        "turnPlayer": "Wenn <b>du</b> einen Gast mit Zahnrad nimmst, musst du <b>1 Krone zusätzlich</b> bezahlen und das Zahnrad zurück in den Vorrat legen. Hast du nicht genug Geld, kannst du den Gast nicht nehmen. <i>(Die 1 Krone musst du auch dann bezahlen, wenn dir ein Effekt einen kostenlosen Gast verspricht.)</i>",
+        "turnBot": "Immer, wenn dein Gegener ein Zimmerplättchen auf ein Feld mit Zahnrad legt, versetzt er das Zahnrad auf den <b>am weitesten links</b> liegenden Gast in der Reihe <i>(nachdem die Reihe wieder aufgefüllt wurde)</i>. Das Zahnrad bleibt auf diesem Gast liegen, auch wenn er nach rechts geschoben wird.",
+        "guestCogwheelScoring": "Wenn <b>dein Gegener</b> einen Gast mit Zahnrad nimmt oder der Gast das Feld <b>ganz rechts</b> in der Reihe erreicht, bekommt Leopold sofort 8 Siegpunkte und das Zahnrad kommt zurück in den Vorrat. <i>(Im letzteren Fall wird nur das Zahnrad entfernt, der Gast bleibt aber in der Reihe.)</i>"
+      },
+      "toll-bridge-hotel": {
+        "title": "Hotel \"An der Mautbrücke\"",
+        "setup": {
+          "none": "Keine zusätzlichen Schritte."
+        },
+        "turnPlayer": "Um ein Aktionsfeld zu nutzen, auf dem ein oder mehrere Zahnräder liegen, musst du vorher <b>genau 1 Krone bezahlen</b>. Hast du kein Geld, kannst du das Aktionsfeld auch nicht nutzen. Kannst du gar kein Aktionsfeld nutzen <i>(d. h., dein Marker ist auf der Geldleiste auf 0 und alle Aktionsfelder haben mindestens ein Zahnrad)</i>, verlierst du sofort <b>5 Siegpunkte</b> und kannst ein Aktionsfeld nutzen, ohne 1 Krone bezahlen zu müssen. Hast du aber mindestens 1 Krone, musst du bezahlen – du kannst nicht freiwillig Siegpunkte abgeben, um 1 Krone zu sparen.<br/>Immer, wenn du ein Aktionsfeld nutzt, bekommt Leopold sofort <b>1 Siegpunkt pro Zahnrad</b> auf dem Aktionsfeld. Danach wird <b<ein Zahnrad</b> vom Aktionsfeld entfernt. <i>(Es spielt dabei keine Rolle, ob du 1 Krone bezahlen konntest oder nicht.)</i>",
+        "turnBot": "Immer, wenn <b>dein Gegner</b> einen Würfel vom Aktionsplan nimmt, platziert er <b>ein Zahnrad</b> auf das entsprechende Aktionsfeld. Auf einem Feld können sich mehrere Zahnräder ansammeln. Sie bleiben dort von Spielrunde zu Spielrunde liegen."
+      }
+    }    
+  },
+  "difficultyLevel": {
+    "1": "Level 1 - Einfach",
+    "2": "Level 2 - Mittel",
+    "3": "Level 3 - Schwer"
+  },
+  "opponentName": {
+    "leopold": "Leopold",
+    "elisabeth": "Elisabeth"
+  },
+  "sideBar": {
+    "round": "Runde {round}",
+    "turn": "Zug {turn}"
+  },
+  "notfound": {
+    "title": "Nicht Gefunden"
+  },
+  "action": {
+    "playGame": "Spielen",
+    "startGame": "Spiel starten",
+    "next": "Weiter",
+    "nextRound": "Nächste Runde",
+    "abortGame": "Spiel abbrechen",
+    "abortGameConfirm": "Das aktuelle Spiel wird abgebrochen - bist du sicher?",
+    "endGame": "Spiel beenden",
+    "endGameConfirm": "Dieses Spiel wird beendet - bist du sicher?",
+    "cancel": "Abbrechen",
+    "backToHome": "Zurück zum Anfang",
+    "back": "Zurück",
+    "close": "Schließen",
+    "ok": "OK"
+  },
+  "footer": {
+    "credits": "Credits"
+  },
+  "serviceWorkerUpdatedRefresh": {
+    "title": "Applikation neu laden",
+    "notice": "Die Applikation wurde aktualisiert - möchtest du die Seite neu laden um die neueste Version zu nutzen?"
+  }
+}

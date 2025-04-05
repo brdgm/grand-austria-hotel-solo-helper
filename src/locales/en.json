@@ -72,7 +72,13 @@
     "additionalAction": "Additional Action"
   },
   "endOfGame": {
-    "title": "End of Game"
+    "title": "End of Game",
+    "finalScoring": "Final Scoring",
+    "staffCards": "You and your opponent receive Victory Points for Staff cards.",
+    "occupiedRooms": "You and your opponent receive Victory Points for your occupied rooms.",
+    "moneyDishDrinks": "You receive 1 Victory Point for each krone and left over dish and drink in your Kitchen.",
+    "remainingGuests": "You lose 5 Victory Points for each guest in your Café.",
+    "winCondition": "You win if you have <b>more victory points</b> than your opponent. Otherwise, your opponent wins."
   },
   "rules": {
     "action": {

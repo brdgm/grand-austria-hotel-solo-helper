@@ -1,12 +1,12 @@
 <template>
   <h1 class="mb-3">{{t('endOfGame.title')}}</h1>
 
-  <p class="fst-italic">TODO: Final Scoring</p>
+  <h5>{{t('endOfGame.finalScoring')}}</h5>
   <ul>
-    <li>Player/Opponent: You receive Victory Points for your Staff cards that provide them.</li>
-    <li>Player/Opponent: You receive Victory Points for your occupied rooms: 1 Victory Point for each room in the fi rst row of your Hotel board, 2 Victory Points each in the second row, 3 Victory Points each in the third row, and 4 Victory Points each in the top row.</li>
-    <li>Player: You receive 1 Victory Point for each krone and left over dish and drink in your Kitchen.</li>
-    <li>Player: You lose 5 Victory Points for each guest in your Café.</li>
+    <li v-html="t('endOfGame.staffCards')"></li>
+    <li v-html="t('endOfGame.occupiedRooms')"></li>
+    <li v-html="t('endOfGame.moneyDishDrinks')"></li>
+    <li v-html="t('endOfGame.remainingGuests')"></li>
     <ul>
       <li>
         <span class="fst-italic" v-html="t('rules.botUniqueHotel.hautel-couture.title')"></span>:
@@ -14,7 +14,7 @@
       </li>
     </ul>
   </ul>
-  <p class="fst-italic">You win if you have more victory points than Leopold. Otherwise, Leopold wins.</p>
+  <p class="fst-italic" v-html="t('endOfGame.winCondition')"></p>
 
   <FooterButtons :backButtonRouteTo="backButtonRouteTo" endGameButtonType="endGame"/>
 </template>

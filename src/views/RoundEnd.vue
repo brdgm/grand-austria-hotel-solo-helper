@@ -11,6 +11,10 @@
         <li v-html="t('roundEnd.emperorScoring.scoreVP')"></li>
         <li v-html="t('roundEnd.emperorScoring.resetMarkers', {steps:emperorResetTrackSteps})"></li>
         <li v-html="t('roundEnd.emperorScoring.gainBonusPenalty')"></li>
+        <li v-if="isBotUniqueHotelNineStarsInn">
+          <span class="fst-italic" v-html="t('rules.botUniqueHotel.nine-stars-inn.title')"></span>:
+          <span v-html="t('rules.botUniqueHotel.nine-stars-inn.emperorScoring')"></span>
+        </li>
       </ul>
     </template>
     <li v-if="hasViennaBallroomsExpansion" v-html="t('roundEnd.viennaBallrooms')"></li>
@@ -33,6 +37,7 @@ import { useStateStore } from '@/store/state'
 import NavigationState from '@/util/NavigationState'
 import SideBar from '@/components/round/SideBar.vue'
 import Expansion from '@/services/enum/Expansion'
+import BotUniqueHotel from '@/services/enum/BotUniqueHotel'
 
 export default defineComponent({
   name: 'RoundEnd',
@@ -69,7 +74,10 @@ export default defineComponent({
     },
     hasCelebritiesExpansion() : boolean {
       return this.state.setup.expansions.includes(Expansion.LETS_WALTZ_MODULE_2_CELEBRITIES)
-    }
+    },
+    isBotUniqueHotelNineStarsInn() : boolean {
+      return this.isBotUniqueHotel(BotUniqueHotel.NINE_STARS_INN)
+    },
   },
   methods: {
     next() : void {
@@ -79,7 +87,11 @@ export default defineComponent({
       else {
         this.router.push(`/round/${this.round + 1}/start`)
       }
-    }
+    },
+    isBotUniqueHotel(botUniqueHotel : BotUniqueHotel) : boolean {
+      return this.state.setup.expansions.includes(Expansion.LETS_WALTZ_MODULE_3_UNIQUE_HOTELS)
+          &&  this.state.setup.botUniqueHotel == botUniqueHotel
+    },
   }
 })
 </script>

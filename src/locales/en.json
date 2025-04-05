@@ -163,13 +163,18 @@
           "prepareItemPool": "Take the items required to complete these guests’ orders from the supply and place them, separate from the supply, beside the action board, as the so-called <b>item pool</b>. Add items from the supply to the item pool, until there are a total of <b>18 items</b> in the pool. Take the additional items from the supply in this order: strudel, cake, wine, coffee, strudel, cake, wine, coffee, etc.",
           "placeItems": "Finally, for each <b>action space</b> on the action board, draw a <b>random item from the item pool</b> and place it on the space."
         },
-        "roundStart": "Replenish the action spaces with random items drawn from the <b>item pool</b>."
+        "roundStart": "Replenish the action spaces with random items drawn from the <b>item pool</b>.",
+        "turnPlayer": "Each time <b>you</b> take a die from an action space, if there is an item on that space, you must immediately place that item on one of your opponent’s guests, if possible. <i>(When your opponent takes a die, nothing happens.)</i> You may freely choose which guest receives the item. If you cannot place the item, return it to the supply.<br/>As soon as you place the last item on one of the guests, thus <b>completing the order</b>, your opponent immediately scores that guest’s victory points and moves the guest to their reserved room. <i>(A green guest must go into the room that has been prepared for them during setup.)</i>",
+        "endOfGame": "Contrary to you, your opponent does not lose victory points if guests remain in his café. If vacant rooms remain in his hotel, they do count for Receptionist <i>(card #34)</i>."
       },
       "nine-stars-inn": {
         "title": "Nine Stars Inn",
         "setup": {
           "objectiveCard": "Place an <b>objective card</b> from those remaining <i>(no matter which one)</i> face up and sideways beside your opponent’s hotel <i>(see image below)</i>, as the so-called stars track. If Ninas Melange is among the three hotel entrances you can choose from, first draw three objective cards for Ninas Melange before placing an objective card as the stars track."
-        }
+        },
+        "turnPlayer": "Each time <b>you</b> complete a <b>floor or column</b> of your hotel board, by occupying all rooms in that floor or column, immediately <b>remove the latest cogwheel</b> token from the stars track <i>(i.e., the rightmost one in the bottommost row)</i>. If there are no cogwheel tokens on the track, nothing happens.",
+        "turnBot": "Additionally to advancing on an objective card, your opponent places also a <b>cogwheel token</b> on the stars track beside his hotel board.<br/>For this purpose, consider the card to be divided into <b>three rows</b> <i>(“III”, “II”, and “I”)</i> of <b>three spaces each</b> <i>(“to the left of”, “inside”, and “to the right of” the requirement box)</i>, for a total of <b>nine spaces</b>. Your opponent places cogwheel tokens onto these spaces <b>from left to right</b>, starting with the <b>top row</b> <i>(filling the “III” row before the “II” row and the “II” row before the “I” row)</i>.",
+        "emperorScoring": "Your opponent scores the <b>victory points</b> printed <b>at the right</b> of the bottommost row of the stars track containing at least one token, i.e., 5, 10, or 15 victory points."
       },
       "sushi-resort": {
         "title": "Sushi Resort",
@@ -178,13 +183,18 @@
           "floor1": "one each on the <b>last two rooms</b> on the first floor,",
           "floor2": "one each on the <b>first three rooms</b> on the second floor,",
           "floor3": "and one on the <b>first</b> room on the third floor."
-        }
+        },
+        "turnPlayer": "When <b>you</b> take a guest with a cogwheel token, you must pay an <b>additional 1 krone</b> for that guest and return the token to the supply. If you cannot pay, you may not choose that guest. <i>(You must pay the additional 1 krone even if an effect allows you to take a guest at no cost.)</i>",
+        "turnBot": "Each time your opponent places a room tile on a space with a cogwheel token, he immediately moves that token onto the <b>leftmost guest</b> in the queue <i>(after replenishing it)</i>. The cogwheel token remains on that guest, even when the guest is shifted to the right when replenishing the queue.",
+        "guestCogwheelScoring": "When <b>your opponent</b> takes a guest with a cogwheel token or that guest moves onto the <b>rightmost space</b> of the queue, he immediately scores an additional <b>8 victory points</b>, returning the token to the supply. <i>(In the latter case, only remove the token, but leave the guest in the queue.)</i>"
       },
       "toll-bridge-hotel": {
         "title": "Toll Bridge Hotel",
         "setup": {
           "none": "No additional steps."
-        }
+        },
+        "turnPlayer": "To use an action space containing one or more cogwheel tokens, you must <b>pay exactly 1 krone</b>. If you cannot pay, you may not use that action space. Only if you cannot use any action space <i>(i.e., the marker on your money track is on 0 and all action spaces contain one or more tokens)</i>, you immediately lose <b>5 victory points</b>; after, you can use any action space without paying 1 krone <i>(this turn only)</i>. If you have at least 1 krone, you must pay; you may not choose to lose 5 victory points instead of paying 1 krone.<br/>When you use an action space, your opponent immediately scores <b>1 victory point per cogwheel token</b> on that space. Then return <b>one token</b> from that space to the supply. <i>(It does not matter whether or not you were able to pay 1 krone for that space.)</i>",
+        "turnBot": "Each time <b>your opponent</b> takes a die from an action space, he leaves a <b>cogwheel token</b> on that space. These tokens can accumulate on the space and they remain from round to round."
       }
     }
   },

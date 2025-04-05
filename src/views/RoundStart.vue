@@ -5,7 +5,7 @@
 
   <ul class="mt-4">
     <li v-html="t('roundStart.rollDice')"></li>
-    <li v-if="isBotUniqueHotelTollBridgeHotel && round > 1">
+    <li v-if="isBotUniqueHotelHautelCouture && round > 1">
       <span class="fst-italic" v-html="t('rules.botUniqueHotel.hautel-couture.title')"></span>:
       <span v-html="t('rules.botUniqueHotel.hautel-couture.roundStart')"></span>
     </li>
@@ -53,7 +53,7 @@ export default defineComponent({
       }
       return ''
     },
-    isBotUniqueHotelTollBridgeHotel() : boolean {
+    isBotUniqueHotelHautelCouture() : boolean {
       return this.state.setup.expansions.includes(Expansion.LETS_WALTZ_MODULE_3_UNIQUE_HOTELS)
           &&  this.state.setup.botUniqueHotel == BotUniqueHotel.HAUTEL_COUTURE
     },

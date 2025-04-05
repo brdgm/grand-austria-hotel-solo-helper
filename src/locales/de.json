@@ -163,13 +163,18 @@
           "prepareItemPool": "Nimm nun die <b>Waren</b> aus dem Vorrat, die von den Gästen im Café deines Gegners insgesamt gefordert werden, und bilde daraus einen <b>Warenpool</b>. Füge dem Warenpool weitere Waren aus dem Vorrat hinzu, um die Gesamtzahl der Waren im Pool auf 18 zu bringen. Füge die weiteren Waren in der folgenden Reihenfolge hinzu: Strudel, Torte, Wein, Kaffee, Strudel, Torte, Wein, Kaffee, etc.",
           "placeItems": "Lege schließlich auf jedes Feld des Aktionsplans <b>eine zufällige Ware aus dem Warenpool</b>."
         },
-        "roundStart": "Fülle die Aktionsfelder, auf denen keine Ware liegt, mit je einer zufälligen Ware aus dem <b>Warenpool</b> auf."
+        "roundStart": "Fülle die Aktionsfelder, auf denen keine Ware liegt, mit je einer zufälligen Ware aus dem <b>Warenpool</b> auf.",
+        "turnPlayer": "Lege immer, wenn <b>du</b> einen Würfel vom Aktionsplan nimmst, die Ware, die auf dem Aktionsfeld liegt, sofort auf einen passenden Gast das Café deines Gegners. <i>(Das gilt nicht, wenn dein Gegner einen Würfel nimmt.)</i> Du kannst frei wählen, auf welchen Gast du die Ware legst, sofern dieser Gast die Ware überhaupt will. Gibt es keinen solchen Gast, kommt die Ware zurück in den Vorrat. Liegt auf dem Aktionsfeld keine Ware, passiert nichts weiter. Die Aktionsfelder, auf denen keine Ware liegt, werden zu Beginn der nächsten Spielrunde mit je einer zufälligen Ware aus dem Warenpool wieder aufgefüllt.<br/>Sobald du die letzte Ware auf einen Gast in das Café deines Gegners legst, gilt die Bestellung als <b>erfüllt</b> und er bekommt sofort die auf der Karte aufgedruckten Siegpunkte. Den Gast bringt er in dem für ihn reservierten Zimmer unter. <i>(Ein grüner Gast muss in genau den Raum einziehen, der für ihn vorbereitet wurde.)</i>",
+        "endOfGame": "Im Gegensatz zu dir bekommt dein Gegner keinen Punktabzug für Gäste, die noch in seinem Café sitzen. Hat Leopold den Rezeptionisten <i>(Karte Nr. 34)</i> gespielt, zählen auch die noch ggf. freien Zimmer."
       },
       "nine-stars-inn": {
         "title": "Gasthaus \"Zum Neunten Stern\"",
         "setup": {
           "objectiveCard": "Lege irgendeine von den übriggebliebenen Politikkarten (egal welche) offen und <b>quer</b> neben das Hotel deines Gegners <i>(siehe Abbildung unten)</i>. Diese Karte stellt die so genannte <b>Sterneleiste</b> dar. Ist Ninas Melange unter den drei Hoteleingängen, von denen du dir einen aussuchen darfst, werden die drei Politikkarten für Ninas Melange zuerst gezogen, bevor eine Karte zur Sterneleiste wird."
-        }
+        },
+        "turnPlayer": "Entferne immer, wenn <b>du</b> eine <b>Etage</b> oder eine <b>Spalte</b> deines Hotels abschließt, also alle Zimmer darin bezogen hast, sofort das zuletzt platzierte Zahnrad von der Sterneleiste <i>(d. h. das Zahnrad, das sich am weitesten rechts in der untersten Zeile befindet, in der mindestens ein Zahnrad liegt)</i>. Befinden sich keine Zahnräder auf der Sterneleiste, passiert nichts weiter.",
+        "turnBot": "Zusätzlich zum Weitersetzen des Markers deines Gegners auf der entsprechenden Politikkarte, platziert er ein <b>Zahnrad</b> auf die Sterneleiste.<br/> Stelle dir dazu vor, dass die Karte in <b>drei Zeilen</b> <i>(„III“, „II“ bzw. „I“)</i> zu je <b>drei Spalten</b> <i>(„links von“, „in“ bzw. „rechts von“ der Bedingung)</i> unterteilt ist, was zusammen <b>neun Felder</b> ergibt. Er platziert die Zahnräder <b>zeilenweise von oben nach unten</b> auf das erste freie Feld von links. <i>(Er füllt also Zeile „III“ zuerst, dann Zeile „II“ und schließlich Zeile „I“.)</i>",
+        "emperorScoring": "Dein Gegener bekommt so viele <b>Siegpunkte</b>, wie <b>rechts</b> in der untersten Zeile angegeben ist, in der mindestens ein Zahnrad liegt, d. h. 5, 10 bzw. 15 Siegpunkte."
       },
       "sushi-resort": {
         "title": "Sushi Resort",
@@ -178,13 +183,18 @@
           "floor1": "je eines auf die <b>letzten beiden Zimmer</b> in der ersten Etage,",
           "floor2": "je eines auf die <b>ersten drei Zimmer</b> in der zweiten Etage sowie",
           "floor3": "eins auf das <b>erste Zimmer</b> in der dritten Etage."
-        }
+        },
+        "turnPlayer": "Wenn <b>du</b> einen Gast mit Zahnrad nimmst, musst du <b>1 Krone zusätzlich</b> bezahlen und das Zahnrad zurück in den Vorrat legen. Hast du nicht genug Geld, kannst du den Gast nicht nehmen. <i>(Die 1 Krone musst du auch dann bezahlen, wenn dir ein Effekt einen kostenlosen Gast verspricht.)</i>",
+        "turnBot": "Immer, wenn dein Gegener ein Zimmerplättchen auf ein Feld mit Zahnrad legt, versetzt er das Zahnrad auf den <b>am weitesten links</b> liegenden Gast in der Reihe <i>(nachdem die Reihe wieder aufgefüllt wurde)</i>. Das Zahnrad bleibt auf diesem Gast liegen, auch wenn er nach rechts geschoben wird.",
+        "guestCogwheelScoring": "Wenn <b>dein Gegener</b> einen Gast mit Zahnrad nimmt oder der Gast das Feld <b>ganz rechts</b> in der Reihe erreicht, bekommt Leopold sofort 8 Siegpunkte und das Zahnrad kommt zurück in den Vorrat. <i>(Im letzteren Fall wird nur das Zahnrad entfernt, der Gast bleibt aber in der Reihe.)</i>"
       },
       "toll-bridge-hotel": {
         "title": "Hotel \"An der Mautbrücke\"",
         "setup": {
           "none": "Keine zusätzlichen Schritte."
-        }
+        },
+        "turnPlayer": "Um ein Aktionsfeld zu nutzen, auf dem ein oder mehrere Zahnräder liegen, musst du vorher <b>genau 1 Krone bezahlen</b>. Hast du kein Geld, kannst du das Aktionsfeld auch nicht nutzen. Kannst du gar kein Aktionsfeld nutzen <i>(d. h., dein Marker ist auf der Geldleiste auf 0 und alle Aktionsfelder haben mindestens ein Zahnrad)</i>, verlierst du sofort <b>5 Siegpunkte</b> und kannst ein Aktionsfeld nutzen, ohne 1 Krone bezahlen zu müssen. Hast du aber mindestens 1 Krone, musst du bezahlen – du kannst nicht freiwillig Siegpunkte abgeben, um 1 Krone zu sparen.<br/>Immer, wenn du ein Aktionsfeld nutzt, bekommt Leopold sofort <b>1 Siegpunkt pro Zahnrad</b> auf dem Aktionsfeld. Danach wird <b<ein Zahnrad</b> vom Aktionsfeld entfernt. <i>(Es spielt dabei keine Rolle, ob du 1 Krone bezahlen konntest oder nicht.)</i>",
+        "turnBot": "Immer, wenn <b>dein Gegner</b> einen Würfel vom Aktionsplan nimmt, platziert er <b>ein Zahnrad</b> auf das entsprechende Aktionsfeld. Auf einem Feld können sich mehrere Zahnräder ansammeln. Sie bleiben dort von Spielrunde zu Spielrunde liegen."
       }
     }    
   },

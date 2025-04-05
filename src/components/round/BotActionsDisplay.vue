@@ -5,17 +5,35 @@
       <GuestSelection :guestSelection="guestSelection" :botActions="botActions"/>
     </div>
   </div>
+  <p class="mt-4" v-if="isBotUniqueHotelSushiResort">
+    <span class="fst-italic" v-html="t('rules.botUniqueHotel.sushi-resort.title')"></span>:
+    <span v-html="t('rules.botUniqueHotel.sushi-resort.turnBot')"></span><br/>
+    <span v-html="t('rules.botUniqueHotel.sushi-resort.guestCogwheelScoring')"></span>
+  </p>
+
   <h5 class="mt-3">{{t('turnBot.die')}}</h5>
   <div class="actionList container-fluid">
     <div class="row">
       <DieSelection :dieSelection="[...botActions.dieSelection]" :botActions="botActions"/>
     </div>
   </div>
+  <p class="mt-4" v-if="isBotUniqueHotelTollBridgeHotel">
+    <span class="fst-italic" v-html="t('rules.botUniqueHotel.toll-bridge-hotel.title')"></span>:
+    <span v-html="t('rules.botUniqueHotel.toll-bridge-hotel.turnBot')"></span><br/>
+  </p>
+
   <h5 class="mt-3">{{t('turnBot.additionalAction')}}</h5>
   <div class="actionList container-fluid">
     <div class="row" v-for="(actionItem,index) in botActions.additionalAction" :key="index">
       <component :is="actionItem.action" :additionalAction="actionItem" :botActions="botActions"/>
     </div>
+  </div>
+  <div class="mt-4" v-if="isBotUniqueHotelNineStarsInnAndObjectiveCard">
+    <img src="@/assets/bot-unique-hotel/nine-stars-inn-example.webp" alt="" class="exampleImage"/>
+    <p>
+      <span class="fst-italic" v-html="t('rules.botUniqueHotel.nine-stars-inn.title')"></span>:
+      <span v-html="t('rules.botUniqueHotel.nine-stars-inn.turnBot')"></span>
+    </p>
   </div>
 </template>
 
@@ -30,12 +48,17 @@ import StaffCard from './action/StaffCard.vue'
 import DieSelection from './action/DieSelection.vue'
 import GuestSelection from './action/GuestSelection.vue'
 import PlaceDancer from './action/PlaceDancer.vue'
+import BotUniqueHotel from '@/services/enum/BotUniqueHotel'
+import Expansion from '@/services/enum/Expansion'
+import { useStateStore } from '@/store/state'
+import Action from '@/services/enum/Action'
 
 export default defineComponent({
   name: 'BotActionsDisplay',
   setup() {
     const { t } = useI18n()
-    return { t }
+    const state = useStateStore()
+    return { t, state }
   },
   components: {
     GuestSelection,
@@ -54,6 +77,24 @@ export default defineComponent({
       type: BotActions,
       required: true
     }
+  },
+  computed: {
+    isBotUniqueHotelNineStarsInnAndObjectiveCard() : boolean {
+      return this.isBotUniqueHotel(BotUniqueHotel.NINE_STARS_INN)
+          && this.navigationState.botActions?.additionalAction.find(item => item.action == Action.OBJECTIVE_CARD) != undefined
+    },
+    isBotUniqueHotelSushiResort() : boolean {
+      return this.isBotUniqueHotel(BotUniqueHotel.SUSHI_RESORT)
+    },
+    isBotUniqueHotelTollBridgeHotel() : boolean {
+      return this.isBotUniqueHotel(BotUniqueHotel.TOLL_BRIDGE_HOTEL)
+    },
+  },
+  methods: {
+    isBotUniqueHotel(botUniqueHotel : BotUniqueHotel) : boolean {
+      return this.state.setup.expansions.includes(Expansion.LETS_WALTZ_MODULE_3_UNIQUE_HOTELS)
+          &&  this.state.setup.botUniqueHotel == botUniqueHotel
+    },
   }
 })
 </script>
@@ -62,5 +103,15 @@ export default defineComponent({
 .actionList {
   display: flex;
   gap: 2.5rem;
+}
+.exampleImage {
+  display: block;
+  height: 7rem;
+  max-width: 100%;
+  object-fit: contain;
+  @media (min-width: 450px) {
+    float: right;
+    margin-left: 1rem;
+  }
 }
 </style>

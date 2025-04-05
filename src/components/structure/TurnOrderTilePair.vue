@@ -1,5 +1,7 @@
 <template>
-  <TurnOrderTile v-for="t of turns" :key="t" :value="t" :active="t==turn"/>
+  <div class="tiles">
+    <TurnOrderTile v-for="t of turns" :key="t" :value="t" :active="t==turn"/>
+  </div>
 </template>
 
 <script lang="ts">
@@ -29,3 +31,11 @@ export default defineComponent({
   }
 })
 </script>
+
+<style lang="scss" scoped>
+.tiles {
+  display: inline-flex;
+  gap: 6px;
+  transform: translateY(-5px);
+}
+</style>

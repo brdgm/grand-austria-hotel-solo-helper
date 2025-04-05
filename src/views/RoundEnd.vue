@@ -17,7 +17,7 @@
         </li>
       </ul>
     </template>
-    <li v-if="hasViennaBallroomsExpansion" v-html="t('roundEnd.viennaBallrooms')"></li>
+    <li v-if="hasViennaBallroomsExpansion && isEmperorScoring" v-html="t('roundEnd.viennaBallrooms')"></li>
     <li v-html="t('roundEnd.swapTurnOrderTiles')"></li>
   </ul>
 

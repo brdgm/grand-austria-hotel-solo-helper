@@ -69,7 +69,9 @@
   "turnBot": {
     "guest": "Guest",
     "die": "Die",
-    "additionalAction": "Additional Action"
+    "additionalAction": "Additional Action",
+    "noGuest": "None",
+    "noAdditionalAction": "None"
   },
   "endOfGame": {
     "title": "End of Game",

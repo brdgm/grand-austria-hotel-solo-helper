@@ -1,10 +1,11 @@
 <template>
   <h5 class="mt-3">{{t('turnBot.guest')}}</h5>
-  <div class="actionList container-fluid">
+  <div class="actionList container-fluid" v-if="botActions.guestSelection.length > 0">
     <div class="row" v-for="(guestSelection,index) in botActions.guestSelection" :key="index">
       <GuestSelection :guestSelection="guestSelection" :botActions="botActions"/>
     </div>
   </div>
+  <p v-else class="fst-italic">{{t('turnBot.noGuest')}}</p>
   <p class="mt-4" v-if="isBotUniqueHotelSushiResort">
     <span class="fst-italic" v-html="t('rules.botUniqueHotel.sushi-resort.title')"></span>:
     <span v-html="t('rules.botUniqueHotel.sushi-resort.turnBot')"></span><br/>
@@ -23,11 +24,12 @@
   </p>
 
   <h5 class="mt-3">{{t('turnBot.additionalAction')}}</h5>
-  <div class="actionList container-fluid">
+  <div class="actionList container-fluid" v-if="botActions.additionalAction.length > 0">
     <div class="row" v-for="(actionItem,index) in botActions.additionalAction" :key="index">
       <component :is="actionItem.action" :additionalAction="actionItem" :botActions="botActions"/>
     </div>
   </div>
+  <p v-else class="fst-italic">{{t('turnBot.noAdditionalAction')}}</p>
   <div class="mt-4" v-if="isBotUniqueHotelNineStarsInnAndObjectiveCard">
     <img src="@/assets/bot-unique-hotel/nine-stars-inn-example.webp" alt="" class="exampleImage"/>
     <p>

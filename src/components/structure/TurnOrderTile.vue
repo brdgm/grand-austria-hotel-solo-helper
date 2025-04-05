@@ -30,13 +30,14 @@ export default defineComponent({
   display: inline-flex;
   width: 45px;
   height: 45px;
-  margin: 3px;
   background-color: #fff;
   align-items: center;
   justify-content: center;
   border: 2px solid #000;
   border-radius: 10px;
   padding-bottom: 4px;
+  font-size: 1rem;
+  font-weight: normal;
   .number {
     margin-left: 2px;
     font-size: 25px;

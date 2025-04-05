@@ -1,9 +1,10 @@
 <template>
   <SideBar :navigationState="navigationState"/>
 
-  <h1>{{t('turnPlayer.title')}}</h1>
-
-  <TurnOrderTilePair :turn="turn"/>
+  <h1>
+    {{t('turnPlayer.title')}}
+    <TurnOrderTilePair :turn="turn"/>
+  </h1>
 
   <p class="mt-4" v-html="t('turnPlayer.takeYourTurn')"></p>
 

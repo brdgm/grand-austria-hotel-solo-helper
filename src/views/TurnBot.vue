@@ -1,9 +1,10 @@
 <template>
   <SideBar :navigationState="navigationState"/>
 
-  <h1>{{t(`opponentName.${navigationState.deckType}`)}}</h1>
-
-  <TurnOrderTilePair :turn="turn"/>
+  <h1>
+    {{t(`opponentName.${navigationState.deckType}`)}}
+    <TurnOrderTilePair :turn="turn"/>
+  </h1>
 
   <BotActionsDisplay v-if="navigationState.botActions"
       :navigationState="navigationState" :botActions="navigationState.botActions"/>

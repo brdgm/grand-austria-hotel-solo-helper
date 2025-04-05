@@ -17,6 +17,7 @@ import ModalDialog from '@brdgm/brdgm-commons/src/components/structure/ModalDial
 import showModal from '@brdgm/brdgm-commons/src/util/modal/showModal'
 import TieBreaker from '@/services/enum/TieBreaker'
 import AppIcon from '../structure/AppIcon.vue'
+import { nanoid } from 'nanoid'
 
 export default defineComponent({
   name: 'ActionBox',
@@ -25,7 +26,7 @@ export default defineComponent({
     AppIcon
   },
   setup() {
-    const modalId = `modal-${crypto.randomUUID()}`
+    const modalId = `modal-${nanoid()}`
     return { modalId }
   },
   props: {
@@ -34,7 +35,7 @@ export default defineComponent({
       required: true
     },
     tieBreaker: {
-      type: Object as PropType<TieBreaker>,
+      type: String as PropType<TieBreaker>,
       required: false
     },
     modalSizeLg: {

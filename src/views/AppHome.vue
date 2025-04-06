@@ -11,13 +11,11 @@
   <p v-html="t('home.play1')"></p>
   <p v-html="t('home.play2')"></p>
 
-<!--
   <p class="text-muted fst-italic">
     {{t('home.feedback')}}
-    <a href="https://boardgamegeek.com/thread/XXX/brdgmme-grand-austria-hotel-solo-helper-web-application" target="_blank" rel="noopener">Board Game Geek Thread</a> |
+    <a href="https://boardgamegeek.com/thread/3491491/brdgmme-grand-austria-hotel-solo-helper-web-applic" target="_blank" rel="noopener">Board Game Geek Thread</a> |
     <a href="https://github.com/brdgm/grand-austria-hotel-solo-helper" target="_blank" rel="noopener">GitHub</a>
   </p>
--->
 
   <button class="btn btn-primary btn-lg mt-3" @click="startGame()">{{t('action.playGame')}}</button>
 

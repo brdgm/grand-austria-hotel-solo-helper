@@ -1,0 +1,12 @@
+ <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve">
+  <defs>
+    <clipPath id="round-corner">
+      <rect x="0" y="0" width="256" height="256" rx="30" ry="30"/>
+    </clipPath>
+  </defs>
+  <rect x="0" y="0" width="256" height="256" fill="#fff" stroke="#000" stroke-width="20" rx="30" ry="30" clip-path="url(#round-corner)" />
+	<g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+    <circle cx="64.99600000000001" cy="24.996" r="6.976" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
+    <circle cx="24.996" cy="64.99600000000001" r="6.976" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
+  </g>
+</svg>

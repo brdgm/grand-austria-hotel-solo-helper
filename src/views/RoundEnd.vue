@@ -84,7 +84,7 @@ export default defineComponent({
   methods: {
     next() : void {
       if (this.round == 7) {
-        this.router.push(`/endOfGame`)
+        this.router.push('/endOfGameAmounts')
       }
       else {
         this.router.push(`/round/${this.round + 1}/start`)

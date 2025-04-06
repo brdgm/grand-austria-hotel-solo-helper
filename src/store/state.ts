@@ -22,6 +22,7 @@ export const useStateStore = defineStore(`${name}.state`, {
       this.rounds = []
       this.setup.initialCardDeck = undefined
       this.setup.botUniqueHotel = undefined
+      this.finalScoringAmount = undefined
     },
     setupToggleExpansion(expansion: Expansion) : void {
       toggleArrayItem(this.setup.expansions, expansion)
@@ -44,6 +45,7 @@ export interface State {
   baseFontSize: number
   setup: Setup
   rounds: Round[]
+  finalScoringAmount?: FinalScoringAmount
 }
 export interface Setup {
   difficultyLevel: DifficultyLevel
@@ -66,4 +68,16 @@ export interface Turn {
 export interface CardDeckPersistence {
   pile: number[]
   discard: number[]
+}
+
+export interface FinalScoringAmount {
+  scoringTrackVP: number[]
+  staffCardsVP: number[]
+  occupiedRoomsLevel4: number[]
+  occupiedRoomsLevel3: number[]
+  occupiedRoomsLevel2: number[]
+  occupiedRoomsLevel1: number[]
+  money: number[]
+  dishesDrinks: number[]
+  remainingGuests: number[]
 }

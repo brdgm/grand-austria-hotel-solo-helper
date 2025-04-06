@@ -29,6 +29,7 @@ import SideBar from '@/components/round/SideBar.vue'
 import TurnOrderTilePair from '@/components/structure/TurnOrderTilePair.vue'
 import DebugInfo from '@/components/round/DebugInfo.vue'
 import BotActionsDisplay from '@/components/round/BotActionsDisplay.vue'
+import RouteCalculator from '@/services/RouteCalculator'
 
 export default defineComponent({
   name: 'TurnBot',
@@ -52,10 +53,8 @@ export default defineComponent({
   },
   computed: {
     backButtonRouteTo() : string {
-      if (this.turn > 1) {
-        return `/round/${this.round}/turn/${this.turn-1}/${this.navigationState.previousPlayer}`
-      }
-      return `/round/${this.round}/start`
+      const routeCalculator = new RouteCalculator({round:this.round, turn:this.turn})
+      return routeCalculator.getBackRouteTo(this.state)
     }
   },
   methods: {
@@ -66,12 +65,8 @@ export default defineComponent({
         cardDeck: this.navigationState.cardDeck.toPersistence()
       }
       this.state.storeTurn(turn)
-      if (this.turn == 4) {
-        this.router.push(`/round/${this.round}/end`)
-      }
-      else {
-        this.router.push(`/round/${this.round}/turn/${this.turn+1}/${this.navigationState.nextPlayer}`)
-      }
+      const routeCalculator = new RouteCalculator({round:this.round, turn:this.turn})
+      this.router.push(routeCalculator.getNextRouteTo(this.state))
     }
   }
 })

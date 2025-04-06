@@ -7,6 +7,7 @@ import DeckType from '@/services/enum/DeckType'
 import getMatchingDeckType from './getMatchingDeckType'
 import CardDeck from '@/services/CardDeck'
 import BotActions from '@/services/BotActions'
+import RouteCalculator, { MAX_TURN } from '@/services/RouteCalculator'
 
 export default class NavigationState {
 
@@ -14,9 +15,6 @@ export default class NavigationState {
   readonly turn : number
   readonly difficultyLevel : DifficultyLevel
   readonly deckType : DeckType
-  readonly currentPlayer : Player
-  readonly nextPlayer : Player
-  readonly previousPlayer : Player
   readonly cardDeck : CardDeck
   readonly botActions? : BotActions
 
@@ -27,34 +25,14 @@ export default class NavigationState {
     this.difficultyLevel = state.setup.difficultyLevel
     this.deckType = getMatchingDeckType(state.setup.expansions)
 
-    const startPlayer = isEven(this.round) ? Player.PLAYER : Player.BOT
-    this.currentPlayer = getTurnPlayer(this.turn, startPlayer)
-    this.nextPlayer = getTurnPlayer(this.turn + 1, startPlayer)
-    this.previousPlayer = getTurnPlayer(this.turn - 1, startPlayer)
-
     this.cardDeck = getCardDeckFromLastTurn(state, this.round, this.turn)
-    if (this.currentPlayer == Player.BOT && this.turn > 0) {
+    const routeCalculator = new RouteCalculator({round:this.round, turn:this.turn})
+    if (routeCalculator.currentPlayer == Player.BOT && this.turn > 0) {
       const currentCard = this.cardDeck.draw()
       this.botActions = new BotActions(currentCard, state)
     }
   }
 
-}
-
-function isEven(n: number) : boolean {
-  return n % 2 == 0
-}
-
-function getTurnPlayer(turn: number, startPlayer: Player) : Player {
-  if (turn == 1 || turn == 4 || turn < 0) {
-    return startPlayer
-  }
-  else if (startPlayer == Player.PLAYER) {
-    return Player.BOT
-  }
-  else {
-    return Player.PLAYER
-  }
 }
 
 function getCardDeckFromLastTurn(state: State, round: number, turn: number) : CardDeck {
@@ -67,7 +45,7 @@ function getCardDeckFromLastTurn(state: State, round: number, turn: number) : Ca
     }
   }
   if (round > 1) {
-    return getCardDeckFromLastTurn(state, round - 1, 999)
+    return getCardDeckFromLastTurn(state, round - 1, MAX_TURN)
   }
   if (state.setup.initialCardDeck) {
     return CardDeck.fromPersistence(state.setup.initialCardDeck)

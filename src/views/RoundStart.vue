@@ -28,6 +28,7 @@ import NavigationState from '@/util/NavigationState'
 import SideBar from '@/components/round/SideBar.vue'
 import Expansion from '@/services/enum/Expansion'
 import BotUniqueHotel from '@/services/enum/BotUniqueHotel'
+import RouteCalculator from '@/services/RouteCalculator'
 
 export default defineComponent({
   name: 'RoundStart',
@@ -60,7 +61,8 @@ export default defineComponent({
   },
   methods: {
     next() : void {
-      this.router.push(`/round/${this.round}/turn/1/${this.navigationState.nextPlayer}`)
+      const routeCalculator = new RouteCalculator({round:this.round})
+      this.router.push(routeCalculator.getFirstTurnRouteTo())
     }
   }
 })

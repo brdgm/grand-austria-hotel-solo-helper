@@ -44,6 +44,7 @@ import SideBar from '@/components/round/SideBar.vue'
 import TurnOrderTilePair from '@/components/structure/TurnOrderTilePair.vue'
 import Expansion from '@/services/enum/Expansion'
 import BotUniqueHotel from '@/services/enum/BotUniqueHotel'
+import RouteCalculator from '@/services/RouteCalculator'
 
 export default defineComponent({
   name: 'TurnPlayer',
@@ -65,10 +66,8 @@ export default defineComponent({
   },
   computed: {
     backButtonRouteTo() : string {
-      if (this.turn > 1) {
-        return `/round/${this.round}/turn/${this.turn-1}/${this.navigationState.previousPlayer}`
-      }
-      return `/round/${this.round}/start`
+      const routeCalculator = new RouteCalculator({round:this.round, turn:this.turn})
+      return routeCalculator.getBackRouteTo(this.state)
     },
     isBotUniqueHotelHautelCouture() : boolean {
       return this.isBotUniqueHotel(BotUniqueHotel.HAUTEL_COUTURE)
@@ -91,12 +90,8 @@ export default defineComponent({
         cardDeck: this.navigationState.cardDeck.toPersistence()
       }
       this.state.storeTurn(turn)
-      if (this.turn == 4) {
-        this.router.push(`/round/${this.round}/end`)
-      }
-      else {
-        this.router.push(`/round/${this.round}/turn/${this.turn+1}/${this.navigationState.nextPlayer}`)
-      }
+      const routeCalculator = new RouteCalculator({round:this.round, turn:this.turn})
+      this.router.push(routeCalculator.getNextRouteTo(this.state))
     },
     isBotUniqueHotel(botUniqueHotel : BotUniqueHotel) : boolean {
       return this.state.setup.expansions.includes(Expansion.LETS_WALTZ_MODULE_3_UNIQUE_HOTELS)

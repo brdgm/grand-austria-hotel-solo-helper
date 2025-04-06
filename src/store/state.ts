@@ -60,6 +60,7 @@ export interface Turn {
   round: number
   turn: number
   cardDeck: CardDeckPersistence
+  pass?: boolean
 }
 
 export interface CardDeckPersistence {

@@ -4,7 +4,7 @@
   <h1>{{t('roundEnd.title', {round})}}</h1>
 
   <ul class="mt-4">
-    <li v-if="hasCelebritiesExpansion" v-html="t('roundEnd.celebrities')"></li>
+    <li v-if="hasCelebritiesExpansion && !isLastRound" v-html="t('roundEnd.celebrities')"></li>
     <template v-if="isEmperorScoring">
       <li v-html="t('roundEnd.emperorScoring.title')"></li>
       <ul>
@@ -18,7 +18,7 @@
       </ul>
     </template>
     <li v-if="hasViennaBallroomsExpansion && isEmperorScoring" v-html="t('roundEnd.viennaBallrooms')"></li>
-    <li v-html="t('roundEnd.swapTurnOrderTiles')"></li>
+    <li v-if="!isLastRound" v-html="t('roundEnd.swapTurnOrderTiles')"></li>
   </ul>
 
   <button class="btn btn-primary btn-lg mt-4" @click="next()">
@@ -61,6 +61,9 @@ export default defineComponent({
     backButtonRouteTo() : string {
       const routeCalculator = new RouteCalculator({round:this.round, state:this.state})
       return routeCalculator.getLastTurnRouteTo()
+    },
+    isLastRound() : boolean {
+      return this.round == 7
     },
     isEmperorScoring() : boolean {
       return this.round == 3 || this.round == 5 || this.round == 7

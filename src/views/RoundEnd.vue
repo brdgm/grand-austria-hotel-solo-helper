@@ -13,7 +13,7 @@
         <li v-html="t('roundEnd.emperorScoring.gainBonusPenalty')"></li>
       </ul>
     </template>
-    <li v-if="isBotUniqueHotelNineStarsInn">
+    <li v-if="isBotUniqueHotelNineStarsInn && isEmperorScoring">
       <span class="fst-italic" v-html="t('rules.botUniqueHotel.nine-stars-inn.title')"></span>:
       <span v-html="t('rules.botUniqueHotel.nine-stars-inn.emperorScoring')"></span>
     </li>

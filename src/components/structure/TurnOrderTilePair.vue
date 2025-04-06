@@ -7,6 +7,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import TurnOrderTile from './TurnOrderTile.vue'
+import NavigationState from '@/util/NavigationState'
 
 export default defineComponent({
   name: 'TurnOrderTilePair',
@@ -14,6 +15,10 @@ export default defineComponent({
     TurnOrderTile
   },
   props: {
+    navigationState: {
+      type: NavigationState,
+      required: true
+    },
     turn: {
       type: Number,
       required: true
@@ -21,7 +26,7 @@ export default defineComponent({
   },
   computed: {
     turns() : number[] {
-      if (this.turn == 1 || this.turn == 4) {
+      if (this.turn == 1 || this.turn == 4 || (this.navigationState.turn > 4 && this.navigationState.round % 2 == 0)) {
         return [1,4]
       }
       else {

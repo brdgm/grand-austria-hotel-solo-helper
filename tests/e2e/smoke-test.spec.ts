@@ -12,11 +12,11 @@ test('smoke test', async ({ page }) => {
   await page.getByRole('button', { name: 'Start Game' }).click()
 
   // play a few rounds
-  await page.getByRole('button', { name: 'Next' }).click()
-  await page.getByRole('button', { name: 'Next' }).click()
-  await page.getByRole('button', { name: 'Next' }).click()
-  await page.getByRole('button', { name: 'Next' }).click()
-  await page.getByRole('button', { name: 'Next' }).click()
+  await page.getByRole('button', { name: 'Next' }).click()  // round start
+  await page.getByRole('button', { name: 'Next' }).click()  // bot turn
+  await page.getByRole('button', { name: 'Turn Executed' }).click()  // player turn
+  await page.getByRole('button', { name: 'Turn Executed' }).click()  // player turn
+  await page.getByRole('button', { name: 'Next' }).click()  // bot turn
 
   // finish game
   await page.getByRole('button', { name: 'Abort Game' }).click()

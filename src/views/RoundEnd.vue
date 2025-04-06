@@ -38,6 +38,7 @@ import NavigationState from '@/util/NavigationState'
 import SideBar from '@/components/round/SideBar.vue'
 import Expansion from '@/services/enum/Expansion'
 import BotUniqueHotel from '@/services/enum/BotUniqueHotel'
+import RouteCalculator from '@/services/RouteCalculator'
 
 export default defineComponent({
   name: 'RoundEnd',
@@ -58,7 +59,8 @@ export default defineComponent({
   },
   computed: {
     backButtonRouteTo() : string {
-      return `/round/${this.round}/turn/4/${this.navigationState.previousPlayer}`
+      const routeCalculator = new RouteCalculator({round:this.round, state:this.state})
+      return routeCalculator.getLastTurnRouteTo()
     },
     isEmperorScoring() : boolean {
       return this.round == 3 || this.round == 5 || this.round == 7

@@ -4,7 +4,6 @@ import mockRouteLocation from '../helper/mockRouteLocation'
 import mockState from '../helper/mockState'
 import mockRound from '../helper/mockRound'
 import mockTurn from '../helper/mockTurn'
-import Player from '@/services/enum/Player'
 
 const state = mockState({initialCardDeck: {pile:[193,194,195], discard:[]}, rounds:[
   mockRound({round:1, turns:[
@@ -22,8 +21,6 @@ describe('util/NavigationState', () => {
 
     expect(navigationState.round).to.eq(1)
     expect(navigationState.turn).to.eq(0)
-    expect(navigationState.nextPlayer).to.eq(Player.BOT)
-    expect(navigationState.previousPlayer).to.eq(Player.BOT)
     expect(navigationState.cardDeck.currentCard?.id).to.undefined
   })
 
@@ -33,8 +30,6 @@ describe('util/NavigationState', () => {
 
     expect(navigationState.round).to.eq(1)
     expect(navigationState.turn).to.eq(1)
-    expect(navigationState.currentPlayer).to.eq(Player.BOT)
-    expect(navigationState.nextPlayer).to.eq(Player.PLAYER)
     expect(navigationState.cardDeck.currentCard?.id).to.eq(193)
   })
 
@@ -44,9 +39,6 @@ describe('util/NavigationState', () => {
 
     expect(navigationState.round).to.eq(1)
     expect(navigationState.turn).to.eq(2)
-    expect(navigationState.currentPlayer).to.eq(Player.PLAYER)
-    expect(navigationState.nextPlayer).to.eq(Player.PLAYER)
-    expect(navigationState.previousPlayer).to.eq(Player.BOT)
     expect(navigationState.cardDeck.currentCard?.id).to.eq(193)
   })
 
@@ -56,9 +48,6 @@ describe('util/NavigationState', () => {
 
     expect(navigationState.round).to.eq(1)
     expect(navigationState.turn).to.eq(3)
-    expect(navigationState.currentPlayer).to.eq(Player.PLAYER)
-    expect(navigationState.nextPlayer).to.eq(Player.BOT)
-    expect(navigationState.previousPlayer).to.eq(Player.PLAYER)
     expect(navigationState.cardDeck.currentCard?.id).to.eq(193)
   })
 
@@ -68,9 +57,6 @@ describe('util/NavigationState', () => {
 
     expect(navigationState.round).to.eq(1)
     expect(navigationState.turn).to.eq(4)
-    expect(navigationState.currentPlayer).to.eq(Player.BOT)
-    expect(navigationState.nextPlayer).to.eq(Player.PLAYER)
-    expect(navigationState.previousPlayer).to.eq(Player.PLAYER)
     expect(navigationState.cardDeck.currentCard?.id).to.eq(194)
   })
 
@@ -80,7 +66,5 @@ describe('util/NavigationState', () => {
 
     expect(navigationState.round).to.eq(2)
     expect(navigationState.turn).to.eq(0)
-    expect(navigationState.nextPlayer).to.eq(Player.PLAYER)
-    expect(navigationState.previousPlayer).to.eq(Player.PLAYER)
   })
 })

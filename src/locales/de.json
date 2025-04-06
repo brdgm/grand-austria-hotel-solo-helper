@@ -3,7 +3,7 @@
   "home": {
     "title": "Grand Austria Hotel Solo Helper",
     "play1": "Spiele <a href='https://boardgamegeek.com/boardgame/182874/grand-austria-hotel' target='_blank' rel='noopener'><b>Grand Austria Hotel</b></a> alleine gegen Leopold und Elisabeth.",
-    "play2": "Diese Applikation implementiert den offiziellen Solo-Modus von Grand Austria Hotel: Alles Walzer! Sie ersetzt das Solo-Kartendeck. Du kannst mit dem Grundspiel oder mit den Modulen aus der Alles Walzer!-Erweiterung spielen.",
+    "play2": "Diese Applikation implementiert den offiziellen Solo-Modus von Grand Austria Hotel: Alles Walzer! Sie ersetzt das Solo-Kartendeck und leitet dich durch den Spielfluss. Du kannst mit dem Grundspiel oder mit den Modulen aus der Alles Walzer!-Erweiterung spielen.",
     "feedback": "Discussion and Feedback:"
   },
   "setup": {

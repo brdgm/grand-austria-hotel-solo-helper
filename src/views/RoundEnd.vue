@@ -11,12 +11,12 @@
         <li v-html="t('roundEnd.emperorScoring.scoreVP')"></li>
         <li v-html="t('roundEnd.emperorScoring.resetMarkers', {steps:emperorResetTrackSteps})"></li>
         <li v-html="t('roundEnd.emperorScoring.gainBonusPenalty')"></li>
-        <li v-if="isBotUniqueHotelNineStarsInn">
-          <span class="fst-italic" v-html="t('rules.botUniqueHotel.nine-stars-inn.title')"></span>:
-          <span v-html="t('rules.botUniqueHotel.nine-stars-inn.emperorScoring')"></span>
-        </li>
       </ul>
     </template>
+    <li v-if="isBotUniqueHotelNineStarsInn && isEmperorScoring">
+      <span class="fst-italic" v-html="t('rules.botUniqueHotel.nine-stars-inn.title')"></span>:
+      <span v-html="t('rules.botUniqueHotel.nine-stars-inn.emperorScoring')"></span>
+    </li>
     <li v-if="hasViennaBallroomsExpansion && isEmperorScoring" v-html="t('roundEnd.viennaBallrooms')"></li>
     <li v-if="!isLastRound" v-html="t('roundEnd.swapTurnOrderTiles')"></li>
   </ul>

@@ -59,8 +59,8 @@ export default defineComponent({
   },
   computed: {
     backButtonRouteTo() : string {
-      const routeCalculator = new RouteCalculator({round:this.round})
-      return routeCalculator.getLastTurnRouteTo(this.state)
+      const routeCalculator = new RouteCalculator({round:this.round, state:this.state})
+      return routeCalculator.getLastTurnRouteTo()
     },
     isEmperorScoring() : boolean {
       return this.round == 3 || this.round == 5 || this.round == 7

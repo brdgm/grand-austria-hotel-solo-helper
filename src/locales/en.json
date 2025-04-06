@@ -64,7 +64,9 @@
   },
   "turnPlayer": {
     "title": "Your Turn",
-    "takeYourTurn": "Take your turn - or pass."
+    "takeYourTurn": "Take your turn - or pass.",
+    "executed": "Turn Executed",
+    "pass": "Pass"
   },
   "turnBot": {
     "guest": "Guest",

@@ -26,7 +26,7 @@ export default class NavigationState {
     this.deckType = getMatchingDeckType(state.setup.expansions)
 
     this.cardDeck = getCardDeckFromLastTurn(state, this.round, this.turn)
-    const routeCalculator = new RouteCalculator({round:this.round, turn:this.turn})
+    const routeCalculator = new RouteCalculator({round:this.round, turn:this.turn, state})
     if (routeCalculator.currentPlayer == Player.BOT && this.turn > 0) {
       const currentCard = this.cardDeck.draw()
       this.botActions = new BotActions(currentCard, state)

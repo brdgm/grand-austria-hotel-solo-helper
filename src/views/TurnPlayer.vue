@@ -26,8 +26,11 @@
     <span v-html="t('rules.botUniqueHotel.toll-bridge-hotel.turnPlayer')"></span>
   </p>
 
-  <button class="btn btn-primary btn-lg mt-4" @click="next()">
-    {{t('action.next')}}
+  <button class="btn btn-success btn-lg mt-4 me-2" @click="next(false)">
+    {{t('turnPlayer.executed')}}
+  </button>
+  <button class="btn btn-danger btn-lg mt-4" @click="next(true)">
+    {{t('turnPlayer.pass')}}
   </button>
 
   <FooterButtons :backButtonRouteTo="backButtonRouteTo" endGameButtonType="abortGame"/>
@@ -66,8 +69,8 @@ export default defineComponent({
   },
   computed: {
     backButtonRouteTo() : string {
-      const routeCalculator = new RouteCalculator({round:this.round, turn:this.turn})
-      return routeCalculator.getBackRouteTo(this.state)
+      const routeCalculator = new RouteCalculator({round:this.round, turn:this.turn, state:this.state})
+      return routeCalculator.getBackRouteTo()
     },
     isBotUniqueHotelHautelCouture() : boolean {
       return this.isBotUniqueHotel(BotUniqueHotel.HAUTEL_COUTURE)
@@ -83,15 +86,18 @@ export default defineComponent({
     },
   },
   methods: {
-    next() : void {
+    next(pass: boolean) : void {
       const turn : Turn = {
         round: this.round,
         turn: this.turn,
         cardDeck: this.navigationState.cardDeck.toPersistence()
       }
+      if (pass) {
+        turn.pass = true
+      }
       this.state.storeTurn(turn)
-      const routeCalculator = new RouteCalculator({round:this.round, turn:this.turn})
-      this.router.push(routeCalculator.getNextRouteTo(this.state))
+      const routeCalculator = new RouteCalculator({round:this.round, turn:this.turn, state:this.state})
+      this.router.push(routeCalculator.getNextRouteTo())
     },
     isBotUniqueHotel(botUniqueHotel : BotUniqueHotel) : boolean {
       return this.state.setup.expansions.includes(Expansion.LETS_WALTZ_MODULE_3_UNIQUE_HOTELS)

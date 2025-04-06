@@ -53,8 +53,8 @@ export default defineComponent({
   },
   computed: {
     backButtonRouteTo() : string {
-      const routeCalculator = new RouteCalculator({round:this.round, turn:this.turn})
-      return routeCalculator.getBackRouteTo(this.state)
+      const routeCalculator = new RouteCalculator({round:this.round, turn:this.turn, state:this.state})
+      return routeCalculator.getBackRouteTo()
     }
   },
   methods: {
@@ -65,8 +65,8 @@ export default defineComponent({
         cardDeck: this.navigationState.cardDeck.toPersistence()
       }
       this.state.storeTurn(turn)
-      const routeCalculator = new RouteCalculator({round:this.round, turn:this.turn})
-      this.router.push(routeCalculator.getNextRouteTo(this.state))
+      const routeCalculator = new RouteCalculator({round:this.round, turn:this.turn, state:this.state})
+      this.router.push(routeCalculator.getNextRouteTo())
     }
   }
 })

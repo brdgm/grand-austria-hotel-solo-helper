@@ -64,7 +64,9 @@
   },
   "turnPlayer": {
     "title": "Dein Zug",
-    "takeYourTurn": "Führ deinen Zug aus - oder passe."
+    "takeYourTurn": "Führ deinen Zug aus - oder passe.",
+    "executed": "Zug ausgeführt",
+    "pass": "Passen"
   },
   "turnBot": {
     "guest": "Gast",
@@ -78,7 +80,7 @@
     "finalScoring": "Schlusswertung",
     "staffCards": "Dein Gegner und du erhalten Siegpunkte für aufgedeckte Personalkarten.",
     "occupiedRooms": "Dein Gegner und du erhalten Siegpunkte für bezogene Zimmer.",
-    "moneyDishDrinks": "Du erhälst 1 Siegpunkt für jede Krone und je übriger Speise und je übrigem Gentränk in deiner Küche.",
+    "moneyDishDrinks": "Du erhältst 1 Siegpunkt für jede Krone und je übriger Speise und je übrigem Getränk in deiner Küche.",
     "remainingGuests": "Du verlierst 5 Siegpunkte je Gast, der sich noch in deinem Café befindet.",
     "winCondition": "Du gewinnst das Spiel, wenn du <b>mehr Siegpunkte</b> als dein Gegner hast. Bei Gleichstand gewinnt dein Gegner."
   },
@@ -193,8 +195,8 @@
           "floor3": "eins auf das <b>erste Zimmer</b> in der dritten Etage."
         },
         "turnPlayer": "Wenn <b>du</b> einen Gast mit Zahnrad nimmst, musst du <b>1 Krone zusätzlich</b> bezahlen und das Zahnrad zurück in den Vorrat legen. Hast du nicht genug Geld, kannst du den Gast nicht nehmen. <i>(Die 1 Krone musst du auch dann bezahlen, wenn dir ein Effekt einen kostenlosen Gast verspricht.)</i>",
-        "turnBot": "Immer, wenn dein Gegener ein Zimmerplättchen auf ein Feld mit Zahnrad legt, versetzt er das Zahnrad auf den <b>am weitesten links</b> liegenden Gast in der Reihe <i>(nachdem die Reihe wieder aufgefüllt wurde)</i>. Das Zahnrad bleibt auf diesem Gast liegen, auch wenn er nach rechts geschoben wird.",
-        "guestCogwheelScoring": "Wenn <b>dein Gegener</b> einen Gast mit Zahnrad nimmt oder der Gast das Feld <b>ganz rechts</b> in der Reihe erreicht, bekommt Leopold sofort 8 Siegpunkte und das Zahnrad kommt zurück in den Vorrat. <i>(Im letzteren Fall wird nur das Zahnrad entfernt, der Gast bleibt aber in der Reihe.)</i>"
+        "turnBot": "Immer, wenn dein Gegner ein Zimmerplättchen auf ein Feld mit Zahnrad legt, versetzt er das Zahnrad auf den <b>am weitesten links</b> liegenden Gast in der Reihe <i>(nachdem die Reihe wieder aufgefüllt wurde)</i>. Das Zahnrad bleibt auf diesem Gast liegen, auch wenn er nach rechts geschoben wird.",
+        "guestCogwheelScoring": "Wenn <b>dein Gegner</b> einen Gast mit Zahnrad nimmt oder der Gast das Feld <b>ganz rechts</b> in der Reihe erreicht, bekommt Leopold sofort 8 Siegpunkte und das Zahnrad kommt zurück in den Vorrat. <i>(Im letzteren Fall wird nur das Zahnrad entfernt, der Gast bleibt aber in der Reihe.)</i>"
       },
       "toll-bridge-hotel": {
         "title": "Hotel \"An der Mautbrücke\"",

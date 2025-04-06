@@ -61,7 +61,7 @@ export default defineComponent({
   },
   methods: {
     next() : void {
-      const routeCalculator = new RouteCalculator({round:this.round})
+      const routeCalculator = new RouteCalculator({round:this.round, state:this.state})
       this.router.push(routeCalculator.getFirstTurnRouteTo())
     }
   }

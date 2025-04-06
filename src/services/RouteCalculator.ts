@@ -1,4 +1,4 @@
-import { State } from '@/store/state'
+import { State, Turn } from '@/store/state'
 import Player from './enum/Player'
 
 /**
@@ -14,25 +14,25 @@ export default class RouteCalculator {
   public readonly currentPlayer : Player
   readonly nextPlayer : Player
   readonly previousPlayer : Player
-  readonly passCount : number
+  readonly playerPassCount : number
 
   constructor(params:{round: number, turn?: number, state: State}) {
     this.round = params.round
     this.turn = params.turn ?? MAX_TURN
     this.state = params.state
 
-    this.startPlayer = isEven(this.round) ? Player.PLAYER : Player.BOT
+    this.startPlayer = getStartPlayer(this.round)
     this.currentPlayer = getTurnPlayer(this.turn, this.startPlayer)
     this.nextPlayer = getTurnPlayer(this.turn + 1, this.startPlayer)
     this.previousPlayer = getTurnPlayer(this.turn - 1, this.startPlayer)
-    this.passCount = getPassCount(this.state, this.round, this.turn)
+    this.playerPassCount = getPlayerPassCount(this.state, this.round, this.turn)
   }
 
   /**
    * Get route to next step in round.
    */
   public getNextRouteTo() : string {
-    if (this.turn < 4 + this.passCount && this.passCount < MAX_PASS_COUNT) {
+    if (this.turn < 4 + this.playerPassCount && this.playerPassCount < MAX_PASS_COUNT) {
       return routeTo({round:this.round, turn:this.turn+1, player:this.nextPlayer})
     }
     else {
@@ -71,6 +71,24 @@ export default class RouteCalculator {
     return ''
   }
 
+  /**
+   * Get current empty turn order tile number for player (also checking for passed turns).
+   * @returns 
+   */
+  public getPlayerTurnOrderTileTurn() : number {
+    if (this.turn <= 4) {
+      return this.turn
+    }
+    const playerTurns = getPlayerTurns(this.round)
+    const playerExecutedMainTurns = getPlayerTurnsFromState(this.state, this.round, this.turn-1).filter(item => !item.pass && item.turn <= 4)
+    const playerExecutedAdditionalTurns = getPlayerTurnsFromState(this.state, this.round, this.turn-1).filter(item => !item.pass && item.turn > 4)
+    const remainingTurns = playerTurns.filter(turn => !playerExecutedMainTurns.find(item => item.turn == turn))
+    if (remainingTurns.length > playerExecutedAdditionalTurns.length) {
+      return remainingTurns[playerExecutedAdditionalTurns.length]
+    }
+    return 0
+  }
+
 }
 
 export const MAX_TURN = 999
@@ -91,8 +109,8 @@ function routeTo(step?: Step) : string {
   }
 }
 
-function isEven(n: number) : boolean {
-  return n % 2 == 0
+function getStartPlayer(round: number) : Player {
+  return round % 2 == 0 ? Player.PLAYER : Player.BOT
 }
 
 function getTurnPlayer(turn: number, startPlayer: Player) : Player {
@@ -110,13 +128,29 @@ function getTurnPlayer(turn: number, startPlayer: Player) : Player {
   }
 }
 
-/**
- * Get number of passes in current round (only possible by player).
- */
-function getPassCount(state: State, round: number, turn: number) : number {
+function getPlayerTurns(round: number) : number[] {
+  const startPlayer = getStartPlayer(round)
+  const turns : number[] = []
+  for (let turn = 1; turn <= 4; turn++) {
+    if (getTurnPlayer(turn, startPlayer) == Player.PLAYER) {
+      turns.push(turn)
+    }
+  }
+  return turns
+}
+
+function getPlayerTurnsFromState(state: State, round: number, turn: number) : Turn[] {
+  const playerTurns = getPlayerTurns(round)
   const roundData = state.rounds.find(item => item.round == round)
   if (roundData) {
-    return roundData.turns.filter(item => item.turn <= turn && item.pass).length
+    return roundData.turns.filter(item => item.turn <= turn && (playerTurns.includes(item.turn) || item.turn > 4))
   }
-  return 0
+  return []
+}
+
+/**
+ * Get number of player passed turns in current round.
+ */
+function getPlayerPassCount(state: State, round: number, turn: number) : number {
+  return getPlayerTurnsFromState(state, round, turn).filter(item => item.pass).length
 }

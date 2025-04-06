@@ -3,7 +3,7 @@
 
   <h1>
     {{t(`opponentName.${navigationState.deckType}`)}}
-    <TurnOrderTilePair :turn="turn"/>
+    <TurnOrderTilePair :navigationState="navigationState" :turn="turn"/>
   </h1>
 
   <BotActionsDisplay v-if="navigationState.botActions"

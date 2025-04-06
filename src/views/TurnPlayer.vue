@@ -3,8 +3,10 @@
 
   <h1>
     {{t('turnPlayer.title')}}
-    <TurnOrderTilePair :turn="turn"/>
+    <TurnOrderTilePair :navigationState="navigationState" :turn="navigationState.playerTurnOrderTileTurn ?? turn"/>
   </h1>
+
+  <p v-if="turn > 4" class="mt-4 alert alert-primary" v-html="t('turnPlayer.removeDiceReroll')"></p>
 
   <p class="mt-4" v-html="t('turnPlayer.takeYourTurn')"></p>
 

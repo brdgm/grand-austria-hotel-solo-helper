@@ -16,6 +16,7 @@ export default class NavigationState {
   readonly difficultyLevel : DifficultyLevel
   readonly deckType : DeckType
   readonly cardDeck : CardDeck
+  readonly playerTurnOrderTileTurn? : number
   readonly botActions? : BotActions
 
   constructor(route: RouteLocation, state: State) {    
@@ -30,6 +31,9 @@ export default class NavigationState {
     if (routeCalculator.currentPlayer == Player.BOT && this.turn > 0) {
       const currentCard = this.cardDeck.draw()
       this.botActions = new BotActions(currentCard, state)
+    }
+    else {
+      this.playerTurnOrderTileTurn = routeCalculator.getPlayerTurnOrderTileTurn()
     }
   }
 

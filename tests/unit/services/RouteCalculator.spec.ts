@@ -45,6 +45,7 @@ describe('services/RouteCalculator', () => {
     expect(routeCalculator.currentPlayer).to.eq(Player.PLAYER)
     expect(routeCalculator.getNextRouteTo()).to.eq('/round/1/turn/3/player')
     expect(routeCalculator.getBackRouteTo()).to.eq('/round/1/turn/1/bot')
+    expect(routeCalculator.getPlayerTurnOrderTileTurn()).to.eq(2)
   })
 
   it('round1-playerTurn3', () => {
@@ -53,6 +54,7 @@ describe('services/RouteCalculator', () => {
     expect(routeCalculator.currentPlayer).to.eq(Player.PLAYER)
     expect(routeCalculator.getNextRouteTo()).to.eq('/round/1/turn/4/bot')
     expect(routeCalculator.getBackRouteTo()).to.eq('/round/1/turn/2/player')
+    expect(routeCalculator.getPlayerTurnOrderTileTurn()).to.eq(3)
   })
 
   it('round1-botTurn4', () => {
@@ -70,12 +72,22 @@ describe('services/RouteCalculator', () => {
     expect(routeCalculator.getLastTurnRouteTo()).to.eq('/round/2/turn/7/player')
   })
 
+  it('round2-playerTurn1', () => {
+    const routeCalculator = new RouteCalculator({round:2,turn:1,state})
+
+    expect(routeCalculator.currentPlayer).to.eq(Player.PLAYER)
+    expect(routeCalculator.getNextRouteTo()).to.eq('/round/2/turn/2/bot')
+    expect(routeCalculator.getBackRouteTo()).to.eq('/round/2/start')
+    expect(routeCalculator.getPlayerTurnOrderTileTurn()).to.eq(1)
+  })
+
   it('round2-playerTurn4', () => {
     const routeCalculator = new RouteCalculator({round:2,turn:4,state})
 
     expect(routeCalculator.currentPlayer).to.eq(Player.PLAYER)
     expect(routeCalculator.getNextRouteTo()).to.eq('/round/2/turn/5/player')
     expect(routeCalculator.getBackRouteTo()).to.eq('/round/2/turn/3/bot')
+    expect(routeCalculator.getPlayerTurnOrderTileTurn()).to.eq(4)
   })
 
   it('round2-playerTurn5', () => {
@@ -84,6 +96,7 @@ describe('services/RouteCalculator', () => {
     expect(routeCalculator.currentPlayer).to.eq(Player.PLAYER)
     expect(routeCalculator.getNextRouteTo()).to.eq('/round/2/turn/6/player')
     expect(routeCalculator.getBackRouteTo()).to.eq('/round/2/turn/4/player')
+    expect(routeCalculator.getPlayerTurnOrderTileTurn()).to.eq(1)
   })
 
   it('round2-playerTurn6', () => {
@@ -92,6 +105,7 @@ describe('services/RouteCalculator', () => {
     expect(routeCalculator.currentPlayer).to.eq(Player.PLAYER)
     expect(routeCalculator.getNextRouteTo()).to.eq('/round/2/turn/7/player')
     expect(routeCalculator.getBackRouteTo()).to.eq('/round/2/turn/5/player')
+    expect(routeCalculator.getPlayerTurnOrderTileTurn()).to.eq(1)
   })
 
   it('round2-playerTurn7', () => {
@@ -100,5 +114,22 @@ describe('services/RouteCalculator', () => {
     expect(routeCalculator.currentPlayer).to.eq(Player.PLAYER)
     expect(routeCalculator.getNextRouteTo()).to.eq('/round/2/end')
     expect(routeCalculator.getBackRouteTo()).to.eq('/round/2/turn/6/player')
+    expect(routeCalculator.getPlayerTurnOrderTileTurn()).to.eq(4)
+  })
+
+  it('round1-pass2-execute3', () => {
+    const routeCalculator = new RouteCalculator({round:1,turn:5,state:mockState({rounds:[
+      mockRound({round:1, turns:[
+        mockTurn({round:1, turn:1}), // bot
+        mockTurn({round:1, turn:2, pass:true}), // player pass
+        mockTurn({round:1, turn:3}), // player
+        mockTurn({round:1, turn:4}), // bot
+      ]})
+    ]})})
+
+    expect(routeCalculator.currentPlayer).to.eq(Player.PLAYER)
+    expect(routeCalculator.getNextRouteTo()).to.eq('/round/1/end')
+    expect(routeCalculator.getBackRouteTo()).to.eq('/round/1/turn/4/bot')
+    expect(routeCalculator.getPlayerTurnOrderTileTurn()).to.eq(2)
   })
 })

@@ -65,6 +65,7 @@
   "turnPlayer": {
     "title": "Dein Zug",
     "takeYourTurn": "Führ deinen Zug aus - oder passe.",
+    "removeDiceReroll": "Entferne 1 Würfel, und werfe die restlichen Würfel neu.",
     "executed": "Zug ausgeführt",
     "pass": "Passen"
   },

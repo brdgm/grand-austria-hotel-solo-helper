@@ -65,6 +65,7 @@
   "turnPlayer": {
     "title": "Your Turn",
     "takeYourTurn": "Take your turn - or pass.",
+    "removeDiceReroll": "Remove 1 dice, reroll all other dice.",
     "executed": "Turn Executed",
     "pass": "Pass"
   },

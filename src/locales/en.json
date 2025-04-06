@@ -76,14 +76,33 @@
     "noGuest": "None",
     "noAdditionalAction": "None"
   },
+  "endOfGameAmounts": {
+    "title": "End of Game: Amounts",
+    "scoringTrack": "Scoring Track: Victory Points",
+    "staffCards": "Staff Cards: Victory Points",
+    "occupiedRoomsLevel4": "Number of occupied rooms on 4th floor",
+    "occupiedRoomsLevel3": "Number of occupied rooms on 3rd floor",
+    "occupiedRoomsLevel2": "Number of occupied rooms on 2nd floor",
+    "occupiedRoomsLevel1": "Number of occupied rooms on 1st floor",
+    "money": "Krones",
+    "dishesDrinks": "Left over dishes and drinks",
+    "remainingGuests": "Number of guests in Café"
+  },
   "endOfGame": {
     "title": "End of Game",
-    "finalScoring": "Final Scoring",
-    "staffCards": "You and your opponent receive Victory Points for Staff cards.",
-    "occupiedRooms": "You and your opponent receive Victory Points for your occupied rooms.",
-    "moneyDishDrinks": "You receive 1 Victory Point for each krone and left over dish and drink in your Kitchen.",
-    "remainingGuests": "You lose 5 Victory Points for each guest in your Café.",
-    "winCondition": "You win if you have <b>more victory points</b> than your opponent. Otherwise, your opponent wins."
+    "player": "Player",
+    "scoringTrack": "Scoring Track",
+    "staffCards": "Staff Cards",
+    "occupiedRoomsLevel4": "Occupied rooms on 4th floor",
+    "occupiedRoomsLevel3": "Occupied rooms on 3rd floor",
+    "occupiedRoomsLevel2": "Occupied rooms on 2nd floor",
+    "occupiedRoomsLevel1": "Occupied rooms on 1st floor",
+    "money": "Krones",
+    "dishesDrinks": "Left over dishes and drinks",
+    "remainingGuests": "Guests in Café",
+    "total": "Total",
+    "won": "Gratulation, you are the winner!",
+    "lost": "Sorry, you have lost."
   },
   "rules": {
     "action": {
@@ -175,8 +194,7 @@
           "placeItems": "Finally, for each <b>action space</b> on the action board, draw a <b>random item from the item pool</b> and place it on the space."
         },
         "roundStart": "Replenish the action spaces with random items drawn from the <b>item pool</b>.",
-        "turnPlayer": "Each time <b>you</b> take a die from an action space, if there is an item on that space, you must immediately place that item on one of your opponent’s guests, if possible. <i>(When your opponent takes a die, nothing happens.)</i> You may freely choose which guest receives the item. If you cannot place the item, return it to the supply.<br/>As soon as you place the last item on one of the guests, thus <b>completing the order</b>, your opponent immediately scores that guest’s victory points and moves the guest to their reserved room. <i>(A green guest must go into the room that has been prepared for them during setup.)</i>",
-        "endOfGame": "Contrary to you, your opponent does not lose victory points if guests remain in his café. If vacant rooms remain in his hotel, they do count for Receptionist <i>(card #34)</i>."
+        "turnPlayer": "Each time <b>you</b> take a die from an action space, if there is an item on that space, you must immediately place that item on one of your opponent’s guests, if possible. <i>(When your opponent takes a die, nothing happens.)</i> You may freely choose which guest receives the item. If you cannot place the item, return it to the supply.<br/>As soon as you place the last item on one of the guests, thus <b>completing the order</b>, your opponent immediately scores that guest’s victory points and moves the guest to their reserved room. <i>(A green guest must go into the room that has been prepared for them during setup.)</i>"
       },
       "nine-stars-inn": {
         "title": "Nine Stars Inn",

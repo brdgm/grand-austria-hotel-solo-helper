@@ -76,14 +76,33 @@
     "noGuest": "Keiner",
     "noAdditionalAction": "Keine"
   },
+  "endOfGameAmounts": {
+    "title": "Spielende: Anzahl",
+    "scoringTrack": "Siegpunktleiste: Siegpunkte",
+    "staffCards": "Personalkarten: Siegpunkte",
+    "occupiedRoomsLevel4": "Anzahl bezogener Räume in der 4. Etage",
+    "occupiedRoomsLevel3": "Anzahl bezogener Räume in der 3. Etage",
+    "occupiedRoomsLevel2": "Anzahl bezogener Räume in der 2. Etage",
+    "occupiedRoomsLevel1": "Anzahl bezogener Räume in der 1. Etage",
+    "money": "Kronen",
+    "dishesDrinks": "Übrige Speisen und Getränke",
+    "remainingGuests": "Anzahl der Gäste im Café"
+  },
   "endOfGame": {
     "title": "Spielende",
-    "finalScoring": "Schlusswertung",
-    "staffCards": "Dein Gegner und du erhalten Siegpunkte für aufgedeckte Personalkarten.",
-    "occupiedRooms": "Dein Gegner und du erhalten Siegpunkte für bezogene Zimmer.",
-    "moneyDishDrinks": "Du erhältst 1 Siegpunkt für jede Krone und je übriger Speise und je übrigem Getränk in deiner Küche.",
-    "remainingGuests": "Du verlierst 5 Siegpunkte je Gast, der sich noch in deinem Café befindet.",
-    "winCondition": "Du gewinnst das Spiel, wenn du <b>mehr Siegpunkte</b> als dein Gegner hast. Bei Gleichstand gewinnt dein Gegner."
+    "player": "Spieler",
+    "scoringTrack": "Siegpunktleiste",
+    "staffCards": "Personalkarten",
+    "occupiedRoomsLevel4": "Bezogene Räume in der 4. Etage",
+    "occupiedRoomsLevel3": "Bezogene Räume in der 3. Etage",
+    "occupiedRoomsLevel2": "Bezogene Räume in der 2. Etage",
+    "occupiedRoomsLevel1": "Bezogene Räume in der 1. Etage",
+    "money": "Kronen",
+    "dishesDrinks": "Übrige Speisen und Getränke",
+    "remainingGuests": "Gäste im Café",
+    "total": "Summe",
+    "won": "Glückwunsch, du hast gewonnen!",
+    "lost": "Du hast leider verloren."
   },
   "rules": {
     "action": {
@@ -175,8 +194,7 @@
           "placeItems": "Lege schließlich auf jedes Feld des Aktionsplans <b>eine zufällige Ware aus dem Warenpool</b>."
         },
         "roundStart": "Fülle die Aktionsfelder, auf denen keine Ware liegt, mit je einer zufälligen Ware aus dem <b>Warenpool</b> auf.",
-        "turnPlayer": "Lege immer, wenn <b>du</b> einen Würfel vom Aktionsplan nimmst, die Ware, die auf dem Aktionsfeld liegt, sofort auf einen passenden Gast das Café deines Gegners. <i>(Das gilt nicht, wenn dein Gegner einen Würfel nimmt.)</i> Du kannst frei wählen, auf welchen Gast du die Ware legst, sofern dieser Gast die Ware überhaupt will. Gibt es keinen solchen Gast, kommt die Ware zurück in den Vorrat. Liegt auf dem Aktionsfeld keine Ware, passiert nichts weiter. Die Aktionsfelder, auf denen keine Ware liegt, werden zu Beginn der nächsten Spielrunde mit je einer zufälligen Ware aus dem Warenpool wieder aufgefüllt.<br/>Sobald du die letzte Ware auf einen Gast in das Café deines Gegners legst, gilt die Bestellung als <b>erfüllt</b> und er bekommt sofort die auf der Karte aufgedruckten Siegpunkte. Den Gast bringt er in dem für ihn reservierten Zimmer unter. <i>(Ein grüner Gast muss in genau den Raum einziehen, der für ihn vorbereitet wurde.)</i>",
-        "endOfGame": "Im Gegensatz zu dir bekommt dein Gegner keinen Punktabzug für Gäste, die noch in seinem Café sitzen. Hat Leopold den Rezeptionisten <i>(Karte Nr. 34)</i> gespielt, zählen auch die noch ggf. freien Zimmer."
+        "turnPlayer": "Lege immer, wenn <b>du</b> einen Würfel vom Aktionsplan nimmst, die Ware, die auf dem Aktionsfeld liegt, sofort auf einen passenden Gast das Café deines Gegners. <i>(Das gilt nicht, wenn dein Gegner einen Würfel nimmt.)</i> Du kannst frei wählen, auf welchen Gast du die Ware legst, sofern dieser Gast die Ware überhaupt will. Gibt es keinen solchen Gast, kommt die Ware zurück in den Vorrat. Liegt auf dem Aktionsfeld keine Ware, passiert nichts weiter. Die Aktionsfelder, auf denen keine Ware liegt, werden zu Beginn der nächsten Spielrunde mit je einer zufälligen Ware aus dem Warenpool wieder aufgefüllt.<br/>Sobald du die letzte Ware auf einen Gast in das Café deines Gegners legst, gilt die Bestellung als <b>erfüllt</b> und er bekommt sofort die auf der Karte aufgedruckten Siegpunkte. Den Gast bringt er in dem für ihn reservierten Zimmer unter. <i>(Ein grüner Gast muss in genau den Raum einziehen, der für ihn vorbereitet wurde.)</i>"
       },
       "nine-stars-inn": {
         "title": "Gasthaus \"Zum Neunten Stern\"",

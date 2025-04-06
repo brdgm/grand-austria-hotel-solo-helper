@@ -16,7 +16,7 @@
           <span v-html="t('endOfGameAmounts.scoringTrack')"></span>
         </th>
         <td v-for="index in playerCount" :key="index">
-          <input type="number" min="0" step="1" v-model="amount.scoringTrackVP[index-1]" @focus="inputSelectAll"/>
+          <ScoringTextInput v-model="amount.scoringTrackVP[index-1]"/>
         </td>
       </tr>
       <tr>
@@ -24,7 +24,7 @@
           <span v-html="t('endOfGameAmounts.staffCards')"></span>
         </th>
         <td v-for="index in playerCount" :key="index">
-          <input type="number" min="0" step="1" v-model="amount.staffCardsVP[index-1]" @focus="inputSelectAll"/>
+          <ScoringTextInput v-model="amount.staffCardsVP[index-1]"/>
         </td>
       </tr>
       <tr>
@@ -32,7 +32,7 @@
           <span v-html="t('endOfGameAmounts.occupiedRoomsLevel4')"></span>
         </th>
         <td v-for="index in playerCount" :key="index">
-          <input type="number" min="0" step="1" v-model="amount.occupiedRoomsLevel4[index-1]" @focus="inputSelectAll"/>
+          <ScoringTextInput v-model="amount.occupiedRoomsLevel4[index-1]"/>
         </td>
       </tr>
       <tr>
@@ -40,7 +40,7 @@
           <span v-html="t('endOfGameAmounts.occupiedRoomsLevel3')"></span>
         </th>
         <td v-for="index in playerCount" :key="index">
-          <input type="number" min="0" step="1" v-model="amount.occupiedRoomsLevel3[index-1]" @focus="inputSelectAll"/>
+          <ScoringTextInput v-model="amount.occupiedRoomsLevel3[index-1]"/>
         </td>
       </tr>
       <tr>
@@ -48,7 +48,7 @@
           <span v-html="t('endOfGameAmounts.occupiedRoomsLevel2')"></span>
         </th>
         <td v-for="index in playerCount" :key="index">
-          <input type="number" min="0" step="1" v-model="amount.occupiedRoomsLevel2[index-1]" @focus="inputSelectAll"/>
+          <ScoringTextInput v-model="amount.occupiedRoomsLevel2[index-1]"/>
         </td>
       </tr>
       <tr>
@@ -56,7 +56,7 @@
           <span v-html="t('endOfGameAmounts.occupiedRoomsLevel1')"></span>
         </th>
         <td v-for="index in playerCount" :key="index">
-          <input type="number" min="0" step="1" v-model="amount.occupiedRoomsLevel1[index-1]" @focus="inputSelectAll"/>
+          <ScoringTextInput v-model="amount.occupiedRoomsLevel1[index-1]"/>
         </td>
       </tr>
       <tr>
@@ -64,7 +64,7 @@
           <span v-html="t('endOfGameAmounts.money')"></span>
         </th>
         <td>
-          <input type="number" min="0" step="1" v-model="amount.money[0]" @focus="inputSelectAll"/>
+          <ScoringTextInput v-model="amount.money[0]"/>
         </td>
         <td></td>
       </tr>
@@ -73,7 +73,7 @@
           <span v-html="t('endOfGameAmounts.dishesDrinks')"></span>
         </th>
         <td>
-          <input type="number" min="0" step="1" v-model="amount.dishesDrinks[0]" @focus="inputSelectAll"/>
+          <ScoringTextInput v-model="amount.dishesDrinks[0]"/>
         </td>
         <td></td>
       </tr>
@@ -82,7 +82,7 @@
           <span v-html="t('endOfGameAmounts.remainingGuests')"></span>
         </th>
         <td>
-          <input type="number" min="0" step="1" v-model="amount.remainingGuests[0]" @focus="inputSelectAll"/>
+          <ScoringTextInput v-model="amount.remainingGuests[0]"/>
         </td>
         <td></td>
       </tr>
@@ -101,9 +101,13 @@ import getMatchingDeckType from '@/util/getMatchingDeckType'
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
+import ScoringTextInput from '@brdgm/brdgm-commons/src/components/form/ScoringTextInput.vue'
 
 export default defineComponent({
   name: 'FinalAmounts',
+  components: {
+    ScoringTextInput
+  },
   setup() {
     const { t } = useI18n()
     const state = useStateStore()
@@ -128,10 +132,6 @@ export default defineComponent({
     return { t, state, router, amount, playerCount, deckType }
   },
   methods: {
-    inputSelectAll(event: Event) : void {
-      const input = event.target as HTMLInputElement
-      input.select()
-    },
     toNumber(value? : number) {
       if (typeof value == 'string') {
         return 0
@@ -142,7 +142,7 @@ export default defineComponent({
     },
     next() : void {
       this.state.finalScoringAmount = this.amount
-      this.router.push(`/endOfGame`)
+      this.router.push('/endOfGame')
     }
   }
 })

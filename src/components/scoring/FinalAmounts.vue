@@ -32,7 +32,7 @@
           <span v-html="t('endOfGameAmounts.occupiedRoomsLevel4')"></span>
         </th>
         <td v-for="index in playerCount" :key="index">
-          <ScoringTextInput v-model="amount.occupiedRoomsLevel4[index-1]"/>
+          <ScoringTextInput v-model="amount.occupiedRoomsLevel4[index-1]" :max="5"/>
         </td>
       </tr>
       <tr>
@@ -40,7 +40,7 @@
           <span v-html="t('endOfGameAmounts.occupiedRoomsLevel3')"></span>
         </th>
         <td v-for="index in playerCount" :key="index">
-          <ScoringTextInput v-model="amount.occupiedRoomsLevel3[index-1]"/>
+          <ScoringTextInput v-model="amount.occupiedRoomsLevel3[index-1]" :max="5"/>
         </td>
       </tr>
       <tr>
@@ -48,7 +48,7 @@
           <span v-html="t('endOfGameAmounts.occupiedRoomsLevel2')"></span>
         </th>
         <td v-for="index in playerCount" :key="index">
-          <ScoringTextInput v-model="amount.occupiedRoomsLevel2[index-1]"/>
+          <ScoringTextInput v-model="amount.occupiedRoomsLevel2[index-1]" :max="5"/>
         </td>
       </tr>
       <tr>
@@ -56,7 +56,7 @@
           <span v-html="t('endOfGameAmounts.occupiedRoomsLevel1')"></span>
         </th>
         <td v-for="index in playerCount" :key="index">
-          <ScoringTextInput v-model="amount.occupiedRoomsLevel1[index-1]"/>
+          <ScoringTextInput v-model="amount.occupiedRoomsLevel1[index-1]" :max="5"/>
         </td>
       </tr>
       <tr>
@@ -64,7 +64,7 @@
           <span v-html="t('endOfGameAmounts.money')"></span>
         </th>
         <td>
-          <ScoringTextInput v-model="amount.money[0]"/>
+          <ScoringTextInput v-model="amount.money[0]" :max="20"/>
         </td>
         <td></td>
       </tr>
@@ -82,7 +82,7 @@
           <span v-html="t('endOfGameAmounts.remainingGuests')"></span>
         </th>
         <td>
-          <ScoringTextInput v-model="amount.remainingGuests[0]"/>
+          <ScoringTextInput v-model="amount.remainingGuests[0]" :max="4"/>
         </td>
         <td></td>
       </tr>
@@ -132,14 +132,6 @@ export default defineComponent({
     return { t, state, router, amount, playerCount, deckType }
   },
   methods: {
-    toNumber(value? : number) {
-      if (typeof value == 'string') {
-        return 0
-      }
-      else {
-        return value ?? 0
-      }
-    },
     next() : void {
       this.state.finalScoringAmount = this.amount
       this.router.push('/endOfGame')

@@ -1,4 +1,4 @@
-import { Round, Turn } from '@/store/state';
+import { Round, Turn } from '@/store/state'
 
 export default function mockRound(params?: MockRoundParams) : Round {
   const round : Round = {

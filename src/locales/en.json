@@ -114,9 +114,9 @@
           "takeGuest": "Your opponent takes a guest from the queue, <b>matching the depicted color</b>. He does not pay for the guest.",
           "multipleGuests": "If there are <b>multiple guests</b> of the depicted color, he takes the one that provides the most victory points.",
           "noSuchGuest": "If there is <b>no such guest</b>, or if the symbol <b>does not specify a color</b>, he chooses the guest in the queue that provides the most victory points.",
-          "allRooms": "If <b>all rooms</b> of the respective color are occupied in your opponents hotel, he chooses the guest that provides the most victory points of any color that can still be moved into the hotel.",
+          "allRooms": "If <b>all rooms</b> of the respective color are occupied in your opponent’s hotel, he chooses the guest that provides the most victory points of any color that can still be moved into the hotel.",
           "tieBreaker": "If there are multiple eligible guests <b>worth the same number</b> of victory points, he chooses them in the order indicated by the <b>hand symbol</b>.",
-          "noGuest": "Only in the very unlikely event that all guests in the queue have a color that is no longer available on your opponents hotel board <i>(i.e., all rooms of those colors are occupied)</i>, he does not take a guest."
+          "noGuest": "Only in the very unlikely event that all guests in the queue have a color that is no longer available on your opponent’s hotel board <i>(i.e., all rooms of those colors are occupied)</i>, he does not take a guest."
         },
         "accommodate": {
           "title": "Accommodating Guest",

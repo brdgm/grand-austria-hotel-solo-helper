@@ -17,10 +17,10 @@
       "title": "Erweiterungen",
       "botUniqueHotel": "Besonderes Hotel für {opponentName}:",
       "botUniqueHotelRandom": "(zufällig)",
-      "lets-waltz-module-1-vienna-ballrooms": "Alles Walzer! - Module 1: Wiener Ballsäle",
-      "lets-waltz-module-2-celebrities": "Alles Walzer! - Module 2: Prominente",
-      "lets-waltz-module-3-unique-hotels": "Alles Walzer! - Module 3: Besondere Hotels",
-      "lets-waltz-module-5-some-more": "Alles Walzer! - Module 4: Darf's a bisserl mehr sein?"
+      "lets-waltz-module-1-vienna-ballrooms": "Alles Walzer! - Modul 1: Wiener Ballsäle",
+      "lets-waltz-module-2-celebrities": "Alles Walzer! - Modul 2: Prominente",
+      "lets-waltz-module-3-unique-hotels": "Alles Walzer! - Modul 3: Besondere Hotels",
+      "lets-waltz-module-5-some-more": "Alles Walzer! - Modul 5: Darf's a bisserl mehr sein?"
     }
   },
   "setupBot": {
@@ -57,7 +57,7 @@
       "title": "Kaiserwertung",
       "scoreVP": "<b>Du und dein Gegner</b> bekommt Siegpunkte für eure Positionen auf der Kaiserleiste.",
       "resetMarkers": "Setze die Marker um {steps} Schritte zurück.",
-      "gainBonusPenalty": "Die Belohnung oder Bestrafung des Kaisers trifft <b>nuf auf dich</b> zu."
+      "gainBonusPenalty": "Die Belohnung oder Bestrafung des Kaisers trifft <b>nur auf dich</b> zu."
     },
     "viennaBallrooms": "<i>Wiener Ballsäle</i>: Werte den <b>Ballsaal</b>.",
     "swapTurnOrderTiles": "Tausche die Reihenfolgeplättchen aus."
@@ -195,7 +195,7 @@
           "placeItems": "Lege schließlich auf jedes Feld des Aktionsplans <b>eine zufällige Ware aus dem Warenpool</b>."
         },
         "roundStart": "Fülle die Aktionsfelder, auf denen keine Ware liegt, mit je einer zufälligen Ware aus dem <b>Warenpool</b> auf.",
-        "turnPlayer": "Lege immer, wenn <b>du</b> einen Würfel vom Aktionsplan nimmst, die Ware, die auf dem Aktionsfeld liegt, sofort auf einen passenden Gast das Café deines Gegners. <i>(Das gilt nicht, wenn dein Gegner einen Würfel nimmt.)</i> Du kannst frei wählen, auf welchen Gast du die Ware legst, sofern dieser Gast die Ware überhaupt will. Gibt es keinen solchen Gast, kommt die Ware zurück in den Vorrat. Liegt auf dem Aktionsfeld keine Ware, passiert nichts weiter. Die Aktionsfelder, auf denen keine Ware liegt, werden zu Beginn der nächsten Spielrunde mit je einer zufälligen Ware aus dem Warenpool wieder aufgefüllt.<br/>Sobald du die letzte Ware auf einen Gast in das Café deines Gegners legst, gilt die Bestellung als <b>erfüllt</b> und er bekommt sofort die auf der Karte aufgedruckten Siegpunkte. Den Gast bringt er in dem für ihn reservierten Zimmer unter. <i>(Ein grüner Gast muss in genau den Raum einziehen, der für ihn vorbereitet wurde.)</i>"
+        "turnPlayer": "Lege immer, wenn <b>du</b> einen Würfel vom Aktionsplan nimmst, die Ware, die auf dem Aktionsfeld liegt, sofort auf einen passenden Gast im Café deines Gegners. <i>(Das gilt nicht, wenn dein Gegner einen Würfel nimmt.)</i> Du kannst frei wählen, auf welchen Gast du die Ware legst, sofern dieser Gast die Ware überhaupt will. Gibt es keinen solchen Gast, kommt die Ware zurück in den Vorrat. Liegt auf dem Aktionsfeld keine Ware, passiert nichts weiter. Die Aktionsfelder, auf denen keine Ware liegt, werden zu Beginn der nächsten Spielrunde mit je einer zufälligen Ware aus dem Warenpool wieder aufgefüllt.<br/>Sobald du die letzte Ware auf einen Gast in das Café deines Gegners legst, gilt die Bestellung als <b>erfüllt</b> und er bekommt sofort die auf der Karte aufgedruckten Siegpunkte. Den Gast bringt er in dem für ihn reservierten Zimmer unter. <i>(Ein grüner Gast muss in genau den Raum einziehen, der für ihn vorbereitet wurde.)</i>"
       },
       "nine-stars-inn": {
         "title": "Gasthaus \"Zum Neunten Stern\"",
@@ -204,7 +204,7 @@
         },
         "turnPlayer": "Entferne immer, wenn <b>du</b> eine <b>Etage</b> oder eine <b>Spalte</b> deines Hotels abschließt, also alle Zimmer darin bezogen hast, sofort das zuletzt platzierte Zahnrad von der Sterneleiste <i>(d. h. das Zahnrad, das sich am weitesten rechts in der untersten Zeile befindet, in der mindestens ein Zahnrad liegt)</i>. Befinden sich keine Zahnräder auf der Sterneleiste, passiert nichts weiter.",
         "turnBot": "Zusätzlich zum Weitersetzen des Markers deines Gegners auf der entsprechenden Politikkarte, platziert er ein <b>Zahnrad</b> auf die Sterneleiste.<br/> Stelle dir dazu vor, dass die Karte in <b>drei Zeilen</b> <i>(„III“, „II“ bzw. „I“)</i> zu je <b>drei Spalten</b> <i>(„links von“, „in“ bzw. „rechts von“ der Bedingung)</i> unterteilt ist, was zusammen <b>neun Felder</b> ergibt. Er platziert die Zahnräder <b>zeilenweise von oben nach unten</b> auf das erste freie Feld von links. <i>(Er füllt also Zeile „III“ zuerst, dann Zeile „II“ und schließlich Zeile „I“.)</i>",
-        "emperorScoring": "Dein Gegener bekommt so viele <b>Siegpunkte</b>, wie <b>rechts</b> in der untersten Zeile angegeben ist, in der mindestens ein Zahnrad liegt, d. h. 5, 10 bzw. 15 Siegpunkte."
+        "emperorScoring": "Dein Gegner bekommt so viele <b>Siegpunkte</b>, wie <b>rechts</b> in der untersten Zeile angegeben ist, in der mindestens ein Zahnrad liegt, d. h. 5, 10 bzw. 15 Siegpunkte."
       },
       "sushi-resort": {
         "title": "Sushi Resort",
@@ -223,7 +223,7 @@
         "setup": {
           "none": "Keine zusätzlichen Schritte."
         },
-        "turnPlayer": "Um ein Aktionsfeld zu nutzen, auf dem ein oder mehrere Zahnräder liegen, musst du vorher <b>genau 1 Krone bezahlen</b>. Hast du kein Geld, kannst du das Aktionsfeld auch nicht nutzen. Kannst du gar kein Aktionsfeld nutzen <i>(d. h., dein Marker ist auf der Geldleiste auf 0 und alle Aktionsfelder haben mindestens ein Zahnrad)</i>, verlierst du sofort <b>5 Siegpunkte</b> und kannst ein Aktionsfeld nutzen, ohne 1 Krone bezahlen zu müssen. Hast du aber mindestens 1 Krone, musst du bezahlen – du kannst nicht freiwillig Siegpunkte abgeben, um 1 Krone zu sparen.<br/>Immer, wenn du ein Aktionsfeld nutzt, bekommt Leopold sofort <b>1 Siegpunkt pro Zahnrad</b> auf dem Aktionsfeld. Danach wird <b<ein Zahnrad</b> vom Aktionsfeld entfernt. <i>(Es spielt dabei keine Rolle, ob du 1 Krone bezahlen konntest oder nicht.)</i>",
+        "turnPlayer": "Um ein Aktionsfeld zu nutzen, auf dem ein oder mehrere Zahnräder liegen, musst du vorher <b>genau 1 Krone bezahlen</b>. Hast du kein Geld, kannst du das Aktionsfeld auch nicht nutzen. Kannst du gar kein Aktionsfeld nutzen <i>(d. h., dein Marker ist auf der Geldleiste auf 0 und alle Aktionsfelder haben mindestens ein Zahnrad)</i>, verlierst du sofort <b>5 Siegpunkte</b> und kannst ein Aktionsfeld nutzen, ohne 1 Krone bezahlen zu müssen. Hast du aber mindestens 1 Krone, musst du bezahlen – du kannst nicht freiwillig Siegpunkte abgeben, um 1 Krone zu sparen.<br/>Immer, wenn du ein Aktionsfeld nutzt, bekommt Leopold sofort <b>1 Siegpunkt pro Zahnrad</b> auf dem Aktionsfeld. Danach wird <b>ein Zahnrad</b> vom Aktionsfeld entfernt. <i>(Es spielt dabei keine Rolle, ob du 1 Krone bezahlen konntest oder nicht.)</i>",
         "turnBot": "Immer, wenn <b>dein Gegner</b> einen Würfel vom Aktionsplan nimmt, platziert er <b>ein Zahnrad</b> auf das entsprechende Aktionsfeld. Auf einem Feld können sich mehrere Zahnräder ansammeln. Sie bleiben dort von Spielrunde zu Spielrunde liegen."
       }
     }    
